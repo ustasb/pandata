@@ -1,0 +1,52 @@
+Reference account
+  http://www.pandora.com/profile/following/tconrad
+
+Stations:
+  http://www.pandora.com/content/stations?startIndex=0&webname=tconrad
+   shows a 'no more' class when nothing's left
+
+Bookmarks
+  tracks:  http://www.pandora.com/content/bookmarked_tracks?trackStartIndex=0&webname=tconrad
+  artists: http://www.pandora.com/content/bookmarked_artists?artistStartIndex=0&webname=tconrad 
+
+  both have at the bottom: <div class="show_more tracklike" data-nextStartIndex="5">Show more</div>
+  <div class="no_more tracklike" /> when nothing's left
+
+Likes
+  tracks:   http://www.pandora.com/content/tracklikes?likeStartIndex=0&thumbStartIndex=5&webname=tconrad
+    <div class="show_more tracklike" data-nextLikeStartIndex="0" data-nextThumbStartIndex="10">Show more</div>
+
+  artists:  http://www.pandora.com/content/artistlikes?artistStartIndex=0&webname=tconrad
+    <div class="show_more" data-nextStartIndex="5">Show more</div>
+    <div class="no_more"></div>
+
+  stations: http://www.pandora.com/content/stationlikes?stationStartIndex=0&webname=tconrad
+
+    <div class="show_more" data-nextStartIndex="5">Show more</div>
+    <div class="no_more"></div>
+
+  albums:   http://www.pandora.com/content/albumlikes?albumStartIndex=0&webname=tconrad
+    <div class="show_more" data-nextStartIndex="5">Show more</div>
+    <div class="no_more"></div>
+
+Following:
+  http://www.pandora.com/content/following?startIndex=0&webname=tconrad
+    <div class="show_more" data-nextStartIndex="50">Show more</div>
+
+    no .no_more element when empty
+
+Followers:
+  http://www.pandora.com/content/followers?startIndex=0&webname=tconrad
+
+    <div class="show_more" data-nextStartIndex="50">Show more</div>        
+
+    shows a <div class="no_more" />
+
+  Pandora::Stats.bookmarks_for 'bjjustas', :all
+  Pandora::Stats.likes_for 'bjjustas', :all
+
+   
+
+++++++++++
+TO SEARCH FOR A USERNAME: http://www.pandora.com/content/connect?searchString=brian.ustas%40gmail.com
+++++++++++
