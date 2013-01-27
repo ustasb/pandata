@@ -16,6 +16,3 @@ module Pandora
     followers:            "http://www.pandora.com/content/followers?startIndex=%{nextStartIndex}&webname=%{webname}"
   }
 end
-
-
-# stations:             "http://www.pandora.com/content/stations?startIndex=%{nextStartIndex}&webname=%{webname}",
