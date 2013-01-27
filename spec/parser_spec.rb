@@ -1,13 +1,18 @@
+require_relative 'test_helpers.rb'
 require_relative '../lib/parser.rb'
 
 describe Pandora::Parser do
+  let(:liked_tracks_html)   { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_tracks.html') }
+  let(:liked_artists_html)  { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_artists.html') }
+  let(:liked_stations_html) { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_stations.html') }
+  let(:liked_albums_html)   { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_albums.html') }
 
   before(:all) do
     @parser = Pandora::Parser.new
   end
 
   describe '#get_webnames_from_search' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'search_results_for_joe.html')) }
+    let(:html) { read_path('spec', 'fixtures', 'ajax', 'show_more', 'search_results_for_joe.html') }
 
     it 'returns an array of webnames' do
       webnames = @parser.get_webnames_from_search html
@@ -29,53 +34,37 @@ describe Pandora::Parser do
     end
   end
 
-  describe '#more_data_on_server?' do
-    context 'when more data exists' do
-      let(:bookmarked_tracks)   { File.read(File.join('spec', 'fixtures', 'bookmarked_tracks.html')) }
-      let(:bookmarked_artists)  { File.read(File.join('spec', 'fixtures', 'bookmarked_artists.html')) }
-      let(:liked_tracks)        { File.read(File.join('spec', 'fixtures', 'liked_tracks.html')) }
-      let(:liked_artists)       { File.read(File.join('spec', 'fixtures', 'liked_artists.html')) }
-      let(:liked_stations)      { File.read(File.join('spec', 'fixtures', 'liked_stations.html')) }
-      let(:liked_albums)        { File.read(File.join('spec', 'fixtures', 'liked_albums.html')) }
-      let(:followers)           { File.read(File.join('spec', 'fixtures', 'followers.html')) }
-      let(:following)           { File.read(File.join('spec', 'fixtures', 'following.html')) }
+  describe '#get_next_data_indices' do
+    context 'when more data exists on the server' do
+      let(:followers) { read_path('spec', 'fixtures', 'ajax', 'show_more', 'followers.html') }
+      let(:following) { read_path('spec', 'fixtures', 'ajax', 'show_more', 'following.html') }
 
-      it 'returns the next indices to use to get the next set of data' do
-        result = @parser.more_data_on_server? bookmarked_tracks
-        expect(result).to eq({ nextStartIndex: 5 })
-
-        result = @parser.more_data_on_server? bookmarked_artists
-        expect(result).to eq({ nextStartIndex: 5 })
-
-        result = @parser.more_data_on_server? liked_tracks
+      it 'returns the indices to use in the next request to get the next set of data' do
+        result = @parser.get_next_data_indices liked_tracks_html
         expect(result).to eq({ nextLikeStartIndex: 0, nextThumbStartIndex: 10 })
 
-        result = @parser.more_data_on_server? liked_artists
+        result = @parser.get_next_data_indices liked_artists_html
         expect(result).to eq({ nextStartIndex: 5 })
 
-        result = @parser.more_data_on_server? liked_stations
+        result = @parser.get_next_data_indices liked_stations_html
         expect(result).to eq({ nextStartIndex: 5 })
 
-        result = @parser.more_data_on_server? liked_albums
+        result = @parser.get_next_data_indices liked_albums_html
         expect(result).to eq({ nextStartIndex: 5 })
 
-        result = @parser.more_data_on_server? followers
+        result = @parser.get_next_data_indices followers
         expect(result).to eq({ nextStartIndex: 50 })
 
-        result = @parser.more_data_on_server? following
+        result = @parser.get_next_data_indices following
         expect(result).to eq({ nextStartIndex: 50 })
       end
     end
 
     context 'when no more data exists' do
-      let(:html1) { File.read(File.join('spec', 'fixtures', 'no_more_bookmarked_tracks.html')) }
-      let(:html2) { File.read(File.join('spec', 'fixtures', 'stations.html')) }
+      let(:html) { read_path('spec', 'fixtures', 'ajax', 'no_more', 'liked_tracks.html') }
 
       it 'returns false' do
-        result = @parser.more_data_on_server? html1
-        expect(result).to eq false
-
-        result = @parser.more_data_on_server? html2
+        result = @parser.get_next_data_indices html
         expect(result).to eq false
       end
     end
@@ -83,54 +72,87 @@ describe Pandora::Parser do
 
   describe '#infobox_each_link' do
     it 'accepts a block passing the title link and the subtitle link text' do
-      html = File.read(File.join('spec', 'fixtures', 'bookmarked_tracks.html'))
-      titles = []
+      tracks = liked_tracks_html
+      all_titles = []
 
       # Access the private method
       @parser.instance_eval do
-        infobox_each_link(html) do |title, subtitle|
-          titles.push title, subtitle
+        infobox_each_link(tracks) do |title, subtitle|
+          all_titles.push title, subtitle
         end
       end
 
-      expect(titles).to eq [
-        'Cover Your Tracks',
-        'A Boy and His Kite',
-        'Royksopp Forever',
-        'Royksopp',
-        'Lucky You',
-        'The National',
-        'Welcome Home',
-        'Radical Face',
-        'Broadripple Is Burning (Daytrotter Sessions)',
-        'Margot & The Nuclear So And So\'s']
+      expect(all_titles).to eq [
+        'Lakehouse',
+        'Of Monsters & Men',
+        'Lasso',
+        'Phoenix',
+        'Hello...Goodbye',
+        'Sean Watkins',
+        'My Legs Are Weak',
+        'Paloma Faith',
+        'Esmerelda',
+        'Ben Howard']
+    end
+  end
+
+  describe '#get_recent_activity' do
+    let(:xml) { read_path('spec', 'fixtures', 'feeds', 'recent_activity.xml') }
+
+    it 'returns an array of activity names' do
+      activity = @parser.get_recent_activity xml
+      expect(activity).to eq [
+        'Drake',
+        'George Strait',
+        'Future',
+        'Ssion',
+        'Gucci Mane',
+        'Frank Ocean',
+        'Rage Against The Machine',
+        'Lady Gaga',
+        'Loverboy',
+        'Lil Wayne',
+        'HYFR (Hell Ya Fucking Right) by Drake',
+        'Human by The Killers',
+        'Drake Radio']
     end
   end
 
   describe '#get_stations' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'stations.html')) }
+    let(:xml) { read_path('spec', 'fixtures', 'feeds', 'stations.xml') }
 
     it 'returns an array of station names' do
-      stations = @parser.get_stations html
+      stations = @parser.get_stations xml
       expect(stations).to eq [
-        'R&B / Soul Radio',
-        'Reggae Radio',
-        'Today\'s R&B and Hip Hop Hits Radio',
-        'Today\'s R&B and Old School Radio',
-        'Lenny Williams Radio',
-        'Murs Radio',
-        'R&B Love Songs Radio',
-        'Contemporary Reggae Radio',
-        'Neo-Soul Radio']
+        'Drake Radio',
+        'George Strait Radio',
+        'Future Radio',
+        'Ssion Radio',
+        'Gucci Mane Radio',
+        'Frank Ocean Radio',
+        'Loverboy Radio',
+        'Lil Wayne Radio',
+        'Fun. Radio',
+        'The Killers Radio',
+        'pandorastats\'s QuickMix']
+    end
+  end
+
+  describe '#get_playing_station' do
+    let(:xml) { read_path('spec', 'fixtures', 'feeds', 'station_now_playing.xml') }
+
+    it 'returns the name of the current station now playing' do
+      station = @parser.get_playing_station xml
+      expect(station).to eq 'Drake Radio'
     end
   end
 
   describe '#get_bookmarked_tracks' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'bookmarked_tracks.html')) }
+    let(:xml) { read_path('spec', 'fixtures', 'feeds', 'bookmarked_tracks.xml') }
 
     it 'returns an array of hashes with the artist and track names' do
-      bookmarked_tracks = @parser.get_bookmarked_tracks html
-      expect(bookmarked_tracks).to eq [
+      tracks = @parser.get_bookmarked_tracks xml
+      expect(tracks).to eq [
         { artist: 'A Boy and His Kite',                 track: 'Cover Your Tracks' },
         { artist: 'Royksopp',                           track: 'Royksopp Forever' },
         { artist: 'The National',                       track: 'Lucky You' },
@@ -140,11 +162,11 @@ describe Pandora::Parser do
   end
 
   describe '#get_bookmarked_artists' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'bookmarked_artists.html')) }
+    let(:xml) { read_path('spec', 'fixtures', 'feeds', 'bookmarked_artists.xml') }
 
     it 'returns an array of artist names' do
-      bookmarked_artists = @parser.get_bookmarked_artists html
-      expect(bookmarked_artists).to eq [
+      artists = @parser.get_bookmarked_artists xml
+      expect(artists).to eq [
         'Trampled By Turtles',
         'Adele',
         'DJ Logic',
@@ -154,11 +176,9 @@ describe Pandora::Parser do
   end
 
   describe '#get_liked_tracks' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'liked_tracks.html')) }
-
     it 'returns an array of hashes with the artist and track names' do
-      liked_tracks = @parser.get_liked_tracks html
-      expect(liked_tracks).to eq [
+      tracks = @parser.get_liked_tracks liked_tracks_html
+      expect(tracks).to eq [
         { artist: 'Of Monsters & Men',  track: 'Lakehouse' },
         { artist: 'Phoenix',            track: 'Lasso' },
         { artist: 'Sean Watkins',       track: 'Hello...Goodbye' },
@@ -168,11 +188,9 @@ describe Pandora::Parser do
   end
 
   describe '#get_liked_artists' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'liked_artists.html')) }
-
     it 'returns an array of artist names' do
-      liked_artists = @parser.get_liked_artists html
-      expect(liked_artists).to eq [
+      artists = @parser.get_liked_artists liked_artists_html
+      expect(artists).to eq [
         'PANTyRAiD',
         'Crystal Castles',
         'Kito & Reija Lee',
@@ -182,11 +200,9 @@ describe Pandora::Parser do
   end
 
   describe '#get_liked_stations' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'liked_stations.html')) }
-
     it 'returns an array of station names' do
-      liked_stations = @parser.get_liked_stations html
-      expect(liked_stations).to eq [
+      stations = @parser.get_liked_stations liked_stations_html
+      expect(stations).to eq [
         'Country Christmas Radio',
         'Pachanga Boys Radio',
         'Tycho Radio',
@@ -196,11 +212,9 @@ describe Pandora::Parser do
   end
 
   describe '#get_liked_albums' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'liked_albums.html')) }
-
     it 'returns an array of hashes with the artist and album names' do
-      liked_albums = @parser.get_liked_albums html
-      expect(liked_albums).to eq [
+      albums = @parser.get_liked_albums liked_albums_html
+      expect(albums).to eq [
         { artist: 'Kito & Reija Lee',       album: 'Sweet Talk EP' },
         { artist: 'Justice',                album: 'Audio, Video, Disco.' },
         { artist: 'The Mountain Goats',     album: 'All Eternals Deck' },
@@ -210,7 +224,7 @@ describe Pandora::Parser do
   end
 
   describe '#get_following' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'all_following.html')) }
+    let(:html) { read_path('spec', 'fixtures', 'ajax', 'no_more', 'following.html') }
 
     it 'returns an array of people being following + metadata' do
       following = @parser.get_following html
@@ -229,7 +243,7 @@ describe Pandora::Parser do
   end
 
   describe '#get_followers' do
-    let(:html) { File.read(File.join('spec', 'fixtures', 'all_followers.html')) }
+    let(:html) { read_path('spec', 'fixtures', 'ajax', 'no_more', 'followers.html') }
 
     it 'returns an array of followers + metadata' do
       followers = @parser.get_followers html
@@ -243,5 +257,4 @@ describe Pandora::Parser do
         { name: 'lochead',        webname: 'lochead',        href: '/profile/lochead' }]
     end
   end
-
 end

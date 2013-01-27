@@ -1,6 +1,6 @@
 module Pandora
   URLS = {
-    search:               "http://www.pandora.com/content/connect?searchString=%{searchString}",
+    user_search:          "http://www.pandora.com/content/connect?searchString=%{searchString}",
     stations:             "http://www.pandora.com/content/stations?startIndex=%{nextStartIndex}&webname=%{webname}",
     bookmarked_tracks:    "http://www.pandora.com/content/bookmarked_tracks?trackStartIndex=%{nextStartIndex}&webname=%{webname}",
     bookmarked_artists:   "http://www.pandora.com/content/bookmarked_artists?artistStartIndex=%{nextStartIndex}&webname=%{webname}",

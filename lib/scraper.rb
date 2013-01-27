@@ -4,18 +4,21 @@ require_relative 'urls'
 
 module Pandora
   class Scraper
+
+    attr_reader :webname
+
     class << self
       private :new
 
       def get user_identifier
-        search_url = URLS[:search] % { searchString: user_identifier }
-        html = Downloader.get(search_url)
+        search_url = URLS[:user_search] % { searchString: user_identifier }
+        html = Downloader.new.read_page(search_url)
         webnames = Parser.new.get_webnames_from_search(html)
 
-        if webnames.length == 1
-          new(webnames.first)
+        if webnames.include? user_identifier
+          new(user_identifier)
         else
-          false
+          webnames
         end
       end
     end
@@ -24,6 +27,14 @@ module Pandora
       @downloader = Downloader.new
       @parser = Parser.new
       @webname = webname
+    end
+
+    def recent_activity
+      scrape_for :recent_activity, :get_recent_activity
+    end
+
+    def playing_station
+      scrape_for(:recent_activity, :get_recent_activity).first
     end
 
     def stations
@@ -77,7 +88,13 @@ module Pandora
       url = get_url data_type
       download_all_data(url) do |html, next_data_indices|
         new_data = @parser.public_send(parser_method, html)
-        results.concat(new_data)
+
+        if new_data.kind_of? Array
+          results.concat(new_data)
+        else
+          results.push(new_data)
+        end
+
         get_url(data_type, next_data_indices) if next_data_indices
       end
 
@@ -89,7 +106,7 @@ module Pandora
 
       while next_data_indices
         html = @downloader.read_page(url)
-        next_data_indices = @parser.more_data_on_server?(html)
+        next_data_indices = @parser.get_next_data_indices(html)
         url = block.call(html, next_data_indices)
       end
     end
@@ -103,11 +120,4 @@ module Pandora
       URLS[data_name] % next_data_indices
     end
   end
-end
-
-scraper = Pandora::Scraper.get('Tom Conrad')
-if scraper
-  p scraper.likes
-else
-  puts 'ID not found!!!!'
 end

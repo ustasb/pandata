@@ -13,7 +13,7 @@ module Pandora
       webnames
     end
 
-    def more_data_on_server? html
+    def get_next_data_indices html
       show_more = Nokogiri::HTML(html).css('.show_more')[0]
 
       if show_more
@@ -30,20 +30,61 @@ module Pandora
       end
     end
 
-    def get_stations html
-      get_infobox_titles html
+    def get_recent_activity xml
+      activity_names = []
+
+      xml_item_each(xml) do |title|
+        activity_names << title
+      end
+
+      activity_names
     end
 
-    def get_bookmarked_tracks html
-      get_tracks html
+    def get_stations xml
+      stations = []
+
+      xml_item_each(xml) do |title|
+        stations << title
+      end
+
+      stations
     end
 
-    def get_bookmarked_artists html
-      get_infobox_titles html
+    def get_playing_station xml
+      xml_item_each(xml) do |title|
+        return title  # Return the name of the first item
+      end
+    end
+
+    def get_bookmarked_tracks xml
+      tracks = []
+
+      xml_item_each(xml) do |title|
+        track, artist = title.split(' by ')
+        tracks << { artist: artist, track: track }
+      end
+
+      tracks
+    end
+
+    def get_bookmarked_artists xml
+      artists = []
+
+      xml_item_each(xml) do |title|
+        artists << title
+      end
+
+      artists
     end
 
     def get_liked_tracks html
-      get_tracks html
+      tracks = []
+
+      infobox_each_link(html) do |title, subtitle|
+        tracks << { track: title, artist: subtitle }
+      end
+
+      tracks
     end
 
     def get_liked_artists html
@@ -74,6 +115,14 @@ module Pandora
 
     private
 
+    def xml_item_each xml
+      Nokogiri::XML(xml).css('item').each do |item|
+        title = item.at_css('title').text
+        desc = item.at_css('description').text
+        yield(title, desc)
+      end
+    end
+
     def infobox_each_link html, &block
       Nokogiri::HTML(html).css('.infobox').each do |infobox|
         infobox_body = infobox.css('.infobox-body')
@@ -90,16 +139,6 @@ module Pandora
       titles = []
       infobox_each_link(html) { |title| titles << title }
       titles
-    end
-
-    def get_tracks html
-      tracks = []
-
-      infobox_each_link(html) do |title, subtitle|
-        tracks << { track: title, artist: subtitle }
-      end
-
-      tracks
     end
 
     def get_followx_users html
