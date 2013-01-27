@@ -34,7 +34,7 @@ module Pandora
     end
 
     def playing_station
-      scrape_for(:recent_activity, :get_recent_activity).first
+      scrape_for(:playing_station, :get_playing_station).first
     end
 
     def stations
@@ -112,9 +112,11 @@ module Pandora
     end
 
     def get_url(data_name, next_data_indices = {})
-      if next_data_indices.empty?
-        next_data_indices = { nextStartIndex: 0, nextLikeStartIndex: 0, nextThumbStartIndex: 0 }
-      end
+      next_data_indices = {
+        nextStartIndex: 0,
+        nextLikeStartIndex: 0,
+        nextThumbStartIndex: 0
+      } if next_data_indices.empty?
 
       next_data_indices[:webname] = @webname
       URLS[data_name] % next_data_indices
