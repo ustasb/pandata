@@ -10,15 +10,10 @@ module Pandora
 
       http = Net::HTTP.new(uri.host, uri.port)
       request = Net::HTTP::Get.new(uri.request_uri)
-      request['Cookie'] = get_random_cookie
+      request['Cookie'] = Downloader::COOKIES.sample  # Get a random cookie
 
       http.request(request).body
     end
 
-    private
-
-    def get_random_cookie
-      Downloader::COOKIES.shuffle.first
-    end
   end
 end
