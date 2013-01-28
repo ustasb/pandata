@@ -3,7 +3,7 @@ require 'uri'
 
 module Pandora
   class Downloader
-    COOKIES = ['at=wSS/+MM34vcWDcbXBjCHIEqaNLEkpjQwtMnlj1+17gagXRISD1d86ADo+5UQmTpLjN1p126cjZfw%3D']
+    COOKIES = ['at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D']
 
     def read_page url
       uri = URI.parse URI.escape(url)

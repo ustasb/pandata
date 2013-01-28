@@ -1,66 +1,10 @@
 #!/usr/bin/env ruby
 
-require 'optparse'
-require 'pandata'
+require_relative '../lib/pandata'
+require_relative '../lib/pandata/argv_parser'
 
-options = {}
-options[:data_to_get] = []
-
-OptionParser.new do |opts|
-  opts.banner = 'Usage: pandata.rb [options]'
-
-  opts.on('--json', 'Return the results as JSON') do |json|
-    options[:return_as_json] = json
-  end
-
-  opts.on('-i', '--identifier ID', 'Pandora email or webname') do |id|
-    options[:id] = id
-  end
-
-  opts.on('-a', '--recent_activity', 'Retrieve recent activity') do
-    options[:data_to_get] << :recent_activity
-  end
-
-  opts.on('-S', '--playing_station', 'Retrieve currently playing station') do
-    options[:data_to_get] << :playing_station
-  end
-
-  opts.on('-s', '--stations', 'Retrieve all stations') do
-    options[:data_to_get] << :stations
-  end
-
-  opts.on('-b', '--bookmarked_tracks', 'Retrieve all bookmarked tracks') do
-    options[:data_to_get] << :bookmarked_tracks
-  end
-
-  opts.on('-B', '--bookmarked_artists', 'Retrieve all bookmarked artists') do
-    options[:data_to_get] << :bookmarked_artists
-  end
-
-  opts.on('-l', '--liked_tracks', 'Retrieve all liked tracks') do
-    options[:data_to_get] << :liked_tracks
-  end
-
-  opts.on('-L', '--liked_artists', 'Retrieve all liked artists') do
-    options[:data_to_get] << :liked_artists
-  end
-
-  opts.on('-m', '--liked_albums', 'Retrieve all liked albums') do
-    options[:data_to_get] << :liked_albums
-  end
-
-  opts.on('-n', '--liked_stations', 'Retrieve all liked stations') do
-    options[:data_to_get] << :liked_stations
-  end
-
-  opts.on('-f', '--followers', 'Retrieve all followers of ID') do
-    options[:data_to_get] << :followers
-  end
-
-  opts.on('-F', '--following', 'Retrieve all users being followed by ID') do
-    options[:data_to_get] << :following
-  end
-end.parse!
+options = Pandata::ArgvParser.parse(ARGV)
+scraper_results = {}
 
 if !options[:id]
   puts 'You must supply a webname or email to -i. See -h for help.'
@@ -71,17 +15,74 @@ scraper = Pandora::Scraper.get(options[:id])
 
 if scraper.kind_of? Array
   puts "No direct matches for '#{options[:id]}'.\n\n"
-  puts "Webnames with '#{options[:id]}' in the profile name:"
-  puts scraper.map { |val| "- #{val}" }
+  if !scraper.empty?
+    puts "Webnames with '#{options[:id]}' in the profile name:"
+    puts scraper.map { |val| "- #{val}" }
+  end
   exit
-else
-  options[:data_to_get].each do |data_type|
-    if /(bookmark|like)e?d_(.*)/ =~ data_type
-      method = $1 + 's'
-      arg = $2.to_sym
-      p scraper.public_send(method, arg)
-    else
-      p scraper.public_send(data_type)
+end
+
+options[:data_to_get].each do |data_type|
+  if /(bookmark|like)e?d_(.*)/ =~ data_type
+    method = ($1 + 's').to_sym
+    arg = $2.to_sym
+    scraper_results[data_type] = scraper.public_send(method, arg)
+  else
+    scraper_results[data_type] = scraper.public_send(data_type)
+  end
+end
+
+if options[:return_as_json]
+  require 'json'
+  puts JSON.generate(scraper_results)
+  exit
+end
+
+require 'set'
+scraper_results.each do |key, value|
+  case key
+  when :playing_station
+    puts 'Playing Station:'
+    puts "  - #{value}"
+  when :recent_activity
+    puts 'Recent Activity:'
+    puts value.map { |activity| "  - #{activity}" }
+  when :liked_albums
+    puts 'Liked Albums:'
+    artist_albums = {}
+    value.each do |hash|
+      (artist_albums[hash[:artist]] ||= Set.new) << hash[:album]
+    end
+    artist_albums.sort.each do |key, value|
+      puts "  - #{key}"
+      value.sort.each do |album|
+        puts "      - #{album}"
+      end
+    end
+  when /.*stations/
+    puts $~.to_s =~ /liked/ ? 'Liked Stations:' : 'Stations:'
+    puts value.sort.map { |station| "  - #{station}" }
+  when /.*artists/
+    puts $~.to_s =~ /liked/ ? 'Liked Artists:' : 'Bookmarked Artists:'
+    puts value.uniq.sort.map { |artist| "  - #{artist}" }
+  when /.*tracks/
+    puts $~.to_s =~ /liked/ ? 'Liked Tracks:' : 'Bookmarked Tracks:'
+    artist_tracks = {}
+    value.each do |hash|
+      (artist_tracks[hash[:artist]] ||= Set.new) << hash[:track]
+    end
+    artist_tracks.sort.each do |key, value|
+      puts "  - #{key}"
+      value.sort.each do |track|
+        puts "      - #{track}"
+      end
+    end
+  when /following|followers/
+    puts $~.to_s.capitalize + ':'
+    value.each do |hash|
+      puts "  - name: #{hash[:name]}
+    webname: #{hash[:webname]}
+    profile: #{hash[:href]}"
     end
   end
 end
