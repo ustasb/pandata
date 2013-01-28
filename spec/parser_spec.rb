@@ -1,5 +1,5 @@
-require_relative 'test_helpers.rb'
-require_relative '../lib/pandata/parser.rb'
+require_relative 'test_helpers'
+require_relative '../lib/pandata/parser'
 
 describe Pandora::Parser do
   let(:liked_tracks_html)   { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_tracks.html') }
