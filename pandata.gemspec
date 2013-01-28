@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.email           = 'brianustas@gmail.com'
   s.files           = ['bin/pandata', 'lib/pandata.rb', 'lib/pandata/scraper.rb',
                        'lib/pandata/downloader.rb', 'lib/pandata/urls.rb',
-                       'lib/pandata/parser.rb', 'lib/pandata/argv_parser.rb']
+                       'lib/pandata/parser.rb', 'lib/pandata/argv_parser.rb',
+                       'lib/pandata/data_formatter.rb']
   s.executables     << 'pandata'
 end
