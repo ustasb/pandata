@@ -2,9 +2,9 @@
 
 require_relative '../lib/pandata'
 require_relative '../lib/pandata/argv_parser'
+require_relative '../lib/pandata/data_formatter'
 
 options = Pandata::ArgvParser.parse(ARGV)
-scraper_results = {}
 
 if !options[:id]
   puts 'You must supply a webname or email to -i. See -h for help.'
@@ -22,6 +22,7 @@ if scraper.kind_of? Array
   exit
 end
 
+scraper_results = {}
 options[:data_to_get].each do |data_type|
   if /(bookmark|like)e?d_(.*)/ =~ data_type
     method = ($1 + 's').to_sym
@@ -38,51 +39,29 @@ if options[:return_as_json]
   exit
 end
 
-require 'set'
+formatter = Pandata::DataFormatter.new
 scraper_results.each do |key, value|
   case key
   when :playing_station
     puts 'Playing Station:'
-    puts "  - #{value}"
+    puts formatter.list value
   when :recent_activity
     puts 'Recent Activity:'
-    puts value.map { |activity| "  - #{activity}" }
+    puts formatter.list value
   when :liked_albums
     puts 'Liked Albums:'
-    artist_albums = {}
-    value.each do |hash|
-      (artist_albums[hash[:artist]] ||= Set.new) << hash[:album]
-    end
-    artist_albums.sort.each do |key, value|
-      puts "  - #{key}"
-      value.sort.each do |album|
-        puts "      - #{album}"
-      end
-    end
-  when /.*stations/
-    puts $~.to_s =~ /liked/ ? 'Liked Stations:' : 'Stations:'
-    puts value.sort.map { |station| "  - #{station}" }
-  when /.*artists/
-    puts $~.to_s =~ /liked/ ? 'Liked Artists:' : 'Bookmarked Artists:'
-    puts value.uniq.sort.map { |artist| "  - #{artist}" }
+    puts formatter.albums value
   when /.*tracks/
     puts $~.to_s =~ /liked/ ? 'Liked Tracks:' : 'Bookmarked Tracks:'
-    artist_tracks = {}
-    value.each do |hash|
-      (artist_tracks[hash[:artist]] ||= Set.new) << hash[:track]
-    end
-    artist_tracks.sort.each do |key, value|
-      puts "  - #{key}"
-      value.sort.each do |track|
-        puts "      - #{track}"
-      end
-    end
+    puts formatter.tracks value
+  when /.*artists/
+    puts $~.to_s =~ /liked/ ? 'Liked Artists:' : 'Bookmarked Artists:'
+    puts formatter.uniq_sort_list value
+  when /.*stations/
+    puts $~.to_s =~ /liked/ ? 'Liked Stations:' : 'Stations:'
+    puts formatter.uniq_sort_list value
   when /following|followers/
     puts $~.to_s.capitalize + ':'
-    value.each do |hash|
-      puts "  - name: #{hash[:name]}
-    webname: #{hash[:webname]}
-    profile: #{hash[:href]}"
-    end
+    puts formatter.followx value
   end
 end
