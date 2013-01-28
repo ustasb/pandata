@@ -1,5 +1,7 @@
+#!/usr/bin/env ruby
+
 require 'optparse'
-require_relative '../lib/scraper.rb'
+require 'pandata'
 
 options = {}
 options[:data_to_get] = []

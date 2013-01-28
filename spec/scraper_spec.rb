@@ -1,5 +1,5 @@
 require_relative 'test_helpers.rb'
-require_relative '../lib/scraper.rb'
+require_relative '../lib/pandata/scraper.rb'
 
 describe Pandora::Scraper do
   describe 'Scraper.get' do
