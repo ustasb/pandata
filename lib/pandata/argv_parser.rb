@@ -2,17 +2,23 @@ require 'optparse'
 
 module Pandata
   class ArgvParser
-    class << self; private :new; end
+    class << self
+      private :new
+    end
 
-    def self.parse args
-      options = {}
-      options[:data_to_get] = []
+    def self.parse
+      options = { data_to_get: [] }
+      get_all_data = false
 
       OptionParser.new do |opts|
         opts.banner = 'Usage: pandata [options]'
 
         opts.on('--json', 'Return the results as JSON') do
           options[:return_as_json] = true
+        end
+
+        opts.on('--all', 'Get all data') do
+          get_all_data = true
         end
 
         opts.on('-i', '--identifier ID', 'Pandora email or webname') do |id|
@@ -62,7 +68,26 @@ module Pandata
         opts.on('-F', '--following', 'Get all users being followed by ID') do
           options[:data_to_get] << :following
         end
-      end.parse! args
+      end.parse!
+
+      if get_all_data
+        options[:data_to_get] = [
+          :recent_activity,
+          :playing_station,
+          :stations,
+          :bookmarked_artists,
+          :bookmarked_tracks,
+          :liked_tracks,
+          :liked_artists,
+          :liked_stations,
+          :liked_albums,
+          :followers,
+          :following
+        ]
+      else
+        # Remove any duplicates caused by supplying flags multiple times.
+        options[:data_to_get].uniq!
+      end
 
       options
     end

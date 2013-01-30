@@ -4,7 +4,7 @@ require_relative '../lib/pandata'
 require_relative '../lib/pandata/argv_parser'
 require_relative '../lib/pandata/data_formatter'
 
-options = Pandata::ArgvParser.parse(ARGV)
+options = Pandata::ArgvParser.parse
 
 unless options[:id]
   puts 'You must supply an email or webname to -i. See -h for help.'
