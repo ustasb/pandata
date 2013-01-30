@@ -6,62 +6,60 @@ require_relative '../lib/pandata/data_formatter'
 
 options = Pandata::ArgvParser.parse(ARGV)
 
-if !options[:id]
-  puts 'You must supply a webname or email to -i. See -h for help.'
+unless options[:id]
+  puts 'You must supply an email or webname to -i. See -h for help.'
   exit
 end
 
+# If scraper is an array, a Pandora user could not be found with certainty.
+# In this case, scraper will contain webnames similar to options[:id].
 scraper = Pandora::Scraper.get(options[:id])
-
+formatter = Pandata::DataFormatter.new
 if scraper.kind_of? Array
-  puts "No direct matches for '#{options[:id]}'.\n\n"
-  if !scraper.empty?
-    puts "Webnames with '#{options[:id]}' in the profile name:"
-    puts scraper.map { |val| "- #{val}" }
+  puts "No exact match for '#{options[:id]}'."
+
+  unless scraper.empty?
+    puts "\nWebname results for '#{options[:id]}':"
+    puts formatter.list(scraper)
   end
+
   exit
 end
 
-scraper_results = {}
+scraper_data = {}
 options[:data_to_get].each do |data_type|
   if /(bookmark|like)e?d_(.*)/ =~ data_type
-    method = ($1 + 's').to_sym
-    arg = $2.to_sym
-    scraper_results[data_type] = scraper.public_send(method, arg)
+    method = ($1 << 's').to_sym  # :likes or :bookmarks
+    arg = $2.to_sym  # :tracks, :artists, :stations, :albums
+    scraper_data[data_type] = scraper.public_send(method, arg)
   else
-    scraper_results[data_type] = scraper.public_send(data_type)
+    scraper_data[data_type] = scraper.public_send(data_type)
   end
 end
 
 if options[:return_as_json]
   require 'json'
-  puts JSON.generate(scraper_results)
+  puts JSON.generate(scraper_data)
   exit
 end
 
-formatter = Pandata::DataFormatter.new
-scraper_results.each do |key, value|
-  case key
-  when :playing_station
-    puts 'Playing Station:'
-    puts formatter.list value
-  when :recent_activity
-    puts 'Recent Activity:'
-    puts formatter.list value
-  when :liked_albums
-    puts 'Liked Albums:'
-    puts formatter.albums value
-  when /.*tracks/
-    puts $~.to_s =~ /liked/ ? 'Liked Tracks:' : 'Bookmarked Tracks:'
-    puts formatter.tracks value
-  when /.*artists/
-    puts $~.to_s =~ /liked/ ? 'Liked Artists:' : 'Bookmarked Artists:'
-    puts formatter.uniq_sort_list value
-  when /.*stations/
-    puts $~.to_s =~ /liked/ ? 'Liked Stations:' : 'Stations:'
-    puts formatter.uniq_sort_list value
-  when /following|followers/
-    puts $~.to_s.capitalize + ':'
-    puts formatter.followx value
-  end
+scraper_data.each do |key, value|
+  # Capitalize each word in the key symbol.
+  # e.g. :liked_tracks -> 'Liked Tracks:'
+  title = key.to_s.split('_').map(&:capitalize).join(' ') << ':'
+
+  output = case key
+           when /playing_station|recent_activity/
+             formatter.list(value)
+           when :liked_albums
+             formatter.albums(value)
+           when /liked_tracks|bookmarked_tracks/
+             formatter.tracks(value)
+           when /liked_artists|bookmarked_artists|stations|liked_stations/
+             formatter.uniq_sort_list(value)
+           when /following|followers/
+             formatter.followx(value)
+           end
+
+  puts "#{ title }\n#{ output }"
 end

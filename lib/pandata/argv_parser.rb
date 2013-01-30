@@ -2,9 +2,7 @@ require 'optparse'
 
 module Pandata
   class ArgvParser
-    class << self
-      private :new
-    end
+    class << self; private :new; end
 
     def self.parse args
       options = {}
