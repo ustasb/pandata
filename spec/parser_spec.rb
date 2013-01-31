@@ -1,14 +1,14 @@
 require_relative 'test_helpers'
 require_relative '../lib/pandata/parser'
 
-describe Pandora::Parser do
+describe Pandata::Parser do
   let(:liked_tracks_html)   { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_tracks.html') }
   let(:liked_artists_html)  { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_artists.html') }
   let(:liked_stations_html) { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_stations.html') }
   let(:liked_albums_html)   { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_albums.html') }
 
   before(:all) do
-    @parser = Pandora::Parser.new
+    @parser = Pandata::Parser.new
   end
 
   describe '#get_webnames_from_search' do

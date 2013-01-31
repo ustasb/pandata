@@ -13,7 +13,7 @@ end
 
 # If scraper is an array, a Pandora user could not be found with certainty.
 # In this case, scraper will contain webnames similar to options[:user_id].
-scraper = Pandora::Scraper.get(options[:user_id])
+scraper = Pandata::Scraper.get(options[:user_id])
 formatter = Pandata::DataFormatter.new
 if scraper.kind_of? Array
   puts "No exact match for '#{options[:user_id]}'."

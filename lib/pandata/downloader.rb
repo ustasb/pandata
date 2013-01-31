@@ -1,7 +1,7 @@
 require 'net/http'
 require 'uri'
 
-module Pandora
+module Pandata
   class Downloader
     COOKIES = ['at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D']
 
@@ -14,6 +14,5 @@ module Pandora
 
       http.request(request).body
     end
-
   end
 end

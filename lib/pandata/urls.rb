@@ -1,4 +1,4 @@
-module Pandora
+module Pandata
   MAX_RESULTS = 100000
 
   URLS = {

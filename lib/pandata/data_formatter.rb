@@ -23,13 +23,11 @@ module Pandata
 
     def followx value
       str = ''
-
       value.sort_by { |item| item[:webname].downcase }.each do |hash|
         str << "  - name: #{hash[:name]}\n"
         str << "    webname: #{hash[:webname]}\n"
         str << "    href: #{hash[:href]}\n"
       end
-
       str
     end
 

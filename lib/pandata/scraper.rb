@@ -1,8 +1,8 @@
-require_relative 'downloader'
-require_relative 'parser'
 require_relative 'urls'
+require_relative 'parser'
+require_relative 'downloader'
 
-module Pandora
+module Pandata
   class Scraper
 
     attr_reader :webname

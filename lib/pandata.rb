@@ -1,3 +1,3 @@
 # encoding: utf-8
 
-require 'pandata/scraper'
+require_relative 'pandata/scraper'

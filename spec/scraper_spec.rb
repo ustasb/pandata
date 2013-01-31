@@ -1,26 +1,26 @@
 require_relative 'test_helpers'
 require_relative '../lib/pandata/scraper'
 
-describe Pandora::Scraper do
+describe Pandata::Scraper do
   describe 'Scraper.get' do
 
     # Stub Downloader's `read_page` instance method
     def override_network_return path
-      Pandora::Downloader.class_eval do
+      Pandata::Downloader.class_eval do
         define_method(:read_page) { |url| File.read(path) }
       end
     end
 
     it 'returns a new Scraper instance if a webname exactly matches the user\'s search' do
       override_network_return File.join('spec', 'fixtures', 'ajax', 'no_more', 'search_results_for_lols.html')
-      result = Pandora::Scraper.get 'lols'
-      expect(result.class).to eq Pandora::Scraper
+      result = Pandata::Scraper.get 'lols'
+      expect(result.class).to eq Pandata::Scraper
       expect(result.webname).to eq 'lols'
     end
 
     it 'returns an array of similar webnames if no matching webname is found' do
       override_network_return File.join('spec', 'fixtures', 'ajax', 'show_more', 'search_results_for_skittle.html')
-      result = Pandora::Scraper.get 'skittle'
+      result = Pandata::Scraper.get 'skittle'
       expect(result).to eq [
         'sixx_miley',
         'sydni00girly',
@@ -47,9 +47,9 @@ describe Pandora::Scraper do
 
     before(:each) do
       # Skip Scraper.get
-      @scraper = Pandora::Scraper.send(:new, 'pandorastats')
+      @scraper = Pandata::Scraper.send(:new, 'pandorastats')
 
-      Pandora::Downloader.class_eval do
+      Pandata::Downloader.class_eval do
         # Read a file instead of make a network request
         define_method(:read_page) { |path| File.read(path) }
       end

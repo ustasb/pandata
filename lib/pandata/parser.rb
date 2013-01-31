@@ -1,6 +1,6 @@
 require 'nokogiri'
 
-module Pandora
+module Pandata
   class Parser
     def get_webnames_from_search html
       user_links = Nokogiri::HTML(html).css('.user_name a')
@@ -159,6 +159,5 @@ module Pandora
 
       users
     end
-
   end
 end
