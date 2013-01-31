@@ -9,8 +9,8 @@ module Pandata
       str
     end
 
-    def uniq_sort_list values
-      list custom_sort(values.uniq)
+    def sort_list values
+      list custom_sort(values)
     end
 
     def tracks tracks
@@ -23,7 +23,7 @@ module Pandata
 
     def followx value
       str = ''
-      value.uniq.sort_by { |item| item[:webname].downcase }.each do |hash|
+      value.sort_by { |item| item[:webname].downcase }.each do |hash|
         str << "  - name: #{hash[:name]}\n"
         str << "    webname: #{hash[:webname]}\n"
         str << "    href: #{hash[:href]}\n"

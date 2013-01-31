@@ -39,11 +39,12 @@ describe Pandata::DataFormatter do
     end
   end
 
-  describe '#uniq_sort_list' do
-    it 'removes all duplicates, sorts and formats like #list does' do
-      str = @parser.uniq_sort_list(ARTISTS)
+  describe '#sort_list' do
+    it 'sorts and formats like #list does' do
+      str = @parser.sort_list(ARTISTS)
       expect(str).to eq <<-END
   - Avicii
+  - Eminem
   - Eminem
   - Ladytron
   - Mogwai

@@ -56,7 +56,7 @@ scraper_data.each do |key, value|
            when /liked_tracks|bookmarked_tracks/
              formatter.tracks(value)
            when /liked_artists|bookmarked_artists|stations|liked_stations/
-             formatter.uniq_sort_list(value)
+             formatter.sort_list(value)
            when /following|followers/
              formatter.followx(value)
            end

@@ -98,7 +98,8 @@ module Pandata
         get_url(data_type, next_data_indices) if next_data_indices
       end
 
-      results
+      # Pandora data often contains duplicates--get rid of them.
+      results.uniq
     end
 
     def download_all_data(url, &block)
