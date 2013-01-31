@@ -24,7 +24,7 @@ module Pandata
     def followx value
       str = ''
 
-      value.each do |hash|
+      value.sort_by { |item| item[:webname].downcase }.each do |hash|
         str << "  - name: #{hash[:name]}\n"
         str << "    webname: #{hash[:webname]}\n"
         str << "    href: #{hash[:href]}\n"
@@ -38,7 +38,15 @@ module Pandata
     def custom_sort(enum)
       # Ignore the initial 'The' when sorting strings.
       # Useful for sorting artist/ song titles.
-      enum.sort_by { |string| string.sub(/^the\s*/i, '') }
+      sorted_array = enum.sort_by { |string, _| string.sub(/^the\s*/i, '') }
+
+      if enum.kind_of? Hash
+        sorted_hash = {}
+        sorted_array.each { |item| sorted_hash[item[0]] = item[1] }
+        sorted_hash
+      else
+        sorted_array
+      end
     end
 
     def artists_items value, item_name

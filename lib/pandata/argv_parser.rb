@@ -6,7 +6,7 @@ module Pandata
       private :new
     end
 
-    def self.parse
+    def self.parse(argv)
       options = { data_to_get: [] }
       get_all_data = false
 
@@ -21,8 +21,8 @@ module Pandata
           get_all_data = true
         end
 
-        opts.on('-i', '--identifier ID', 'Pandora email or webname') do |id|
-          options[:id] = id
+        opts.on('-u', '--user ID', 'Pandora email or webname') do |id|
+          options[:user_id] = id
         end
 
         opts.on('-a', '--recent_activity', 'Get recent activity') do
@@ -61,26 +61,26 @@ module Pandata
           options[:data_to_get] << :liked_stations
         end
 
-        opts.on('-f', '--followers', 'Get all ID\'s followers') do
+        opts.on('-F', '--followers', 'Get all ID\'s followers') do
           options[:data_to_get] << :followers
         end
 
-        opts.on('-F', '--following', 'Get all users being followed by ID') do
+        opts.on('-f', '--following', 'Get all users being followed by ID') do
           options[:data_to_get] << :following
         end
-      end.parse!
+      end.parse(argv)
 
       if get_all_data
         options[:data_to_get] = [
           :recent_activity,
           :playing_station,
           :stations,
-          :bookmarked_artists,
           :bookmarked_tracks,
+          :bookmarked_artists,
           :liked_tracks,
           :liked_artists,
-          :liked_stations,
           :liked_albums,
+          :liked_stations,
           :followers,
           :following
         ]

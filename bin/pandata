@@ -4,22 +4,22 @@ require_relative '../lib/pandata'
 require_relative '../lib/pandata/argv_parser'
 require_relative '../lib/pandata/data_formatter'
 
-options = Pandata::ArgvParser.parse
+options = Pandata::ArgvParser.parse(ARGV)
 
-unless options[:id]
+unless options[:user_id]
   puts 'You must supply an email or webname to -i. See -h for help.'
   exit
 end
 
 # If scraper is an array, a Pandora user could not be found with certainty.
-# In this case, scraper will contain webnames similar to options[:id].
-scraper = Pandora::Scraper.get(options[:id])
+# In this case, scraper will contain webnames similar to options[:user_id].
+scraper = Pandora::Scraper.get(options[:user_id])
 formatter = Pandata::DataFormatter.new
 if scraper.kind_of? Array
-  puts "No exact match for '#{options[:id]}'."
+  puts "No exact match for '#{options[:user_id]}'."
 
   unless scraper.empty?
-    puts "\nWebname results for '#{options[:id]}':"
+    puts "\nWebname results for '#{options[:user_id]}':"
     puts formatter.list(scraper)
   end
 
