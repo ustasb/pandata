@@ -23,7 +23,7 @@ module Pandata
 
     def followx value
       str = ''
-      value.sort_by { |item| item[:webname].downcase }.each do |hash|
+      value.uniq.sort_by { |item| item[:webname].downcase }.each do |hash|
         str << "  - name: #{hash[:name]}\n"
         str << "    webname: #{hash[:webname]}\n"
         str << "    href: #{hash[:href]}\n"
@@ -64,7 +64,6 @@ module Pandata
           str << "      - #{item}\n"
         end
       end
-
       str
     end
   end
