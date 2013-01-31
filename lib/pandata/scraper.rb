@@ -10,13 +10,16 @@ module Pandata
     class << self
       private :new
 
-      def get user_identifier
-        search_url = URLS[:user_search] % { searchString: user_identifier }
+      def get user_id
+        search_url = URLS[:user_search] % { searchString: user_id }
         html = Downloader.new.read_page(search_url)
         webnames = Parser.new.get_webnames_from_search(html)
 
-        if webnames.include? user_identifier
-          new(user_identifier)
+        if webnames.include?(user_id)
+          new(user_id)
+        # If user_id looks like an email and still gets a result.
+        elsif webnames.size == 1 && /.*@.*\..*/ =~ user_id
+          new(webnames.first)
         else
           webnames
         end
