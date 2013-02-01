@@ -1,3 +1,5 @@
+gem_path = File.dirname(__FILE__)
+
 Gem::Specification.new do |s|
   s.name            = 'pandata'
   s.version         = '1.0.0'
@@ -7,9 +9,7 @@ Gem::Specification.new do |s|
   s.homepage        = 'https://github.com/ustasb/pandata'
   s.authors         = ['Brian Ustas']
   s.email           = 'brianustas@gmail.com'
-  s.files           = ['bin/pandata', 'lib/pandata.rb', 'lib/pandata/scraper.rb',
-                       'lib/pandata/downloader.rb', 'lib/pandata/urls.rb',
-                       'lib/pandata/parser.rb', 'lib/pandata/argv_parser.rb',
-                       'lib/pandata/data_formatter.rb']
+  s.files           = Dir["#{gem_path}/lib/**/*.rb"] << "#{gem_path}/bin/pandata"
   s.executables     << 'pandata'
 end
+
