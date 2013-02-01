@@ -2,28 +2,28 @@ require 'set'
 
 module Pandata
   class DataFormatter
-    def list values
-      values = [values] unless values.kind_of? Array
+    def list(data)
+      data = [data] unless data.kind_of?(Array)
       str = ''
-      values.each { |item| str << "  - #{item}\n" }
+      data.each { |item| str << "  - #{item}\n" }
       str
     end
 
-    def sort_list values
-      list custom_sort(values)
+    def sort_list(data)
+      list custom_sort(data)
     end
 
-    def tracks tracks
-      artists_items tracks, :track
+    def tracks(tracks)
+      artists_items(tracks, :track)
     end
 
-    def albums albums
-      artists_items albums, :album
+    def albums(albums)
+      artists_items(albums, :album)
     end
 
-    def followx value
+    def followx(data)
       str = ''
-      value.sort_by { |item| item[:webname].downcase }.each do |hash|
+      data.sort_by { |item| item[:webname].downcase }.each do |hash|
         str << "  - name: #{hash[:name]}\n"
         str << "    webname: #{hash[:webname]}\n"
         str << "    href: #{hash[:href]}\n"
@@ -33,12 +33,12 @@ module Pandata
 
     private
 
-    def custom_sort(enum)
+    def custom_sort(enumerable)
       # Ignore the initial 'The' when sorting strings.
       # Useful for sorting artist names or song titles.
-      sorted_array = enum.sort_by { |key, _| key.sub(/^the\s*/i, '') }
+      sorted_array = enumerable.sort_by { |key, _| key.sub(/^the\s*/i, '') }
 
-      if enum.kind_of? Hash
+      if enumerable.kind_of?(Hash)
         sorted_hash = {}
         sorted_array.each { |item| sorted_hash[item[0]] = item[1] }
         sorted_hash
@@ -47,18 +47,18 @@ module Pandata
       end
     end
 
-    def artists_items value, item_name
-      artist_items = {}
+    def artists_items(data, item_name)
+      artists_items = {}
 
-      value.each do |hash|
+      data.each do |hash|
         artist_name = hash[:artist]
-        (artist_items[artist_name] ||= Set.new) << hash[item_name]
+        (artists_items[artist_name] ||= Set.new) << hash[item_name]
       end
 
-      artist_items = custom_sort(artist_items)
+      artists_items = custom_sort(artists_items)
 
       str = ''
-      artist_items.each do |artist_name, items|
+      artists_items.each do |artist_name, items|
         str << "  - #{artist_name}\n"
         items.sort.each do |item|
           str << "      - #{item}\n"

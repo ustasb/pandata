@@ -3,7 +3,7 @@ require 'optparse'
 module Pandata
   class ArgvParser
     class << self
-      # Disable instances
+      # Prevent instances
       private :new
     end
 
@@ -14,13 +14,15 @@ module Pandata
       options[:opts] = OptionParser.new do |opts|
         opts.banner = 'Pandata: A tool for downloading Pandora data (likes, bookmarks, stations, etc.)'
         opts.define_head 'Usage: pandata <email|webname> [options]'
-        opts.separator ''
-        opts.separator 'Examples:'
-        opts.separator '  pandata john@example.com --liked_tracks'
-        opts.separator '  pandata my_webname --all'
-        opts.separator '  pandata my_webname -lLb --json'
-        opts.separator ''
-        opts.separator 'Options:'
+        opts.separator <<-END
+
+Examples:
+  pandata john@example.com --liked_tracks
+  pandata my_webname --all
+  pandata my_webname -lLb --json
+
+Options:
+        END
 
         opts.on('--all', 'Get all data') do
           get_all_data = true

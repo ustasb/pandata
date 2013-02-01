@@ -12,4 +12,3 @@ Gem::Specification.new do |s|
   s.files           = Dir["#{gem_path}/lib/**/*.rb"] << "#{gem_path}/bin/pandata"
   s.executables     << 'pandata'
 end
-

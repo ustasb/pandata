@@ -5,22 +5,23 @@ describe Pandata::Scraper do
   describe 'Scraper.get' do
 
     # Stub Downloader's `read_page` instance method
-    def override_network_return path
+    def override_network_return(path)
       Pandata::Downloader.class_eval do
         define_method(:read_page) { |url| File.read(path) }
       end
     end
 
     it 'returns a new Scraper instance if a webname exactly matches the user\'s search' do
-      override_network_return File.join('spec', 'fixtures', 'ajax', 'no_more', 'search_results_for_lols.html')
-      result = Pandata::Scraper.get 'lols'
+      override_network_return(File.join('spec', 'fixtures', 'ajax', 'no_more', 'search_results_for_lols.html'))
+      result = Pandata::Scraper.get('lols')
+
       expect(result.class).to eq Pandata::Scraper
       expect(result.webname).to eq 'lols'
     end
 
     it 'returns an array of similar webnames if no matching webname is found' do
-      override_network_return File.join('spec', 'fixtures', 'ajax', 'show_more', 'search_results_for_skittle.html')
-      result = Pandata::Scraper.get 'skittle'
+      override_network_return(File.join('spec', 'fixtures', 'ajax', 'show_more', 'search_results_for_skittle.html'))
+      result = Pandata::Scraper.get('skittle')
       expect(result).to eq [
         'sixx_miley',
         'sydni00girly',
@@ -36,7 +37,8 @@ describe Pandata::Scraper do
         'sweetsophie10',
         'drewwhorton',
         'skittle_sz_21',
-        'rawr_skittle_lover']
+        'rawr_skittle_lover'
+      ]
     end
   end
 
@@ -75,7 +77,8 @@ describe Pandata::Scraper do
           'Lil Wayne',
           'HYFR (Hell Ya Fucking Right) by Drake',
           'Human by The Killers',
-          'Drake Radio']
+          'Drake Radio'
+        ]
       end
     end
 
@@ -108,7 +111,8 @@ describe Pandata::Scraper do
           'Lil Wayne Radio',
           'Fun. Radio',
           'The Killers Radio',
-          'pandorastats\'s QuickMix']
+          'pandorastats\'s QuickMix'
+        ]
       end
     end
 
@@ -119,13 +123,14 @@ describe Pandata::Scraper do
         end
 
         it 'returns an array of hashes with track name and artist names' do
-          tracks = @scraper.bookmarks :tracks
+          tracks = @scraper.bookmarks(:tracks)
           expect(tracks).to eq [
             { artist: 'A Boy and His Kite',                 track: 'Cover Your Tracks' },
             { artist: 'Royksopp',                           track: 'Royksopp Forever' },
             { artist: 'The National',                       track: 'Lucky You' },
             { artist: 'Radical Face',                       track: 'Welcome Home' },
-            { artist: 'Margot & The Nuclear So And So\'s',  track: 'Broadripple Is Burning (Daytrotter Sessions)' }]
+            { artist: "Margot & The Nuclear So And So's",   track: 'Broadripple Is Burning (Daytrotter Sessions)' }
+          ]
         end
       end
 
@@ -135,13 +140,14 @@ describe Pandata::Scraper do
         end
 
         it 'returns an array of artist names' do
-          artists = @scraper.bookmarks :artists
+          artists = @scraper.bookmarks(:artists)
           expect(artists).to eq [
             'Trampled By Turtles',
             'Adele',
             'DJ Logic',
             'Whitley',
-            'Mumford & Sons']
+            'Mumford & Sons'
+          ]
         end
       end
     end
@@ -153,13 +159,14 @@ describe Pandata::Scraper do
         end
 
         it 'returns an array of hashes with track and artist names' do
-          tracks = @scraper.likes :tracks
+          tracks = @scraper.likes(:tracks)
           expect(tracks).to eq [
             { artist: 'Of Monsters & Men',  track: 'Lakehouse' },
             { artist: 'Phoenix',            track: 'Lasso' },
             { artist: 'Sean Watkins',       track: 'Hello...Goodbye' },
             { artist: 'Paloma Faith',       track: 'My Legs Are Weak' },
-            { artist: 'Ben Howard',         track: 'Esmerelda' }]
+            { artist: 'Ben Howard',         track: 'Esmerelda' }
+          ]
         end
       end
 
@@ -169,13 +176,14 @@ describe Pandata::Scraper do
         end
 
         it 'returns an array of artist names' do
-          artists = @scraper.likes :artists
+          artists = @scraper.likes(:artists)
           expect(artists).to eq [
             'PANTyRAiD',
             'Crystal Castles',
             'Kito & Reija Lee',
             'Portishead',
-            'Avicii']
+            'Avicii'
+          ]
         end
       end
 
@@ -185,13 +193,14 @@ describe Pandata::Scraper do
         end
 
         it 'returns an array of hashes with the artist and album names' do
-          albums = @scraper.likes :albums
+          albums = @scraper.likes(:albums)
           expect(albums).to eq [
             { artist: 'Kito & Reija Lee',       album: 'Sweet Talk EP' },
             { artist: 'Justice',                album: 'Audio, Video, Disco.' },
             { artist: 'The Mountain Goats',     album: 'All Eternals Deck' },
             { artist: 'Explosions In The Sky',  album: 'All Of A Sudden I Miss Everyone' },
-            { artist: 'The Black Keys',         album: 'Attack & Release' }]
+            { artist: 'The Black Keys',         album: 'Attack & Release' }
+          ]
         end
       end
 
@@ -201,13 +210,14 @@ describe Pandata::Scraper do
         end
 
         it 'returns an array of station names' do
-          stations = @scraper.likes :stations
+          stations = @scraper.likes(:stations)
           expect(stations).to eq [
             'Country Christmas Radio',
             'Pachanga Boys Radio',
             'Tycho Radio',
             'Bon Iver Radio',
-            'Beach House Radio']
+            'Beach House Radio'
+          ]
         end
       end
     end
@@ -229,7 +239,8 @@ describe Pandata::Scraper do
           { name: 'Steve Boeckels',   webname: 'steve_boeckels',   href: '/profile/steve_boeckels' },
           { name: 'Steve D',          webname: 'steve_diamond',    href: '/profile/steve_diamond' },
           { name: 'Steve Orona',      webname: 'orona_steve',      href: '/profile/orona_steve' },
-          { name: 'John',             webname: 'john_chretien',    href: '/profile/john_chretien' }]
+          { name: 'John',             webname: 'john_chretien',    href: '/profile/john_chretien' }
+        ]
       end
     end
 
@@ -247,9 +258,9 @@ describe Pandata::Scraper do
           { name: 'sexy bella :)',  webname: 'sexygirl43',     href: '/profile/sexygirl43' },
           { name: 'jhendrix3188',   webname: 'jhendrix3188',   href: '/profile/jhendrix3188' },
           { name: 'Murtada67',      webname: 'murtada67',      href: '/profile/murtada67' },
-          { name: 'lochead',        webname: 'lochead',        href: '/profile/lochead' }]
+          { name: 'lochead',        webname: 'lochead',        href: '/profile/lochead' }
+        ]
       end
     end
   end
 end
-

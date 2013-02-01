@@ -10,7 +10,7 @@ module Pandata
     class << self
       private :new
 
-      def get user_id
+      def get(user_id)
         search_url = URLS[:user_search] % { searchString: user_id }
         html = Downloader.new.read_page(search_url)
         webnames = Parser.new.get_webnames_from_search(html)
@@ -26,14 +26,14 @@ module Pandata
       end
     end
 
-    def initialize webname
+    def initialize(webname)
       @downloader = Downloader.new
       @parser = Parser.new
       @webname = webname
     end
 
     def recent_activity
-      scrape_for :recent_activity, :get_recent_activity
+      scrape_for(:recent_activity, :get_recent_activity)
     end
 
     def playing_station
@@ -41,15 +41,15 @@ module Pandata
     end
 
     def stations
-      scrape_for :stations, :get_stations
+      scrape_for(:stations, :get_stations)
     end
 
     def bookmarks(bookmark_type = :all)
       case bookmark_type
       when :tracks
-        scrape_for :bookmarked_tracks, :get_bookmarked_tracks
+        scrape_for(:bookmarked_tracks, :get_bookmarked_tracks)
       when :artists
-        scrape_for :bookmarked_artists, :get_bookmarked_artists
+        scrape_for(:bookmarked_artists, :get_bookmarked_artists)
       when :all
         { tracks: bookmarks(:tracks),
           artists: bookmarks(:artists) }
@@ -59,13 +59,13 @@ module Pandata
     def likes(like_type = :all)
       case like_type
       when :tracks
-        scrape_for :liked_tracks, :get_liked_tracks
+        scrape_for(:liked_tracks, :get_liked_tracks)
       when :artists
-        scrape_for :liked_artists, :get_liked_artists
+        scrape_for(:liked_artists, :get_liked_artists)
       when :stations
-        scrape_for :liked_stations, :get_liked_stations
+        scrape_for(:liked_stations, :get_liked_stations)
       when :albums
-        scrape_for :liked_albums, :get_liked_albums
+        scrape_for(:liked_albums, :get_liked_albums)
       when :all
         { tracks: likes(:tracks),
           artists: likes(:artists),
@@ -76,23 +76,23 @@ module Pandata
 
     # Can only retrieve profiles that are publicly visible.
     def following
-      scrape_for :following, :get_following
+      scrape_for(:following, :get_following)
     end
 
     def followers
-      scrape_for :followers, :get_followers
+      scrape_for(:followers, :get_followers)
     end
 
     private
 
-    def scrape_for data_type, parser_method
+    def scrape_for(data_type, parser_method)
       results = []
 
-      url = get_url data_type
+      url = get_url(data_type)
       download_all_data(url) do |html, next_data_indices|
         new_data = @parser.public_send(parser_method, html)
 
-        if new_data.kind_of? Array
+        if new_data.kind_of?(Array)
           results.concat(new_data)
         else
           results.push(new_data)
@@ -105,13 +105,13 @@ module Pandata
       results.uniq
     end
 
-    def download_all_data(url, &block)
+    def download_all_data(url)
       next_data_indices = {}
 
       while next_data_indices
         html = @downloader.read_page(url)
         next_data_indices = @parser.get_next_data_indices(html)
-        url = block.call(html, next_data_indices)
+        url = yield(html, next_data_indices)
       end
     end
 
