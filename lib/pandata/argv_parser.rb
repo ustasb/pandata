@@ -3,6 +3,7 @@ require 'optparse'
 module Pandata
   class ArgvParser
     class << self
+      # Disable instances
       private :new
     end
 
@@ -10,47 +11,51 @@ module Pandata
       options = { data_to_get: [] }
       get_all_data = false
 
-      OptionParser.new do |opts|
-        opts.banner = 'Usage: pandata [options]'
-
-        opts.on('--json', 'Return the results as JSON') do
-          options[:return_as_json] = true
-        end
+      options[:opts] = OptionParser.new do |opts|
+        opts.banner = 'Pandata: A tool for downloading Pandora data (likes, bookmarks, stations, etc.)'
+        opts.define_head 'Usage: pandata <email|webname> [options]'
+        opts.separator ''
+        opts.separator 'Examples:'
+        opts.separator '  pandata john@example.com --liked_tracks'
+        opts.separator '  pandata my_webname --all'
+        opts.separator '  pandata my_webname -lLb --json'
+        opts.separator ''
+        opts.separator 'Options:'
 
         opts.on('--all', 'Get all data') do
           get_all_data = true
-        end
-
-        opts.on('-u', '--user ID', 'Pandora email or webname') do |id|
-          options[:user_id] = id
         end
 
         opts.on('-a', '--recent_activity', 'Get recent activity') do
           options[:data_to_get] << :recent_activity
         end
 
-        opts.on('-S', '--playing_station', 'Get currently playing station') do
-          options[:data_to_get] << :playing_station
-        end
-
-        opts.on('-s', '--stations', 'Get all stations') do
-          options[:data_to_get] << :stations
+        opts.on('-B', '--bookmarked_artists', 'Get all bookmarked artists') do
+          options[:data_to_get] << :bookmarked_artists
         end
 
         opts.on('-b', '--bookmarked_tracks', 'Get all bookmarked tracks') do
           options[:data_to_get] << :bookmarked_tracks
         end
 
-        opts.on('-B', '--bookmarked_artists', 'Get all bookmarked artists') do
-          options[:data_to_get] << :bookmarked_artists
+        opts.on('-F', '--followers', "Get all ID's followers") do
+          options[:data_to_get] << :followers
         end
 
-        opts.on('-l', '--liked_tracks', 'Get all liked tracks') do
-          options[:data_to_get] << :liked_tracks
+        opts.on('-f', '--following', 'Get all users being followed by ID') do
+          options[:data_to_get] << :following
+        end
+
+        opts.on('-j', '--json', 'Return the results as JSON') do
+          options[:return_as_json] = true
         end
 
         opts.on('-L', '--liked_artists', 'Get all liked artists') do
           options[:data_to_get] << :liked_artists
+        end
+
+        opts.on('-l', '--liked_tracks', 'Get all liked tracks') do
+          options[:data_to_get] << :liked_tracks
         end
 
         opts.on('-m', '--liked_albums', 'Get all liked albums') do
@@ -61,14 +66,17 @@ module Pandata
           options[:data_to_get] << :liked_stations
         end
 
-        opts.on('-F', '--followers', 'Get all ID\'s followers') do
-          options[:data_to_get] << :followers
+        opts.on('-S', '--playing_station', 'Get currently playing station') do
+          options[:data_to_get] << :playing_station
         end
 
-        opts.on('-f', '--following', 'Get all users being followed by ID') do
-          options[:data_to_get] << :following
+        opts.on('-s', '--stations', 'Get all stations') do
+          options[:data_to_get] << :stations
         end
-      end.parse(argv)
+      end
+
+      options[:opts].parse(argv)
+      options[:user_id] = argv.shift
 
       if get_all_data
         options[:data_to_get] = [

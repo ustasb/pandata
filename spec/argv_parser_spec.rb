@@ -8,9 +8,9 @@ describe Pandata::ArgvParser do
   describe '.parse' do
     it 'returns an options hash with no duplicates' do
       mock_argv = [
+        'yoda',
         '--json',
         '--all',
-        '-u', 'yoda',
         '-a',
         '-S',
         '-s',

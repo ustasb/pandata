@@ -6,16 +6,17 @@ require_relative '../lib/pandata/data_formatter'
 
 options = Pandata::ArgvParser.parse(ARGV)
 
-unless options[:user_id]
-  puts 'You must supply an email or webname to -i. See -h for help.'
+if ARGV.empty?
+  puts options[:opts]
   exit
 end
 
-# If scraper is an array, a Pandora user could not be found with certainty.
-# In this case, scraper will contain webnames similar to options[:user_id].
 scraper = Pandata::Scraper.get(options[:user_id])
 formatter = Pandata::DataFormatter.new
-if scraper.kind_of? Array
+
+# If scraper is an array, a Pandora user could not be found with certainty.
+# In this case, scraper will contain webnames similar to options[:user_id].
+if scraper.kind_of?(Array)
   puts "No exact match for '#{options[:user_id]}'."
 
   unless scraper.empty?
@@ -30,7 +31,7 @@ scraper_data = {}
 options[:data_to_get].each do |data_type|
   if /(bookmark|like)e?d_(.*)/ =~ data_type
     method = ($1 << 's').to_sym  # :likes or :bookmarks
-    arg = $2.to_sym  # :tracks, :artists, :stations, :albums
+    arg = $2.to_sym  # :tracks, :artists, :stations or :albums
     scraper_data[data_type] = scraper.public_send(method, arg)
   else
     scraper_data[data_type] = scraper.public_send(data_type)
@@ -48,18 +49,22 @@ scraper_data.each do |key, value|
   # e.g. :liked_tracks -> 'Liked Tracks:'
   title = key.to_s.split('_').map(&:capitalize).join(' ') << ':'
 
-  output = case key
-           when /playing_station|recent_activity/
-             formatter.list(value)
-           when :liked_albums
-             formatter.albums(value)
-           when /liked_tracks|bookmarked_tracks/
-             formatter.tracks(value)
-           when /liked_artists|bookmarked_artists|stations|liked_stations/
-             formatter.sort_list(value)
-           when /following|followers/
-             formatter.followx(value)
-           end
+  if value.empty?
+    output = '  ** No Data **'
+  else
+    output = case key
+             when /playing_station|recent_activity/
+               formatter.list(value)
+             when /liked_tracks|bookmarked_tracks/
+               formatter.tracks(value)
+             when /liked_artists|bookmarked_artists|stations|liked_stations/
+               formatter.sort_list(value)
+             when :liked_albums
+               formatter.albums(value)
+             when /following|followers/
+               formatter.followx(value)
+             end
+  end
 
   puts "#{ title }\n#{ output }"
 end

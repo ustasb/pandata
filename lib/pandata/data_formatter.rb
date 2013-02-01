@@ -35,8 +35,8 @@ module Pandata
 
     def custom_sort(enum)
       # Ignore the initial 'The' when sorting strings.
-      # Useful for sorting artist/ song titles.
-      sorted_array = enum.sort_by { |string, _| string.sub(/^the\s*/i, '') }
+      # Useful for sorting artist names or song titles.
+      sorted_array = enum.sort_by { |key, _| key.sub(/^the\s*/i, '') }
 
       if enum.kind_of? Hash
         sorted_hash = {}
