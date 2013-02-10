@@ -30,9 +30,9 @@ end
 scraper_data = {}
 options[:data_to_get].each do |data_type|
   if /(bookmark|like)e?d_(.*)/ =~ data_type
-    method = ($1 << 's').to_sym  # :likes or :bookmarks
-    arg = $2.to_sym  # :tracks, :artists, :stations or :albums
-    scraper_data[data_type] = scraper.public_send(method, arg)
+    method = $1 << 's'  # likes or bookmarks
+    argument = $2.to_sym  # :tracks, :artists, :stations or :albums
+    scraper_data[data_type] = scraper.public_send(method, argument)
   else
     scraper_data[data_type] = scraper.public_send(data_type)
   end
