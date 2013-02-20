@@ -22,9 +22,22 @@ This first argument can be either an email associated with a Pandora account or
 a Pandora webname. The Pandora webname is what Pandora uses to identify you and
 can be found in Pandora's URL: pandora.com/profile/my_web_name
 
-Usage Examples:
+Examples:
+    pandata john@example.com --liked_tracks
+    pandata my_webname --all
+    pandata my_webname -lLb --json
 
-    pandata tconrad --liked_tracks
-
-    ## Output as JSON
-    pandata tconrad --liked_tracks --json
+Options:
+        --all                        Get all data
+    -a, --recent_activity            Get recent activity
+    -B, --bookmarked_artists         Get all bookmarked artists
+    -b, --bookmarked_tracks          Get all bookmarked tracks
+    -F, --followers                  Get all ID's followers
+    -f, --following                  Get all users being followed by ID
+    -j, --json                       Return the results as JSON
+    -L, --liked_artists              Get all liked artists
+    -l, --liked_tracks               Get all liked tracks
+    -m, --liked_albums               Get all liked albums
+    -n, --liked_stations             Get all liked stations
+    -S, --playing_station            Get currently playing station
+    -s, --stations                   Get all stations
