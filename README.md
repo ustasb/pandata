@@ -30,11 +30,11 @@ Examples:
 
     pandata john@example.com --liked_tracks
 
-    # Download EVERYTHING!
-    pandata my_webname --all
-
     # Liked tracks, artists and bookmarked tracks + output as JSON
     pandata my_webname -lLb --json
+    
+    # Download EVERYTHING!
+    pandata my_webname --all
 
 Options:
 
