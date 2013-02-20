@@ -22,10 +22,18 @@ The first argument can be either an email associated with a Pandora account or
 a Pandora webname. A webname is what Pandora uses to identify a user and
 can be found in Pandora's URL: pandora.com/profile/<my_web_name>
 
+Usage:
+
+    pandata <email|webname> [options]
+
 Examples:
 
     pandata john@example.com --liked_tracks
+
+    # Download EVERYTHING!
     pandata my_webname --all
+
+    # Liked tracks, artists and bookmarked tracks + output as JSON
     pandata my_webname -lLb --json
 
 Options:

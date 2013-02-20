@@ -2,7 +2,7 @@ gem_path = File.dirname(__FILE__)
 
 Gem::Specification.new do |s|
   s.name            = 'pandata'
-  s.version         = '1.0.0'
+  s.version         = '0.1.0'
   s.date            = '2013-01-27'
   s.summary         = 'A Pandora web scraper'
   s.description     = 'A tool for downloading Pandora data (likes, bookmarks, stations, etc.)'
