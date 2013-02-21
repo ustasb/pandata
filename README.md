@@ -18,15 +18,15 @@ Pandata is a Ruby gem. To install, execute:
 
 This will install a command-line tool called 'pandata'.
 
-The first argument can be either an email associated with a Pandora account, or
-a Pandora webname. A webname is what Pandora uses to identify a user and
-can be found in Pandora's URL: pandora.com/profile/\<my\_web\_name\>
-
-Usage:
+**Syntax:**
 
     pandata <email|webname> [options]
 
-Examples:
+The first argument can be either an email associated with a Pandora account, or
+a Pandora webname. A webname is what Pandora uses to identify a user and
+can be found in Pandora's URL: pandora.com/profile/\<my_webname\>
+
+**Examples:**
 
     pandata john@example.com --liked_tracks
 
@@ -36,7 +36,7 @@ Examples:
     # Download EVERYTHING!
     pandata my_webname --all
 
-Options:
+**Options:**
 
         --all                        Get all data
     -a, --recent_activity            Get recent activity
