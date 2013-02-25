@@ -1,18 +1,31 @@
-require 'net/http'
-require 'uri'
+require 'json'
+require 'open-uri'
 
 module Pandata
   class Downloader
-    COOKIES = ['at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D']
+    CONFIG_URL = 'https://gist.github.com/ustasb/596f1ee96d03463fde77/raw/pandata_config.json'
+
+    class << self
+      attr_accessor :cookie
+    end
+
+    def initialize
+      # If we already have a cookie, don't get another. Finish it first.
+      unless Downloader.cookie
+        Downloader.cookie = get_cookie
+      end
+    end
 
     def read_page(url)
-      uri = URI.parse URI.escape(url)
+      escaped_url = URI.escape(url)
+      open(escaped_url, 'Cookie' => Downloader.cookie).read
+    end
 
-      http = Net::HTTP.new(uri.host, uri.port)
-      request = Net::HTTP::Get.new(uri.request_uri)
-      request['Cookie'] = COOKIES.sample  # Get a random cookie
+    private
 
-      http.request(request).body
+    def get_cookie
+      config = JSON.parse open(CONFIG_URL).read
+      config['cookie']
     end
   end
 end
