@@ -51,9 +51,14 @@ module Pandata
     end
 
     def get_playing_station(xml)
+      station = ''
+
       xml_each_item(xml) do |title|
-        return title  # Return the name of the first item.
+        station = title  # First title is the station name.
+        break
       end
+
+      station
     end
 
     def get_bookmarked_tracks(xml)

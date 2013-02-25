@@ -36,6 +36,7 @@ module Pandata
     def custom_sort(enumerable)
       # Ignore the initial 'The' when sorting strings.
       # Useful for sorting artist names or song titles.
+      # Also case insensitive to prevent lowercase names from being displayed last.
       sorted_array = enumerable.sort_by { |key, _| key.sub(/^the\s*/i, '').downcase }
 
       if enumerable.kind_of?(Hash)

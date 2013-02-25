@@ -1,5 +1,5 @@
 module Pandata
-  MAX_RESULTS = 100000
+  MAX_RESULTS = 100000  # Get everything...
 
   URLS = {
     user_search:          'http://www.pandora.com/content/connect?searchString=%{searchString}',
