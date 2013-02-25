@@ -77,11 +77,11 @@ describe Pandata::DataFormatter do
     end
   end
 
-  describe '#custom_sort', "ignores the initial 'The' word when sorting strings" do
+  describe '#custom_sort', "case insensitive + ignores the initial 'The' word when sorting strings" do
     it 'sorts arrays' do
-      words = ['Skittle', 'Apple', 'The Cat', 'the Dog', 'The Banana']
+      words = ['Skittle', 'apple', 'The Cat', 'the Dog', 'The banana']
       sorted_words = @parser.send(:custom_sort, words)
-      expect(sorted_words).to eq ['Apple', 'The Banana', 'The Cat', 'the Dog', 'Skittle']
+      expect(sorted_words).to eq ['apple', 'The banana', 'The Cat', 'the Dog', 'Skittle']
     end
 
     it 'sorts hashes by key' do
