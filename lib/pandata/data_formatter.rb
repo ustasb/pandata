@@ -39,7 +39,9 @@ module Pandata
       # Also case insensitive to prevent lowercase names from being displayed last.
       sorted_array = enumerable.sort_by { |key, _| key.sub(/^the\s*/i, '').downcase }
 
+      # sort_by() returns an array when called on hashes.
       if enumerable.kind_of?(Hash)
+        # Rebuild the hash.
         sorted_hash = {}
         sorted_array.each { |item| sorted_hash[item[0]] = item[1] }
         sorted_hash
@@ -61,7 +63,7 @@ module Pandata
       str = ''
       artists_items.each do |artist_name, items|
         str << "  - #{artist_name}\n"
-        items.sort.each do |item|
+        custom_sort(items).each do |item|
           str << "      - #{item}\n"
         end
       end

@@ -3,11 +3,15 @@ require_relative '../lib/pandata/data_formatter'
 ARTISTS = %w{ Mogwai Eminem Portishead Eminem Avicii Ladytron Ted }
 TRACKS = [
   { track: 'Love Story',    artist: 'Foobar' },
-  { track: 'Love Story 2',  artist: 'Foobar' },
+  { track: 'love story 2',  artist: 'Foobar' },
   { track: 'Without You',   artist: 'Foobar' },
+  { track: 'The Love',      artist: 'Foobar' },
   { track: 'Yolo',          artist: 'Solo' },
   { track: 'Kiss It',       artist: 'Baz' },
-  { track: 'Consent',       artist: 'Baz' },
+  { track: 'The Awe',       artist: 'Baz' },
+  { track: 'The Old Life',  artist: 'Baz' },
+  { track: 'consent',       artist: 'Baz' },
+  { track: 'Zebra Love',    artist: 'Baz' },
   { track: 'Him and Her',   artist: 'Qux' },
   { track: 'Bromance',      artist: 'Qux' }
 ]
@@ -92,15 +96,19 @@ describe Pandata::DataFormatter do
   end
 
   describe '#artists_items' do
-    it 'sorts by artist name, indenting items under respective artists' do
+    it "ignores 'The', is case insensitive and sorts by artist name, indenting items under owning artist" do
       str = @parser.send(:artists_items, TRACKS, :track)
       expect(str).to eq <<-END
   - Baz
-      - Consent
+      - The Awe
+      - consent
       - Kiss It
+      - The Old Life
+      - Zebra Love
   - Foobar
+      - The Love
       - Love Story
-      - Love Story 2
+      - love story 2
       - Without You
   - Qux
       - Bromance
