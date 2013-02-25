@@ -1,4 +1,4 @@
-require_relative 'urls'
+require_relative 'data_urls'
 require_relative 'parser'
 require_relative 'downloader'
 
