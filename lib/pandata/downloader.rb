@@ -10,21 +10,32 @@ module Pandata
     end
 
     def initialize
-      # If we already have a cookie, don't get another. Finish it first.
+      # If we already have a cookie, don't get another.
       unless Downloader.cookie
         Downloader.cookie = get_cookie
       end
     end
 
     def read_page(url)
-      escaped_url = URI.escape(url)
-      open(escaped_url, 'Cookie' => Downloader.cookie).read
+      safe_open(url, Downloader.cookie).read
     end
 
     private
 
+    def safe_open(url, cookie = '')
+      escaped_url = URI.escape(url)
+
+      begin
+        open(escaped_url, 'Cookie' => cookie, :read_timeout => 5)
+      rescue OpenURI::HTTPError => error
+        puts "The network request for:\n  #{url}\nreturned an error:\n  #{error.message}"
+        puts 'Please try again later or update Pandata. Sorry about that!'
+        exit
+      end
+    end
+
     def get_cookie
-      config = JSON.parse open(CONFIG_URL).read
+      config = JSON.parse safe_open(CONFIG_URL).read
       config['cookie']
     end
   end
