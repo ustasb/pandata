@@ -22,30 +22,41 @@ This also installs a command-line tool called 'pandata'.
 
 ## Usage
 
-Pandata can be used as a library or command-line too
+Pandata can be used as a Ruby library or command-line tool.
 
-But first, what's a **webname**? It's what Pandora uses internally to identify a user and remains constant even if the user ties a new email to their Pandora account.
-To find yours, go to 'My Profile' and you'll see your webname in the URL:
+To identify a user, you must supply either an email address or a webname.
 
-pandora.com/profile/**webname**
+A **webname** is what Pandora uses to identify a user and it remains constant even if the user ties a new email to their Pandora account.
+To find your webname, go to 'My Profile' and you'll see your webname in the URL. For example:
+
+pandora.com/profile/\<my_webname\>
 
 ### As a Library
 
+First, create a new Pandata scraper for some user:
 
+    # Scraper.get takes either an email or webname.
+    scraper = Pandata::Scraper.get('john@example.com')
+
+Next, start scraping!
+
+    # Get only liked tracks
+    likes = scraper.likes :tracks
+    
+    # Get all bookmarks (tracks and artists)
+    bookmarks = scraper.bookmarks :all
+    
+    # Get all stations
+    stations = scraper.stations
+    
+    # Get all followers
+    followers = scraper.followers
+
+Please see the documentation for more information.
 
 ### As a Command-Line Tool
 
-
-
-
-
-**Syntax:**
-
     pandata <email|webname> [options]
-
-The first argument can be either an email associated with a Pandora account, or
-a Pandora webname. A webname is what Pandora uses to identify a user and
-can be found in Pandora's URL: pandora.com/profile/\<my_webname\>
 
 **Examples:**
 
