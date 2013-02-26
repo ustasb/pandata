@@ -10,7 +10,7 @@ Pandata is a Ruby library for downloading a user's Pandora data. This data inclu
 - Followers
 - Following
 
-Where possible, Pandora [feeds][1] are used (indicated by the * above).
+Where possible, Pandora [feeds][1] are used (indicated by an * above).
 
 ## Installing
 
@@ -26,7 +26,7 @@ Pandata can be used as a Ruby library or command-line tool.
 
 To identify a user, you must supply either an email address or a webname.
 
-A **webname** is what Pandora uses to identify a user and it remains constant even if the user ties a new email to their Pandora account.
+A **webname** is what Pandora uses to identify a user and it remains constant even if the user ties a new email address to their Pandora account.
 To find your webname, go to 'My Profile' and you'll see your webname in the URL. For example:
 
 pandora.com/profile/\<my_webname\>
