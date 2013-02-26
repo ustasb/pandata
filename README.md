@@ -1,22 +1,43 @@
-#Pandata (WIP)
+# Pandata
 
-A tool for downloading Pandora data. This includes:
+Pandata is a Ruby library for downloading a user's Pandora data. This data includes:
 
-- Playing Station
-- Recent Activity
-- Stations
-- Bookmarks (tracks, artists)
+- Playing Station *
+- Recent Activity *
+- Stations *
+- Bookmarks (tracks, artists) *
 - Likes (tracks, artists, albums, stations)
 - Followers
 - Following
 
-## Usage
+Where possible, Pandora [feeds][1] are used (indicated by the * above).
+
+## Installing
 
 Pandata is a Ruby gem. To install, execute:
 
     gem install pandata
 
-This will install a command-line tool called 'pandata'.
+This also installs a command-line tool called 'pandata'.
+
+## Usage
+
+Pandata can be used as a library or command-line too
+
+But first, what's a **webname**? It's what Pandora uses internally to identify a user and remains constant even if the user ties a new email to their Pandora account.
+To find yours, go to 'My Profile' and you'll see your webname in the URL:
+
+pandora.com/profile/**webname**
+
+### As a Library
+
+
+
+### As a Command-Line Tool
+
+
+
+
 
 **Syntax:**
 
@@ -51,3 +72,6 @@ can be found in Pandora's URL: pandora.com/profile/\<my_webname\>
     -n, --liked_stations             Get all liked stations
     -S, --playing_station            Get currently playing station
     -s, --stations                   Get all stations
+
+
+[1]: http://www.pandora.com/feeds
