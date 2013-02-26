@@ -29,8 +29,8 @@ module Pandata
         open(escaped_url, 'Cookie' => cookie, :read_timeout => 5)
       rescue OpenURI::HTTPError => error
         puts "The network request for:\n  #{url}\nreturned an error:\n  #{error.message}"
-        puts 'Please try again later or update Pandata. Sorry about that!'
-        exit
+        puts "Please try again later or update Pandata. Sorry about that!\n\nFull error:"
+        raise error
       end
     end
 
