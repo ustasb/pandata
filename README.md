@@ -41,10 +41,10 @@ First, create a new Pandata scraper for some user:
 Next, start scraping!
 
     # Get only liked tracks
-    likes = scraper.likes :tracks
+    likes = scraper.likes(:tracks)
     
     # Get all bookmarks (tracks and artists)
-    bookmarks = scraper.bookmarks :all
+    bookmarks = scraper.bookmarks
     
     # Get all stations
     stations = scraper.stations
