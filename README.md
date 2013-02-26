@@ -33,7 +33,7 @@ pandora.com/profile/\<my_webname\>
 
 ### As a Library
 
-First, create a new Pandata scraper for some user:
+First, create a new Pandata scraper for a user:
 
     # Scraper.get takes either an email or webname.
     scraper = Pandata::Scraper.get('john@example.com')
