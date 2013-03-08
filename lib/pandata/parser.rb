@@ -166,7 +166,7 @@ module Pandata
       titles
     end
 
-    # Loops over each .follow_section container and return a hash with
+    # Loops over each .follow_section container and returns a hash with
     # :name, :webname and :href keys.
     def get_followx_users(html)
       users = []
