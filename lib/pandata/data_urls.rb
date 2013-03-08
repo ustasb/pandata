@@ -1,7 +1,9 @@
 module Pandata
+  # Number of results to get from a feeds.pandora.com URL.
   MAX_RESULTS = 100000  # Get everything...
 
-  URLS = {
+  # URLs to Pandora's data!
+  DATA_FEED_URLS = {
     user_search:          'http://www.pandora.com/content/connect?searchString=%{searchString}',
     recent_activity:      'http://feeds.pandora.com/feeds/people/%{webname}/recentactivity.xml',
     playing_station:      'http://feeds.pandora.com/feeds/people/%{webname}/nowplaying.xml',

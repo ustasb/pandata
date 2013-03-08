@@ -2,13 +2,17 @@ require 'json'
 require 'open-uri'
 
 module Pandata
+
+  # Retrieves data from Pandora and handles errors.
   class Downloader
+    # A GitHub Gist that contains an updated cookie allowing access to 'login-only' visible data.
     CONFIG_URL = 'https://gist.github.com/ustasb/596f1ee96d03463fde77/raw/pandata_config.json'
 
     class << self
       attr_accessor :cookie
     end
 
+    # Gets a cookie allowing access to Pandora's data.
     def initialize
       # If we already have a cookie, don't get another.
       unless Downloader.cookie
@@ -16,12 +20,14 @@ module Pandata
       end
     end
 
+    # Downloads a page and returns its content as a string.
     def read_page(url)
       safe_open(url, Downloader.cookie).read
     end
 
     private
 
+    # Downloads a page and handles errors.
     def safe_open(url, cookie = '')
       escaped_url = URI.escape(url)
 

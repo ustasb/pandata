@@ -1,7 +1,20 @@
 require 'set'
 
 module Pandata
+
+  # Sorts and formats Pandata::Scraper data as a string for printing.
   class DataFormatter
+
+    # Takes an array or string argument.
+    # Returns a string with each item on its own line.
+    #--
+    #
+    # Example output:
+    # - item1
+    # - item2
+    # - item3
+    #
+    #++
     def list(data)
       data = [data] unless data.kind_of?(Array)
       str = ''
@@ -9,18 +22,22 @@ module Pandata
       str
     end
 
+    # Same as DataFormatter#list but sorts alphabetically ignoring 'the'.
     def sort_list(data)
       list custom_sort(data)
     end
 
+    # Takes an array of hashes with :track and :artist keys.
     def tracks(tracks)
       artists_items(tracks, :track)
     end
 
+    # Takes an array of hashes with :album and :artist keys.
     def albums(albums)
       artists_items(albums, :album)
     end
 
+    # Takes an array of hashes with :name, :webname and :href keys.
     def followx(data)
       str = ''
       data.sort_by { |item| item[:webname].downcase }.each do |hash|
@@ -33,10 +50,10 @@ module Pandata
 
     private
 
+    # Takes an array or hash.
+    # Sorts alphabetically ignoring the initial 'The' when sorting strings.
+    # Also case insensitive to prevent lowercase names from being displayed last.
     def custom_sort(enumerable)
-      # Ignore the initial 'The' when sorting strings.
-      # Useful for sorting artist names or song titles.
-      # Also case insensitive to prevent lowercase names from being displayed last.
       sorted_array = enumerable.sort_by { |key, _| key.sub(/^the\s*/i, '').downcase }
 
       # sort_by() returns an array when called on hashes.
@@ -50,6 +67,21 @@ module Pandata
       end
     end
 
+    # Takes an array of hashes with :artist and another key belonging to an
+    # artist (e.g.: :track, or :album).
+    # Returns a string with each artist name on a line with the artist's items
+    # listed + indented below. Sorts the output, too.
+    #--
+    #
+    # Example output:
+    # - Artist1:
+    #   - item2
+    #   - item3
+    # - Artist2:
+    #   - item1
+    #   - item1
+    #
+    #++
     def artists_items(data, item_name)
       artists_items = {}
 

@@ -1,12 +1,22 @@
 require 'optparse'
 
 module Pandata
+
+  # Parses command-line input.
   class ArgvParser
     class << self
       # Prevent instances
       private :new
     end
 
+    # Accepts an ARGV argument.
+    #
+    # Returns a hash with:
+    # - :opts (string: help information)
+    # - :user_id (string)
+    # - :data_to_get (array)
+    # - :get_all_data (boolean)
+    # - :return_as_json (boolean)
     def self.parse(argv)
       options = { data_to_get: [] }
       get_all_data = false
