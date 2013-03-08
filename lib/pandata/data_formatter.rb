@@ -21,7 +21,7 @@ module Pandata
       str
     end
 
-    # Same as #list but sorts alphabetically ignoring 'the'.
+    # Identical to #list but sorts alphabetically ignoring 'the'.
     def sort_list(data)
       list custom_sort(data)
     end

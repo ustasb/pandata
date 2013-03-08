@@ -58,7 +58,7 @@ module Pandata
     # Bookmark types:
     # - :artists - Returns an array of artist names.
     # - :tracks - Returns an array of hashes with :artist and :track keys.
-    # - :all - Returns a hash with all bookmark data.
+    # - :all - Returns a hash with all bookmarked data.
     def bookmarks(bookmark_type = :all)
       case bookmark_type
       when :tracks
@@ -100,14 +100,14 @@ module Pandata
     # Returns the users being followed by the user.
     #
     # Returns an array of hashes with keys:
-    # - :name - User's profile name.
+    # - :name - Profile name
     # - :webname - Unique Pandora ID
     # - :href - URL to online Pandora profile.
     def following
       scrape_for(:following, :get_following)
     end
 
-    # Return's the user's followers in a format identical to #following.
+    # Returns the user's followers in a format identical to #following.
     def followers
       scrape_for(:followers, :get_followers)
     end

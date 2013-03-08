@@ -7,7 +7,7 @@ module Pandata
     # Prevent instances
     private_class_method :new
 
-    # Takes an ARGV argument.
+    # Takes an ARGV (array) argument.
     #
     # Returns a hash with:
     # - :opts (string: help information)
