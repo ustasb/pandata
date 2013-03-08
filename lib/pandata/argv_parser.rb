@@ -4,10 +4,8 @@ module Pandata
 
   # Parses command-line input.
   class ArgvParser
-    class << self
-      # Prevent instances
-      private :new
-    end
+    # Prevent instances
+    private_class_method :new
 
     # Accepts an ARGV argument.
     #

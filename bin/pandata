@@ -47,7 +47,7 @@ end
 
 scraper_data.each do |key, value|
   # Capitalize each word in the key symbol.
-  # e.g. :liked_tracks -> 'Liked Tracks:'
+  # e.g. :liked_tracks becomes 'Liked Tracks:'
   title = key.to_s.split('_').map(&:capitalize).join(' ') << ':'
 
   if value.empty?

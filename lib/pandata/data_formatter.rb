@@ -5,8 +5,7 @@ module Pandata
   # Sorts and formats Pandata::Scraper data as a string for printing.
   class DataFormatter
 
-    # Takes an array or string argument.
-    # Returns a string with each item on its own line.
+    # Takes an array or string and returns a string with each item on its own line.
     #--
     #
     # Example output:
@@ -22,17 +21,17 @@ module Pandata
       str
     end
 
-    # Same as DataFormatter#list but sorts alphabetically ignoring 'the'.
+    # Same as #list but sorts alphabetically ignoring 'the'.
     def sort_list(data)
       list custom_sort(data)
     end
 
-    # Takes an array of hashes with :track and :artist keys.
+    # Takes an array of hashes with :artist and :track keys.
     def tracks(tracks)
       artists_items(tracks, :track)
     end
 
-    # Takes an array of hashes with :album and :artist keys.
+    # Takes an array of hashes with :artist and :album keys.
     def albums(albums)
       artists_items(albums, :album)
     end
@@ -52,7 +51,7 @@ module Pandata
 
     # Takes an array or hash.
     # Sorts alphabetically ignoring the initial 'The' when sorting strings.
-    # Also case insensitive to prevent lowercase names from being displayed last.
+    # Also case-insensitive to prevent lowercase names from being displayed last.
     def custom_sort(enumerable)
       sorted_array = enumerable.sort_by { |key, _| key.sub(/^the\s*/i, '').downcase }
 
@@ -68,7 +67,7 @@ module Pandata
     end
 
     # Takes an array of hashes with :artist and another key belonging to an
-    # artist (e.g.: :track, or :album).
+    # artist (e.g. :track or :album).
     # Returns a string with each artist name on a line with the artist's items
     # listed + indented below. Sorts the output, too.
     #--
@@ -101,5 +100,6 @@ module Pandata
       end
       str
     end
+
   end
 end
