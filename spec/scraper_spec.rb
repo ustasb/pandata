@@ -11,7 +11,7 @@ describe Pandata::Scraper do
       end
     end
 
-    it 'returns a new Scraper instance if a webname exactly matches the user\'s search' do
+    it "returns a new Scraper instance if a webname exactly matches the user's search" do
       override_network_return(File.join('spec', 'fixtures', 'ajax', 'no_more', 'search_results_for_lols.html'))
       result = Pandata::Scraper.get('lols')
 
@@ -52,7 +52,7 @@ describe Pandata::Scraper do
       @scraper = Pandata::Scraper.send(:new, 'pandorastats')
 
       Pandata::Downloader.class_eval do
-        # Read a file instead of make a network request
+        # Read a file instead of making a network request.
         define_method(:read_page) { |path| File.read(path) }
       end
     end
@@ -87,7 +87,7 @@ describe Pandata::Scraper do
         stub_get_url('spec', 'fixtures', 'feeds', 'station_now_playing.xml')
       end
 
-      it 'returns the name of the current station playing' do
+      it 'returns the name of the currently playing station' do
         station = @scraper.playing_station
         expect(station).to eq 'Drake Radio'
       end
@@ -122,7 +122,7 @@ describe Pandata::Scraper do
           stub_get_url('spec', 'fixtures', 'feeds', 'bookmarked_tracks.xml')
         end
 
-        it 'returns an array of hashes with track name and artist names' do
+        it 'returns an array of hashes with track and artist names' do
           tracks = @scraper.bookmarks(:tracks)
           expect(tracks).to eq [
             { artist: 'A Boy and His Kite',                 track: 'Cover Your Tracks' },
@@ -227,7 +227,7 @@ describe Pandata::Scraper do
         stub_get_url('spec', 'fixtures', 'ajax', 'no_more', 'following.html')
       end
 
-      it 'returns an array of people being following + metadata' do
+      it 'returns an array of people being followed + metadata' do
         following = @scraper.following
         expect(following).to eq [
           { name: 'caleb',            webname: 'wakcamaro',        href: '/profile/wakcamaro' },

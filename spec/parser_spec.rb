@@ -145,7 +145,7 @@ describe Pandata::Parser do
   describe '#get_playing_station' do
     let(:xml) { read_path('spec', 'fixtures', 'feeds', 'station_now_playing.xml') }
 
-    it 'returns the name of the current station now playing' do
+    it 'returns the name of the currently playing station' do
       station = @parser.get_playing_station(xml)
       expect(station).to eq 'Drake Radio'
     end
@@ -236,7 +236,7 @@ describe Pandata::Parser do
   describe '#get_following' do
     let(:html) { read_path('spec', 'fixtures', 'ajax', 'no_more', 'following.html') }
 
-    it 'returns an array of people being following + metadata' do
+    it 'returns an array of people being followed + metadata' do
       following = @parser.get_following(html)
       expect(following).to eq [
         { name: 'caleb',            webname: 'wakcamaro',        href: '/profile/wakcamaro' },

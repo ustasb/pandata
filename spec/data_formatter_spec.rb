@@ -29,7 +29,7 @@ describe Pandata::DataFormatter do
   end
 
   describe '#list' do
-    it 'formats an array as a multiline string' do
+    it 'formats an array as a multi-line string' do
       str = @parser.list(ARTISTS)
       expect(str).to eq <<-END
   - Mogwai
@@ -44,7 +44,7 @@ describe Pandata::DataFormatter do
   end
 
   describe '#sort_list' do
-    it 'sorts and formats like #list does' do
+    it 'sorts and formats like #list' do
       str = @parser.sort_list(ARTISTS)
       expect(str).to eq <<-END
   - Avicii
@@ -59,7 +59,7 @@ describe Pandata::DataFormatter do
   end
 
   describe '#followx' do
-    it 'lists the user\'s stats and sorts by webname' do
+    it "lists the user's stats and sorts by webname" do
       str = @parser.followx(FOLLOWERS)
       expect(str).to eq <<-END
   - name: hendrix
@@ -96,7 +96,7 @@ describe Pandata::DataFormatter do
   end
 
   describe '#artists_items' do
-    it "ignores 'The', is case insensitive and sorts by artist name, indenting items under owning artist" do
+    it "ignores 'The', is case-insensitive and sorts by artist name, indenting items under owning artist" do
       str = @parser.send(:artists_items, TRACKS, :track)
       expect(str).to eq <<-END
   - Baz
