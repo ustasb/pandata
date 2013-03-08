@@ -114,7 +114,7 @@ module Pandata
       get_infobox_titles(html)
     end
 
-    # Returns an array of hashes with :album and :artist keys.
+    # Returns an array of hashes with :artist and :album keys.
     def get_liked_albums(html)
       albums = []
 
@@ -125,12 +125,12 @@ module Pandata
       albums
     end
 
-    # Returns an array of hashes with :name and :webname and :href keys.
+    # Returns an array of hashes with :name, :webname and :href keys.
     def get_following(html)
       get_followx_users(html)
     end
 
-    # Returns an array of hashes with :name and :webname and :href keys.
+    # Returns an array of hashes with :name, :webname and :href keys.
     def get_followers(html)
       get_followx_users(html)
     end
@@ -166,7 +166,7 @@ module Pandata
       titles
     end
 
-    # Loops over each .follow_section container and return as hash with
+    # Loops over each .follow_section container and return a hash with
     # :name, :webname and :href keys.
     def get_followx_users(html)
       users = []
@@ -175,7 +175,7 @@ module Pandata
         listener_name = section.css('.listener_name').first
         webname = listener_name['webname']
 
-        # Remove any 'spans with a space' that sometimes appear with special characters
+        # Remove any 'spans with a space' that sometimes appear with special characters.
         listener_name.css('span').each(&:remove)
         name = listener_name.text.strip
 

@@ -51,7 +51,7 @@ module Pandata
 
     # Takes an array or hash.
     # Sorts alphabetically ignoring the initial 'The' when sorting strings.
-    # Also case-insensitive to prevent lowercase names from being displayed last.
+    # Also case-insensitive to prevent lowercase names from being sorted last.
     def custom_sort(enumerable)
       sorted_array = enumerable.sort_by { |key, _| key.sub(/^the\s*/i, '').downcase }
 
@@ -69,7 +69,7 @@ module Pandata
     # Takes an array of hashes with :artist and another key belonging to an
     # artist (e.g. :track or :album).
     # Returns a string with each artist name on a line with the artist's items
-    # listed + indented below. Sorts the output, too.
+    # listed and indented below. Sorts the output, too.
     #--
     #
     # Example output:

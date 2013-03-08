@@ -12,7 +12,7 @@ module Pandata
       attr_accessor :cookie
     end
 
-    # Gets a cookie allowing access to Pandora's data and returns a Downloader instance.
+    # Gets a Pandora cookie and returns a Downloader instance.
     def initialize
       # If we already have a cookie, don't get another.
       unless Downloader.cookie

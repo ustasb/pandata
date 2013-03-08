@@ -102,7 +102,7 @@ module Pandata
     # Returns an array of hashes with keys:
     # - :name - User's profile name.
     # - :webname - Unique Pandora ID
-    # - :href - URL to user's Pandora online profile.
+    # - :href - URL to online Pandora profile.
     def following
       scrape_for(:following, :get_following)
     end
@@ -115,7 +115,7 @@ module Pandata
     private
 
     # Downloads all data for a given type, calls the supplied Pandata::Parser
-    # method and removes any duplicates
+    # method and removes any duplicates.
     def scrape_for(data_type, parser_method)
       results = []
 
