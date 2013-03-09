@@ -12,6 +12,7 @@ module Pandata
     # Returns a hash with:
     # - :opts (string: help information)
     # - :user_id (string)
+    # - :output_file (string)
     # - :data_to_get (array)
     # - :get_all_data (boolean)
     # - :return_as_json (boolean)
@@ -76,6 +77,10 @@ Options:
           options[:data_to_get] << :liked_stations
         end
 
+        opts.on('-o', '--output_file PATH', 'A file to output the data to') do |path|
+          options[:output_file] = path
+        end
+
         opts.on('-S', '--playing_station', 'Get currently playing station') do
           options[:data_to_get] << :playing_station
         end
@@ -86,6 +91,8 @@ Options:
       end
 
       options[:opts].parse(argv)
+
+      # User ID is the first argument.
       options[:user_id] = argv.shift
 
       if get_all_data

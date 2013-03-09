@@ -18,6 +18,8 @@ describe Pandata::ArgvParser do
         '-B',
         '-l',
         '-L',
+        '-o',
+        'my_data.json',
         '-m',
         '-n',
         '-F',
@@ -33,6 +35,7 @@ describe Pandata::ArgvParser do
       options = Pandata::ArgvParser.parse(mock_argv)
 
       expect(options[:user_id]).to eq 'yoda'
+      expect(options[:output_file]).to eq 'my_data.json'
       expect(options[:return_as_json]).to eq true
       expect(options[:data_to_get]).to eq [
         :recent_activity,

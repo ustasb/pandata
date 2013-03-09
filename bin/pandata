@@ -6,6 +6,21 @@ require_relative '../lib/pandata/data_formatter'
 
 options = Pandata::ArgvParser.parse(ARGV)
 
+output_file = options[:output_file]
+if output_file
+  File.delete(output_file) if File.exists?(output_file)
+
+  define_method(:write) do |string|
+    File.open(output_file, 'a') do |file|
+      file.write(string)
+    end
+  end
+else
+  def write(string)
+    puts string
+  end
+end
+
 if ARGV.empty?
   # Print command-line usage help.
   puts options[:opts]
@@ -41,7 +56,7 @@ end
 
 if options[:return_as_json]
   require 'json'
-  puts JSON.generate(scraper_data)
+  write JSON.generate(scraper_data)
   exit
 end
 
@@ -67,5 +82,5 @@ scraper_data.each do |key, value|
              end
   end
 
-  puts "#{ title }\n#{ output }"
+  write "#{ title }\n#{ output }"
 end
