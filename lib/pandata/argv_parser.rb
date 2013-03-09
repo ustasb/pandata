@@ -77,7 +77,7 @@ Options:
           options[:data_to_get] << :liked_stations
         end
 
-        opts.on('-o', '--output_file PATH', 'A file to output the data to') do |path|
+        opts.on('-o', '--output_file PATH', 'File to output the data into') do |path|
           options[:output_file] = path
         end
 
