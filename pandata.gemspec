@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.summary                       = 'A Pandora web scraper'
   s.description                   = 'A library and tool for downloading Pandora data (likes, bookmarks, stations, etc.)'
   s.homepage                      = 'https://github.com/ustasb/pandata'
+  s.license                       = 'MIT'
   s.authors                       = ['Brian Ustas']
   s.email                         = 'brianustas@gmail.com'
   s.files                         = Dir["#{gem_path}/lib/**/*.rb"] << "#{gem_path}/bin/pandata"
