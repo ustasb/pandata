@@ -59,17 +59,9 @@ See the documentation for more information.
 
 ### As a Command-Line Tool
 
+All output is sorted alphabetically, duplicates are removed and tracks are grouped under their owning artist.
+
     pandata <email|webname> [options]
-
-**Examples:**
-
-    pandata john@example.com --liked_tracks
-
-    # Liked tracks, artists and bookmarked tracks + output as JSON
-    pandata my_webname -lLb --json
-    
-    # Download EVERYTHING and output to a file.
-    pandata my_webname --all -o ~/Desktop/my_pandora_data.txt
 
 **Options:**
 
@@ -87,5 +79,15 @@ See the documentation for more information.
     -o, --output_file PATH           File to output the data into
     -S, --playing_station            Get currently playing station
     -s, --stations                   Get all stations
+
+**Examples:**
+
+    pandata john@example.com --liked_tracks
+
+    # Liked tracks, artists and bookmarked tracks + output as JSON
+    pandata my_webname -lLb --json
+    
+    # Download EVERYTHING and output to a file.
+    pandata my_webname --all -o ~/Desktop/my_pandora_data.txt
 
 [1]: http://www.pandora.com/feeds
