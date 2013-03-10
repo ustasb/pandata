@@ -77,6 +77,6 @@ For an up-to-date list, check out:
     pandata my_webname -lLb --json
     
     # Download EVERYTHING and output to a file.
-    pandata my_webname --all -o ~/Desktop/my_pandora_data.txt
+    pandata my_webname --all -o my_pandora_data.txt
 
 [1]: http://www.pandora.com/feeds
