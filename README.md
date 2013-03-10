@@ -45,13 +45,13 @@ Next, start scraping!
 
     # Get only liked tracks
     likes = johns_scraper.likes(:tracks)
-    
+
     # Get all bookmarks (tracks and artists)
     bookmarks = johns_scraper.bookmarks
-    
+
     # Get all stations
     stations = johns_scraper.stations
-    
+
     # Get all followers
     followers = johns_scraper.followers
 
@@ -66,16 +66,16 @@ All output is sorted alphabetically, duplicates are removed and tracks are group
 **Options:**
 
 For an up-to-date list, check out:
-    
+
     pandata --help
-    
+
 **Examples:**
 
     pandata john@example.com --liked_tracks
 
-    # Liked tracks, artists and bookmarked tracks + output as JSON
+    # Liked tracks, artists and bookmarked tracks + output as JSON.
     pandata my_webname -lLb --json
-    
+
     # Download EVERYTHING and output to a file.
     pandata my_webname --all -o my_pandora_data.txt
 

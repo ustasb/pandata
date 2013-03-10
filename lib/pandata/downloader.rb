@@ -2,6 +2,9 @@ require 'json'
 require 'open-uri'
 
 module Pandata
+  # Custom Pandata error
+  class PandataError < StandardError
+  end
 
   # Retrieves data from Pandora and handles errors.
   class Downloader
@@ -36,12 +39,17 @@ module Pandata
       rescue OpenURI::HTTPError => error
         puts "The network request for:\n  #{url}\nreturned an error:\n  #{error.message}"
         puts "Please try again later or update Pandata. Sorry about that!\n\nFull error:"
-        raise error
+        raise PandataError
       end
     end
 
     def get_cookie
       config = JSON.parse download(CONFIG_URL).read
+
+      if Gem::Version.new(Pandata::Version::STRING) <= Gem::Version.new(config['required_update_for'])
+        raise PandataError, 'Pandora.com has changed something and you need to update Pandata!'
+      end
+
       config['cookie']
     end
   end
