@@ -97,7 +97,7 @@ module Pandata
       end
     end
 
-    # Returns the users being followed by the user.
+    # Returns the *public* users being followed by the user.
     #
     # Returns an array of hashes with keys:
     # - :name - Profile name
