@@ -1,4 +1,5 @@
 require 'optparse'
+require_relative '../pandata'
 
 module Pandata
 
@@ -87,6 +88,16 @@ Options:
 
         opts.on('-s', '--stations', 'Get all stations') do
           options[:data_to_get] << :stations
+        end
+
+        opts.on_tail("-h", "--help", "Show this message") do
+          puts opts
+          exit
+        end
+
+        opts.on_tail("--version", "Show version") do
+          puts Pandata::Version::STRING
+          exit
         end
       end
 
