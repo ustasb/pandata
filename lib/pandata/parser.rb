@@ -137,7 +137,7 @@ module Pandata
 
     private
 
-    # Loop over each 'item' tag and yield the title and description.
+    # Loops over each 'item' tag and yields the title and description.
     def xml_each_item(xml)
       Nokogiri::XML(xml).css('item').each do |item|
         title = item.at_css('title').text
@@ -146,7 +146,7 @@ module Pandata
       end
     end
 
-    # Loop over each .infobox container and yield the title and subtitle.
+    # Loops over each .infobox container and yields the title and subtitle.
     def infobox_each_link(html)
       Nokogiri::HTML(html).css('.infobox').each do |infobox|
         infobox_body = infobox.css('.infobox-body')
