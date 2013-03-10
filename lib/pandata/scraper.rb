@@ -4,7 +4,7 @@ require_relative 'downloader'
 
 module Pandata
 
-  # Downloads a user's Pandora data.
+  # Downloads a user's Pandora.com data.
   # A user's profile must be public for Pandata to download its data.
   class Scraper
 
@@ -12,7 +12,7 @@ module Pandata
     # the user ties a new email address to their Pandora account.
     attr_reader :webname
 
-    # Takes either an email or webname string.
+    # Takes either an email or a webname string.
     # Returns either:
     # - a new scraper object for the supplied user ID.
     # - an array of similar webnames because a matching Pandora user could not be found.
