@@ -1,6 +1,6 @@
 # Pandata
 
-Pandata is a Ruby library for downloading a user's Pandora data. This data includes:
+Pandata is a Ruby 1.9+ library for downloading a user's Pandora.com data. This data includes:
 
 - Playing Station *
 - Recent Activity *
@@ -11,6 +11,8 @@ Pandata is a Ruby library for downloading a user's Pandora data. This data inclu
 - Following
 
 Where possible, Pandora [feeds][1] are used (indicated by an * above).
+
+Pandata can only access **public** Pandora profiles. This option can be changed in Pandora's settings.
 
 ## Installing
 
@@ -35,24 +37,25 @@ pandora.com/profile/\<my_webname\>
 
 First, create a new Pandata scraper for a user:
 
-    # Scraper.get takes either an email or webname.
-    scraper = Pandata::Scraper.get('john@example.com')
+    # Scraper.get takes either an email or a webname.
+    # Returns a list of similar webnames if no match is found.
+    johns_scraper = Pandata::Scraper.get('john@example.com')
 
 Next, start scraping!
 
     # Get only liked tracks
-    likes = scraper.likes(:tracks)
+    likes = johns_scraper.likes(:tracks)
     
     # Get all bookmarks (tracks and artists)
-    bookmarks = scraper.bookmarks
+    bookmarks = johns_scraper.bookmarks
     
     # Get all stations
-    stations = scraper.stations
+    stations = johns_scraper.stations
     
     # Get all followers
-    followers = scraper.followers
+    followers = johns_scraper.followers
 
-Please see the documentation for more information.
+See the documentation for more information.
 
 ### As a Command-Line Tool
 
@@ -65,8 +68,8 @@ Please see the documentation for more information.
     # Liked tracks, artists and bookmarked tracks + output as JSON
     pandata my_webname -lLb --json
     
-    # Download EVERYTHING!
-    pandata my_webname --all
+    # Download EVERYTHING and output to a file.
+    pandata my_webname --all -o ~/Desktop/johns_pandora_data.txt
 
 **Options:**
 
@@ -81,8 +84,8 @@ Please see the documentation for more information.
     -l, --liked_tracks               Get all liked tracks
     -m, --liked_albums               Get all liked albums
     -n, --liked_stations             Get all liked stations
+    -o, --output_file PATH           File to output the data into
     -S, --playing_station            Get currently playing station
     -s, --stations                   Get all stations
-
 
 [1]: http://www.pandora.com/feeds
