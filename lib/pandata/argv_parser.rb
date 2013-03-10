@@ -11,7 +11,7 @@ module Pandata
     # Takes an ARGV (array) argument.
     #
     # Returns a hash with:
-    # - :opts (string: help information)
+    # - :opts (OptionParser object)
     # - :user_id (string)
     # - :output_file (string)
     # - :data_to_get (array)
