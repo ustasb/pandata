@@ -22,13 +22,13 @@ module Pandata
       get_all_data = false
 
       options[:opts] = OptionParser.new do |opts|
-        opts.banner = 'Pandata: A tool for downloading Pandora data (likes, bookmarks, stations, etc.)'
+        opts.banner = 'Pandata: A tool for downloading Pandora.com data (likes, bookmarks, stations, etc.)'
         opts.define_head 'Usage: pandata <email|webname> [options]'
         opts.separator <<-END
 
 Examples:
   pandata john@example.com --liked_tracks
-  pandata my_webname --all
+  pandata my_webname --all -o my_pandora_data.txt
   pandata my_webname -lLb --json
 
 Options:
