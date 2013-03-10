@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.email                         = 'brianustas@gmail.com'
   s.files                         = Dir.glob('lib/**/*.rb')
   s.executables                   << 'pandata'
-  s.add_runtime_dependency        'nokogiri', '~> 1.5.6'
+  s.add_dependency                'nokogiri', '~> 1.5.6'
   s.add_development_dependency    'rspec', '~> 2.12.2'
 end
