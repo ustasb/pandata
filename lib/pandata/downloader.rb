@@ -22,13 +22,13 @@ module Pandata
 
     # Downloads a page and returns its content as a string.
     def read_page(url)
-      safe_open(url, Downloader.cookie).read
+      download(url, Downloader.cookie).read
     end
 
     private
 
     # Downloads a page and handles errors.
-    def safe_open(url, cookie = '')
+    def download(url, cookie = '')
       escaped_url = URI.escape(url)
 
       begin
@@ -41,7 +41,7 @@ module Pandata
     end
 
     def get_cookie
-      config = JSON.parse safe_open(CONFIG_URL).read
+      config = JSON.parse download(CONFIG_URL).read
       config['cookie']
     end
   end
