@@ -69,7 +69,7 @@ See the documentation for more information.
     pandata my_webname -lLb --json
     
     # Download EVERYTHING and output to a file.
-    pandata my_webname --all -o ~/Desktop/johns_pandora_data.txt
+    pandata my_webname --all -o ~/Desktop/my_pandora_data.txt
 
 **Options:**
 
