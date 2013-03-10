@@ -37,6 +37,8 @@ pandora.com/profile/\<my_webname\>
 
 First, create a new Pandata scraper for a user:
 
+    require 'pandata'
+    
     # Scraper.get takes either an email or a webname.
     # Returns a list of similar webnames if no match is found.
     johns_scraper = Pandata::Scraper.get('john@example.com')
@@ -55,7 +57,7 @@ Next, start scraping!
     # Get all followers
     followers = johns_scraper.followers
 
-See the documentation for more information.
+For more information, see the documentation for Pandata::Scraper.
 
 ### As a Command-Line Tool
 
