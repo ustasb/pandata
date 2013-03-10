@@ -40,7 +40,7 @@ First, create a new Pandata scraper for a user:
     require 'pandata'
     
     # Scraper.get takes either an email or a webname.
-    # Returns a list of similar webnames if no match is found.
+    # Returns an array of similar webnames if no match is found.
     johns_scraper = Pandata::Scraper.get('john@example.com')
 
 Next, start scraping!
@@ -48,7 +48,7 @@ Next, start scraping!
     # Get only liked tracks
     likes = johns_scraper.likes(:tracks)
 
-    # Get all bookmarks (tracks and artists)
+    # Get all bookmarks (artists and tracks)
     bookmarks = johns_scraper.bookmarks
 
     # Get all stations
@@ -75,10 +75,10 @@ For an up-to-date list, check out:
 
     pandata john@example.com --liked_tracks
 
-    # Liked tracks, artists and bookmarked tracks + output as JSON.
+    # Get liked tracks, artists and bookmarked tracks + output as JSON.
     pandata my_webname -lLb --json
 
-    # Download EVERYTHING and output to a file.
+    # Get all data and output to a file.
     pandata my_webname --all -o my_pandora_data.txt
 
 [1]: http://www.pandora.com/feeds
