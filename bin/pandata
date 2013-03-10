@@ -10,7 +10,7 @@ output_file = options[:output_file]
 if output_file
   File.delete(output_file) if File.exists?(output_file)
 
-  define_method(:write) do |string|
+  Object.send(:define_method, :write) do |string|
     File.open(output_file, 'a') do |file|
       file.write(string)
     end

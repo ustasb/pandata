@@ -3,6 +3,7 @@ require './lib/pandata'
 Gem::Specification.new do |s|
   s.name                          = 'pandata'
   s.version                       = Pandata::Version::STRING
+  s.required_ruby_version         = '>= 1.9.1'
   s.summary                       = 'A Pandora.com web scraper'
   s.description                   = 'A library and tool for downloading Pandora.com data (likes, bookmarks, stations, etc.)'
   s.homepage                      = 'https://github.com/ustasb/pandata'
