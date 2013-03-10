@@ -50,11 +50,11 @@ Options:
           options[:data_to_get] << :bookmarked_tracks
         end
 
-        opts.on('-F', '--followers', "Get all ID's followers") do
+        opts.on('-F', '--followers', "Get all user's followers") do
           options[:data_to_get] << :followers
         end
 
-        opts.on('-f', '--following', 'Get all users being followed by ID') do
+        opts.on('-f', '--following', 'Get all users being followed by user') do
           options[:data_to_get] << :following
         end
 

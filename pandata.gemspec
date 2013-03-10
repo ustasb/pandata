@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.license                       = 'MIT'
   s.authors                       = ['Brian Ustas']
   s.email                         = 'brianustas@gmail.com'
-  s.files                         = Dir.glob('lib/**/*.rb') << 'bin/pandata'
+  s.files                         = Dir.glob('lib/**/*.rb')
   s.executables                   << 'pandata'
   s.add_runtime_dependency        'nokogiri', '~> 1.5.6'
   s.add_development_dependency    'rspec', '~> 2.12.2'
