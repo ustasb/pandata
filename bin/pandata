@@ -12,7 +12,7 @@ if output_file
 
   Object.send(:define_method, :write) do |string|
     File.open(output_file, 'a') do |file|
-      file.write(string)
+      file.puts string
     end
   end
 else
