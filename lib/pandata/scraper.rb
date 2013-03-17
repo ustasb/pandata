@@ -12,10 +12,11 @@ module Pandata
     # the user ties a new email address to their Pandora account.
     attr_reader :webname
 
-    # Takes either an email or a webname string.
-    # Returns either:
-    # - a new scraper object for the supplied user ID.
-    # - an array of similar webnames because a matching Pandora user could not be found.
+    # If possible, get a Scraper instance for the user_id otherwise return
+    # an array of similar webnames.
+    # @param user_id [String] email or webname
+    # @return [Scraper] a scraper object for the supplied user ID
+    # @return [Array] array of similar webnames because a matching Pandora user could not be found
     def self.get(user_id)
       search_url = DATA_FEED_URLS[:user_search] % { searchString: user_id }
       html = Downloader.new.read_page(search_url)
@@ -38,27 +39,29 @@ module Pandata
       @webname = webname
     end
 
-    # Returns an array of the user's recent activity.
+    # Get the user's recent activity.
+    # @return [Array] array of activity names
     def recent_activity
       scrape_for(:recent_activity, :get_recent_activity)
     end
 
-    # Returns the user's currently playing station.
+    # Get the user's playing station.
+    # @return [String]
     def playing_station
       scrape_for(:playing_station, :get_playing_station).first
     end
 
-    # Returns an array of the user's stations.
+    # Get the user's stations.
+    # @return [Array] array of station names
     def stations
       scrape_for(:stations, :get_stations)
     end
 
-    # Returns a user's bookmarked data.
-    #
-    # Bookmark types:
-    # - :artists - Returns an array of artist names.
-    # - :tracks - Returns an array of hashes with :artist and :track keys.
-    # - :all - Returns a hash with all bookmarked data.
+    # Get the user's bookmarked data.
+    # @param bookmark_type [Symbol]
+    #   - :artists - returns an array of artist names
+    #   - :tracks - returns an array of hashes with :artist and :track keys
+    #   - :all - returns a hash with all bookmarked data
     def bookmarks(bookmark_type = :all)
       case bookmark_type
       when :tracks
@@ -71,14 +74,13 @@ module Pandata
       end
     end
 
-    # Returns a user's liked data. (The results from giving a 'thumbs up.')
-    #
-    # Like types:
-    # - :artists - Returns an array of artist names.
-    # - :albums - Returns an array of album names.
-    # - :stations - Returns an array of station names.
-    # - :tracks - Returns an array of hashes with :artist and :track keys.
-    # - :all - Returns a hash with all liked data.
+    # Get the user's liked data. (The results from giving a 'thumbs up.')
+    # @param like_type [Symbol]
+    #   - :artists - returns an array of artist names
+    #   - :albums - returns an array of album names
+    #   - :stations - returns an array of station names
+    #   - :tracks - returns an array of hashes with :artist and :track keys
+    #   - :all - returns a hash with all liked data
     def likes(like_type = :all)
       case like_type
       when :tracks
@@ -97,17 +99,17 @@ module Pandata
       end
     end
 
-    # Returns the *public* users being followed by the user.
-    #
-    # Returns an array of hashes with keys:
-    # - :name - Profile name
-    # - :webname - Unique Pandora ID
-    # - :href - URL to online Pandora profile.
+    # Get the *public* users being followed by the user.
+    # @return [Array] array of hashes with keys:
+    #   - :name - profile name
+    #   - :webname - unique Pandora ID
+    #   - :href - URL to online Pandora profile
     def following
       scrape_for(:following, :get_following)
     end
 
-    # Returns the user's followers in a format identical to #following.
+    # Get the user's *public* followers.
+    # @return [Array] identical to #following
     def followers
       scrape_for(:followers, :get_followers)
     end
@@ -116,6 +118,9 @@ module Pandata
 
     # Downloads all data for a given type, calls the supplied Pandata::Parser
     # method and removes any duplicates.
+    # @param data_type [Symbol]
+    # @param parser_method [Symbol] method to be sent to the Parser instance
+    # @return [Array]
     def scrape_for(data_type, parser_method)
       results = []
 
@@ -139,6 +144,7 @@ module Pandata
     # Downloads all data given a starting URL. Some Pandora feeds only return
     # 5 - 10 items per page but contain a link to the next set of data. Threads
     # cannot be used because page A be must visited to know how to obtain page B.
+    # @param url [String]
     def download_all_data(url)
       next_data_indices = {}
 
@@ -150,6 +156,8 @@ module Pandata
     end
 
     # Grabs a URL from DATA_FEED_URLS and formats it appropriately.
+    # @param data_name [Symbol]
+    # @param next_data_indices [Symbol] query parameters to get the next set of data
     def get_url(data_name, next_data_indices = {})
       next_data_indices = {
         nextStartIndex: 0,

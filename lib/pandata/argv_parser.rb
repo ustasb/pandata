@@ -8,15 +8,15 @@ module Pandata
     # Prevent instances
     private_class_method :new
 
-    # Takes an ARGV (array) argument.
-    #
-    # Returns a hash with:
-    # - :opts (OptionParser object)
-    # - :user_id (string)
-    # - :output_file (string)
-    # - :data_to_get (array)
-    # - :get_all_data (boolean)
-    # - :return_as_json (boolean)
+    # Parses an ARGV array for options.
+    # @param argv [Array] an ARGV array
+    # @return [Hash]
+    #   - :opts [OptionParser]
+    #   - :user_id [String]
+    #   - :output_file [String]
+    #   - :data_to_get [Array]
+    #   - :get_all_data [Boolean]
+    #   - :return_as_json [Boolean]
     def self.parse(argv)
       options = { data_to_get: [] }
       get_all_data = false

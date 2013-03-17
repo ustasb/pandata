@@ -3,8 +3,7 @@ require 'open-uri'
 
 module Pandata
   # Custom Pandata error
-  class PandataError < StandardError
-  end
+  class PandataError < StandardError; end
 
   # Retrieves data from Pandora and handles errors.
   class Downloader
@@ -17,13 +16,14 @@ module Pandata
 
     # Gets a Pandora cookie and returns a Downloader instance.
     def initialize
-      # If we already have a cookie, don't get another.
       unless Downloader.cookie
         Downloader.cookie = get_cookie
       end
     end
 
-    # Downloads a page and returns its content as a string.
+    # Downloads and reads a page from a URL.
+    # @param url [String]
+    # @return [String] contents of page
     def read_page(url)
       download(url, Downloader.cookie).read
     end
@@ -31,6 +31,9 @@ module Pandata
     private
 
     # Downloads a page and handles errors.
+    # @param url [String]
+    # @param cookie [String]
+    # @return [File]
     def download(url, cookie = '')
       escaped_url = URI.escape(url)
 
