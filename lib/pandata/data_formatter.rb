@@ -33,7 +33,7 @@ module Pandata
     end
 
     # @param data [Array] array of hashes with :name, :webname and :href keys
-    # Returns a string with followers sorted by webname.
+    # Returns a string with followers/ing sorted by webname.
     def followx(data)
       str = ''
       data.sort_by { |item| item[:webname].downcase }.each do |hash|
