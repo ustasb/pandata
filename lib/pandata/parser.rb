@@ -5,7 +5,7 @@ module Pandata
   # Parses HTML/XML pages from Pandora for relevant data.
   class Parser
 
-    # Get the webnames from a user ID search.
+    # Gets the webnames from a user ID search.
     # @param html [String]
     # @return [Array] array of webnames
     def get_webnames_from_search(html)
@@ -19,7 +19,7 @@ module Pandata
       webnames
     end
 
-    # Get the query parameters necessary to get the next page of data from Pandora.
+    # Gets the query parameters necessary to get the next page of data from Pandora.
     # @param html [String]
     # @return [Hash, False]
     def get_next_data_indices(html)

@@ -5,8 +5,8 @@ module Pandata
   # Sorts and formats Pandata::Scraper data as a string for printing.
   class DataFormatter
 
-    # Returns a string with each array item on its own line.
     # @param data [Array, String]
+    # Returns a string with each array item on its own line.
     def list(data)
       data = [data] unless data.kind_of?(Array)
       str = ''
@@ -20,20 +20,20 @@ module Pandata
       list custom_sort(data)
     end
 
-    # Returns a string with tracks grouped under owning artist.
     # @param tracks [Array] array of hashes with :artist and :track keys
+    # Returns a string with tracks grouped under owning artist.
     def tracks(tracks)
       artists_items(tracks, :track)
     end
 
-    # Returns a string with albums grouped under owning artist.
     # @param albums [Array] array of hashes with :artist and :album keys
+    # Returns a string with albums grouped under owning artist.
     def albums(albums)
       artists_items(albums, :album)
     end
 
-    # Returns a string with followers sorted by webname.
     # @param data [Array] array of hashes with :name, :webname and :href keys
+    # Returns a string with followers sorted by webname.
     def followx(data)
       str = ''
       data.sort_by { |item| item[:webname].downcase }.each do |hash|
@@ -66,11 +66,9 @@ module Pandata
       end
     end
 
-    # Returns a string with items grouped under their owning artist.
     # @param data [Array] array of hashes with :artist and item_name
     # @param item_name [Symbol] e.g. :track or :album
-    # @return [String] each artist name on a line with the artist's
-    #   items listed and indented below. Sorts the output, too.
+    # Returns a string with items grouped under their owning artist.
     def artists_items(data, item_name)
       artists_items = {}
 
