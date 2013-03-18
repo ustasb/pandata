@@ -77,7 +77,7 @@ module Pandata
     # Get the user's liked data. (The results from giving a 'thumbs up.')
     # @param like_type [Symbol]
     #   - :artists - returns an array of artist names
-    #   - :albums - returns an array of album names
+    #   - :albums - returns an array of hashes with :artist and :album keys
     #   - :stations - returns an array of station names
     #   - :tracks - returns an array of hashes with :artist and :track keys
     #   - :all - returns a hash with all liked data
