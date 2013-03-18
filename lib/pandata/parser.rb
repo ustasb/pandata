@@ -39,9 +39,8 @@ module Pandata
       end
     end
 
-    # Get all recent activity names.
     # @param xml [String]
-    # @return [Array]
+    # Returns an array of recent activity names.
     def get_recent_activity(xml)
       activity_names = []
 
@@ -52,9 +51,8 @@ module Pandata
       activity_names
     end
 
-    # Get all station names.
     # @param xml [String]
-    # @return [Array]
+    # Returns an array of station names.
     def get_stations(xml)
       stations = []
 
@@ -65,7 +63,6 @@ module Pandata
       stations
     end
 
-    # Get the currently playing station name.
     # @param xml [String]
     # @return [String]
     def get_playing_station(xml)
@@ -79,9 +76,8 @@ module Pandata
       station
     end
 
-    # Returns an array of hashes with :artist and :track keys.
     # @param xml [String]
-    # @return [Array]
+    # Returns an array of hashes with :artist and :track keys.
     def get_bookmarked_tracks(xml)
       tracks = []
 
@@ -93,9 +89,8 @@ module Pandata
       tracks
     end
 
-    # Returns an array of artist names.
     # @param xml [String]
-    # @return [Array]
+    # Returns an array of artist names.
     def get_bookmarked_artists(xml)
       artists = []
 
@@ -106,9 +101,8 @@ module Pandata
       artists
     end
 
-    # Returns an array of hashes with :artist and :track keys.
     # @param html [String]
-    # @return [Array]
+    # Returns an array of hashes with :artist and :track keys.
     def get_liked_tracks(html)
       tracks = []
 
@@ -119,23 +113,20 @@ module Pandata
       tracks
     end
 
-    # Returns an array of artist names.
     # @param html [String]
-    # @return [Array]
+    # Returns an array of artist names.
     def get_liked_artists(html)
       get_infobox_titles(html)
     end
 
-    # Returns an array of station names.
     # @param html [String]
-    # @return [Array]
+    # Returns an array of station names.
     def get_liked_stations(html)
       get_infobox_titles(html)
     end
 
-    # Returns an array of hashes with :artist and :album keys.
     # @param html [String]
-    # @return [Array]
+    # Returns an array of hashes with :artist and :album keys.
     def get_liked_albums(html)
       albums = []
 
@@ -146,16 +137,14 @@ module Pandata
       albums
     end
 
-    # Returns an array of hashes with :name, :webname and :href keys.
     # @param html [String]
-    # @return [Array]
+    # Returns an array of hashes with :name, :webname and :href keys.
     def get_following(html)
       get_followx_users(html)
     end
 
-    # Returns an array of hashes with :name, :webname and :href keys.
     # @param html [String]
-    # @return [Array]
+    # Returns an array of hashes with :name, :webname and :href keys.
     def get_followers(html)
       get_followx_users(html)
     end
@@ -186,9 +175,8 @@ module Pandata
       end
     end
 
-    # Returns an array of titles from #infobox_each_link.
     # @param html [String]
-    # @return [Array]
+    # Returns an array of titles from #infobox_each_link.
     def get_infobox_titles(html)
       titles = []
       infobox_each_link(html) { |title| titles << title }

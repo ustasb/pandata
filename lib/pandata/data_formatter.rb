@@ -7,7 +7,6 @@ module Pandata
 
     # Returns a string with each array item on its own line.
     # @param data [Array, String]
-    # @return [String]
     def list(data)
       data = [data] unless data.kind_of?(Array)
       str = ''
@@ -17,28 +16,24 @@ module Pandata
 
     # Identical to #list but sorts alphabetically ignoring 'the'.
     # @param data [Array]
-    # @return [String]
     def sort_list(data)
       list custom_sort(data)
     end
 
     # Returns a string with tracks grouped under owning artist.
     # @param tracks [Array] array of hashes with :artist and :track keys
-    # @return [String]
     def tracks(tracks)
       artists_items(tracks, :track)
     end
 
     # Returns a string with albums grouped under owning artist.
     # @param albums [Array] array of hashes with :artist and :album keys
-    # @return [String]
     def albums(albums)
       artists_items(albums, :album)
     end
 
     # Returns a string with followers sorted by webname.
     # @param data [Array] array of hashes with :name, :webname and :href keys
-    # @return [String]
     def followx(data)
       str = ''
       data.sort_by { |item| item[:webname].downcase }.each do |hash|
@@ -56,7 +51,9 @@ module Pandata
     # @param enumerable [Array, Hash]
     # @return [Array, Hash]
     def custom_sort(enumerable)
-      sorted_array = enumerable.sort_by { |key, _| key.sub(/^the\s*/i, '').downcase }
+      sorted_array = enumerable.sort_by do |key, _|
+        key.sub(/^the\s*/i, '').downcase
+      end
 
       # sort_by() returns an array when called on hashes.
       if enumerable.kind_of?(Hash)
@@ -70,11 +67,10 @@ module Pandata
     end
 
     # Returns a string with items grouped under their owning artist.
-    # @param data [Array] array of hashes with :artist and another key belonging to an
-    #   artist (e.g. :track or :album)
-    # @param item_name [Symbol] item name belonging to artists
-    # @return [String] string with each artist name on a line with the artist's items
-    #   listed and indented below. Sorts the output, too.
+    # @param data [Array] array of hashes with :artist and item_name
+    # @param item_name [Symbol] e.g. :track or :album
+    # @return [String] each artist name on a line with the artist's
+    #   items listed and indented below. Sorts the output, too.
     def artists_items(data, item_name)
       artists_items = {}
 

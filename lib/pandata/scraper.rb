@@ -16,7 +16,7 @@ module Pandata
     # an array of similar webnames.
     # @param user_id [String] email or webname
     # @return [Scraper] a scraper object for the supplied user ID
-    # @return [Array] array of similar webnames because a matching Pandora user could not be found
+    # @return [Array] array of similar webnames
     def self.get(user_id)
       search_url = DATA_FEED_URLS[:user_search] % { searchString: user_id }
       html = Downloader.new.read_page(search_url)

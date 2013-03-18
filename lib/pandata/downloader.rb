@@ -2,10 +2,9 @@ require 'json'
 require 'open-uri'
 
 module Pandata
-  # Custom Pandata error
   class PandataError < StandardError; end
 
-  # Retrieves data from Pandora and handles errors.
+  # Retrieves data from Pandora.com and handles errors.
   class Downloader
     # A GitHub Gist that contains an updated cookie allowing access to 'login-only' visible data.
     CONFIG_URL = 'https://gist.github.com/ustasb/596f1ee96d03463fde77/raw/pandata_config.json'

@@ -5,7 +5,6 @@ module Pandata
 
   # Parses command-line input.
   class ArgvParser
-    # Prevent instances
     private_class_method :new
 
     # Parses an ARGV array for options.
@@ -127,5 +126,6 @@ Options:
 
       options
     end
+
   end
 end
