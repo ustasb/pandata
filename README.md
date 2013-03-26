@@ -57,7 +57,7 @@ Next, start scraping!
     # Get all followers
     followers = johns_scraper.followers
 
-For more information, see the documentation for Pandata::Scraper.
+For more information, see the [documentation][2] for Pandata::Scraper.
 
 ### As a Command-Line Tool
 
@@ -82,3 +82,4 @@ For an up-to-date list, check out:
     pandata my_webname --all -o my_pandora_data.txt
 
 [1]: http://www.pandora.com/feeds
+[2]: http://rubydoc.info/gems/pandata/frames
