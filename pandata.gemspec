@@ -14,6 +14,9 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files              = %w[LICENSE README.md]
   s.executables                   << 'pandata'
   s.add_runtime_dependency        'nokogiri', '~> 1.5.6'
-  s.add_development_dependency    'rspec', '~> 2.12.2'
+  s.add_runtime_dependency        'ruby-progressbar', '~> 1.2.0'
+  s.add_development_dependency    'rspec', '~> 2.14.0'
+  s.add_development_dependency    'vcr', '~> 2.5.0'
+  s.add_development_dependency    'webmock', '~> 1.13.0'
   s.add_development_dependency    'yard', '~> 0.8.5'
 end

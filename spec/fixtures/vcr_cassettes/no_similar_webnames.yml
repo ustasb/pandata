@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gist.github.com/ustasb/596f1ee96d03463fde77/raw/pandata_config.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - ''
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sun, 01 Sep 2013 21:51:48 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - https://render.github.com
+      Etag:
+      - '"cb30953cc0d59c01f15374237abaf198"'
+      Content-Disposition:
+      - inline
+      Content-Transfer-Encoding:
+      - binary
+      X-Served-By:
+      - github-fe102-cp1-prd.iad.github.net
+      Cache-Control:
+      - private
+      X-Request-Id:
+      - 3a377a6b-b7a0-4dca-9cbc-eb775fee113c
+      X-Runtime:
+      - '0.012712'
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "cookie": "at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D",
+          "required_update_for": "0.0.0"
+        }
+    http_version: 
+  recorded_at: Sun, 01 Sep 2013 21:51:53 GMT
+- request:
+    method: get
+    uri: http://www.pandora.com/content/connect?searchString=invalidzz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Sep 2013 21:51:48 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Set-Cookie:
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Fri, 31-Aug-18 21:51:48
+        GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '365'
+    body:
+      encoding: UTF-8
+      string: "\n\n<!-- following.vm -->\n\n\n\t\n\t\t\t\n\t\t<div class=\"find_people
+        space-t-2 clearfix\">\n\t\t\t<div class=\"inputContainer\">\n\t\t\t\t<input
+        type=\"text\" id=\"connect_search\" class=\"find_field\"\n\t\t\t\tonblur=\"if(this.value=='')this.value='Find
+        by name or email address'\"\n\t\t\t\tonfocus=\"if(this.value=='Find by name
+        or email address')this.value=''\"\n\t\t\t\tvalue=\"Find by name or email address\">\n\t\t\t\t<span
+        class=\"clear_input\">x</span>\n\t\t\t</div>\n\t\t\t<input type=\"button\"
+        value=\"Find\" id=\"connect_find\" class=\"btn_bg find_btn\">\n\t\t</div>\n\t\n<div
+        id=\"suggestions\">\n\t<div class=\"results_list\">\n\t\t\t<div class=\"results_hdr
+        clearfix\">\n\t\t\t<h3>Search results for: <span class=\"search_term\">invalidzz</span></h3>\n\t\t\t\t\t\t\t\t\t<div
+        class=\"results_count\">0 results</div>\n\t\t</div>\n\t\t<div class=\"people_search\">\n\t\t\n\t\t\t</div>\n\t</div>\n</div>\n"
+    http_version: 
+  recorded_at: Sun, 01 Sep 2013 21:51:53 GMT
+recorded_with: VCR 2.5.0

@@ -2,7 +2,6 @@ require 'json'
 require 'open-uri'
 
 module Pandata
-  class PandataError < StandardError; end
 
   # Retrieves data from Pandora.com and handles errors.
   class Downloader

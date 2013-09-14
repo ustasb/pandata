@@ -1,4 +1,5 @@
-require_relative '../lib/pandata/argv_parser'
+require 'spec_helper'
+require 'pandata/argv_parser'
 
 describe Pandata::ArgvParser do
   it 'does not allow instances of itself' do

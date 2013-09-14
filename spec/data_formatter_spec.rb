@@ -1,4 +1,5 @@
-require_relative '../lib/pandata/data_formatter'
+require 'spec_helper'
+require 'pandata/data_formatter'
 
 ARTISTS = %w{ Mogwai Eminem Portishead Eminem Avicii Ladytron Ted }
 TRACKS = [
