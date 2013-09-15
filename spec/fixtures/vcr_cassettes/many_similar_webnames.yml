@@ -1,0 +1,288 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gist.github.com/ustasb/596f1ee96d03463fde77/raw/pandata_config.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - ''
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Sun, 01 Sep 2013 21:59:04 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Access-Control-Allow-Origin:
+      - https://render.github.com
+      Etag:
+      - '"cb30953cc0d59c01f15374237abaf198"'
+      Content-Disposition:
+      - inline
+      Content-Transfer-Encoding:
+      - binary
+      X-Served-By:
+      - github-fe103-cp1-prd.iad.github.net
+      Cache-Control:
+      - private
+      X-Request-Id:
+      - 74e4f5f6-3629-4089-bfcc-8ffc1d52b457
+      X-Runtime:
+      - '0.011578'
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "cookie": "at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D",
+          "required_update_for": "0.0.0"
+        }
+    http_version: 
+  recorded_at: Sun, 01 Sep 2013 21:59:09 GMT
+- request:
+    method: get
+    uri: http://www.pandora.com/content/connect?searchString=swedish
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 01 Sep 2013 21:59:04 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Set-Cookie:
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Fri, 31-Aug-18 21:59:04
+        GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1504'
+    body:
+      encoding: UTF-8
+      string: "\n\n<!-- following.vm -->\n\n\n\t\n\t\t\t\n\t\t<div class=\"find_people
+        space-t-2 clearfix\">\n\t\t\t<div class=\"inputContainer\">\n\t\t\t\t<input
+        type=\"text\" id=\"connect_search\" class=\"find_field\"\n\t\t\t\tonblur=\"if(this.value=='')this.value='Find
+        by name or email address'\"\n\t\t\t\tonfocus=\"if(this.value=='Find by name
+        or email address')this.value=''\"\n\t\t\t\tvalue=\"Find by name or email address\">\n\t\t\t\t<span
+        class=\"clear_input\">x</span>\n\t\t\t</div>\n\t\t\t<input type=\"button\"
+        value=\"Find\" id=\"connect_find\" class=\"btn_bg find_btn\">\n\t\t</div>\n\t\n<div
+        id=\"suggestions\">\n\t<div class=\"results_list\">\n\t\t\t<div class=\"results_hdr
+        clearfix\">\n\t\t\t<h3>Search results for: <span class=\"search_term\">swedish</span></h3>\n\t\t\t\t\t\t\t\t\t<div
+        class=\"results_count\">67 results</div>\n\t\t</div>\n\t\t<div class=\"people_search\">\n\t\t\t\t\t<div
+        class=\"section clearfix\">\n\t<div class=\"row clearfix\">\n\t\t<div class=\"bi-col-left
+        col-w-2_x\">\n\t\t\t<a href=\"/profile/edwardgarcia1999\">\n\t\t\t<img class=\"facebookThumbnail
+        profile_img_sm\" fbid=\"100001750305152\" src=\"http://graph.facebook.com/100001750305152/picture?type=square\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/edwardgarcia1999\" fbid=\"100001750305152\"
+        webname=\"edwardgarcia1999\" class=\"facebookName\">Swedish House Mafia Edward</a></div>\n\t\t\t\t\t\t\t\t<div
+        class=\"location single\">Miami,FL</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"edwardgarcia1999\"
+        data-listenerid=\"286280648\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/oskar.tegni\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/oskar.tegni\" fbid=\"0\" webname=\"oskar.tegni\"
+        class=\"facebookName\">swedish guy...:)</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"oskar.tegni\"
+        data-listenerid=\"912168835\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_fish_09\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"503065224\" src=\"http://graph.facebook.com/503065224/picture?type=square\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_fish_09\" fbid=\"503065224\"
+        webname=\"swedish_fish_09\" class=\"facebookName\">Laura Nelson </a></div>\n\t\t\t\t\t\t\t\t<div
+        class=\"location single\">Rapid City </div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_fish_09\"
+        data-listenerid=\"81600820\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/parsa_aalamrezaieh\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/parsa_aalamrezaieh\" fbid=\"0\"
+        webname=\"parsa_aalamrezaieh\" class=\"facebookName\">Swedish House Mafia/EMIN3M</a></div>\n\t\t\t\t\t\t\t\t<div
+        class=\"location single\">NEW YORK CITY</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"parsa_aalamrezaieh\"
+        data-listenerid=\"257719038\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/magickiwi14\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/magickiwi14\" fbid=\"0\" webname=\"magickiwi14\"
+        class=\"facebookName\">sparkled_swedish_fish</a></div>\n\t\t\t\t\t\t\t\t<div
+        class=\"location single\">y do u wanna know u stalker</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"magickiwi14\"
+        data-listenerid=\"926643749\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_gorilla\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"1404248383\" src=\"http://graph.facebook.com/1404248383/picture?type=square\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_gorilla\" fbid=\"1404248383\"
+        webname=\"swedish_gorilla\" class=\"facebookName\">swedish_gorilla</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_gorilla\"
+        data-listenerid=\"81596440\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_chic\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"509388101\" src=\"http://graph.facebook.com/509388101/picture?type=square\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_chic\" fbid=\"509388101\"
+        webname=\"swedish_chic\" class=\"facebookName\">swedish_chic</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_chic\"
+        data-listenerid=\"63130444\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_lotty\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_lotty\" fbid=\"0\" webname=\"swedish_lotty\"
+        class=\"facebookName\">swedish_lotty</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_lotty\"
+        data-listenerid=\"315392520\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_engineer\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_engineer\" fbid=\"0\"
+        webname=\"swedish_engineer\" class=\"facebookName\">swedish_engineer</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_engineer\"
+        data-listenerid=\"96155537\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_dawl\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_dawl\" fbid=\"0\" webname=\"swedish_dawl\"
+        class=\"facebookName\">swedish_dawl</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_dawl\"
+        data-listenerid=\"1100487125\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_fush\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_fush\" fbid=\"0\" webname=\"swedish_fush\"
+        class=\"facebookName\">swedish_fush</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_fush\"
+        data-listenerid=\"27810951\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_vikings\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_vikings\" fbid=\"0\"
+        webname=\"swedish_vikings\" class=\"facebookName\">swedish_vikings</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_vikings\"
+        data-listenerid=\"930932175\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_chic_29\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_chic_29\" fbid=\"0\"
+        webname=\"swedish_chic_29\" class=\"facebookName\">swedish_chic_29</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_chic_29\"
+        data-listenerid=\"329634281\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_and_proud\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_and_proud\" fbid=\"0\"
+        webname=\"swedish_and_proud\" class=\"facebookName\">swedish_and_proud</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_and_proud\"
+        data-listenerid=\"425203196\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
+        clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/swedish_queen\">\n\t\t\t<img
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
+        class=\"user_name single\"><a href=\"/profile/swedish_queen\" fbid=\"0\" webname=\"swedish_queen\"
+        class=\"facebookName\">swedish_queen</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
+        class=\"bi-col-right\">\n\t\t\t<div class=\"buttons\">\n\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"swedish_queen\"
+        data-listenerid=\"1200656430\">\n\t\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t\t</div><!--
+        //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
+        section-->\n\t\t\n\t\t\t\t\t<div class=\"show_more\" data-nextStartIndex=\"15\">Show
+        More</div>\n\t\t\t</div>\n\t</div>\n</div>\n"
+    http_version: 
+  recorded_at: Sun, 01 Sep 2013 21:59:10 GMT
+recorded_with: VCR 2.5.0

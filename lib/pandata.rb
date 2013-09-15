@@ -6,10 +6,12 @@ require_relative 'pandata/parser'
 require_relative 'pandata/scraper'
 
 module Pandata
+  class PandataError < StandardError; end
+
   module Version
     MAJOR = 0
-    MINOR = 1
-    PATCH = 2
+    MINOR = 2
+    PATCH = 0
     BUILD = nil
 
     STRING = [MAJOR, MINOR, PATCH, BUILD].compact.join('.')

@@ -15,6 +15,8 @@ module Pandata
     #   - :output_file [String]
     #   - :data_to_get [Array]
     #   - :get_all_data [Boolean]
+    #   - :help [Boolean]
+    #   - :version [Boolean]
     #   - :return_as_json [Boolean]
     def self.parse(argv)
       options = { data_to_get: [] }
@@ -90,20 +92,18 @@ Options:
         end
 
         opts.on_tail("-h", "--help", "Show this message") do
-          puts opts
-          exit
+          options[:help] = true
         end
 
         opts.on_tail("--version", "Show version") do
-          puts Pandata::Version::STRING
-          exit
+          options[:version] = true
         end
       end
 
       options[:opts].parse(argv)
 
       # User ID is the first argument.
-      options[:user_id] = argv.shift
+      options[:user_id] = argv[0]
 
       if get_all_data
         options[:data_to_get] = [

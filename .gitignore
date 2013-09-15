@@ -2,3 +2,5 @@
 *.gem
 doc/*
 .yardoc
+.rspec
+Gemfile.lock

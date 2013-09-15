@@ -1,5 +1,5 @@
-require_relative 'test_helpers'
-require_relative '../lib/pandata/parser'
+require 'spec_helper'
+require 'pandata/parser'
 
 describe Pandata::Parser do
   let(:liked_tracks_html)   { read_path('spec', 'fixtures', 'ajax', 'show_more', 'liked_tracks.html') }

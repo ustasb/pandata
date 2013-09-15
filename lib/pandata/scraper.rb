@@ -12,6 +12,9 @@ module Pandata
     # the user ties a new email address to their Pandora account.
     attr_reader :webname
 
+    # A Proc that gets called after some data has been downloaded.
+    attr_accessor :download_cb
+
     # If possible, get a Scraper instance for the user_id otherwise return
     # an array of similar webnames.
     # @param user_id [String] email or webname
@@ -133,6 +136,8 @@ module Pandata
         else
           results.push(new_data)
         end
+
+        @download_cb[new_data.size] if @download_cb
 
         get_url(data_type, next_data_indices) if next_data_indices
       end

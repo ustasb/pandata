@@ -1,5 +1,5 @@
-require_relative 'test_helpers'
-require_relative '../lib/pandata/scraper'
+require 'spec_helper'
+require 'pandata/scraper'
 
 describe Pandata::Scraper do
   describe 'Scraper.get' do
