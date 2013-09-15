@@ -22,7 +22,7 @@ module Pandata
     # @return [Array] array of similar webnames
     def self.get(user_id)
       search_url = DATA_FEED_URLS[:user_search] % { searchString: user_id }
-      html = Downloader.new.read_page(search_url)
+      html = Downloader.read_page(search_url)
       webnames = Parser.new.get_webnames_from_search(html)
 
       if webnames.include?(user_id)
@@ -37,7 +37,6 @@ module Pandata
 
     private_class_method :new
     def initialize(webname)
-      @downloader = Downloader.new
       @parser = Parser.new
       @webname = webname
     end
@@ -154,7 +153,7 @@ module Pandata
       next_data_indices = {}
 
       while next_data_indices
-        html = @downloader.read_page(url)
+        html = Downloader.read_page(url)
         next_data_indices = @parser.get_next_data_indices(html)
         url = yield(html, next_data_indices)
       end

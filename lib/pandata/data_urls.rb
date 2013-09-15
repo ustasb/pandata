@@ -1,6 +1,6 @@
 module Pandata
   # Number of results to get from a feeds.pandora.com URL.
-  MAX_RESULTS = 100000  # Get everything...
+  MAX_RESULTS = 100_000  # Get everything...
 
   # URLs to Pandora's data!
   DATA_FEED_URLS = {
