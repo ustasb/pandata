@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 require 'pandata/cli'
 
 describe Pandata::CLI do
@@ -43,7 +43,7 @@ describe Pandata::CLI do
       it 'displays a list of similar webnames' do
         VCR.use_cassette('many_similar_webnames') do
           STDOUT.should_receive(:puts).with("No exact match for 'swedish'.")
-          STDOUT.should_receive(:puts).with <<eos
+          STDOUT.should_receive(:puts).with <<-END
 
 Webname results for 'swedish':
   - edwardgarcia1999
@@ -61,7 +61,7 @@ Webname results for 'swedish':
   - swedish_chic_29
   - swedish_and_proud
   - swedish_queen
-eos
+          END
           expect { described_class.scrape(argv) }.to raise_error(Pandata::PandataError)
         end
       end
@@ -69,17 +69,13 @@ eos
   end
 
   context 'user is found' do
-
     let(:webname) { 'tconrad' }
-    let(:subject) { double described_class.new(argv) }
 
     after(:each) do
       STDOUT.should_receive(:puts).with(
-        File.read("spec/fixtures/data/#{cassette}")
+        File.read relative_path("fixtures/data/#{cassette}")
       )
-      VCR.use_cassette(cassette) do
-        described_class.scrape(argv)
-      end
+      VCR.use_cassette(cassette) { described_class.scrape(argv) }
     end
 
     describe '--recent_activity' do
