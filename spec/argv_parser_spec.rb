@@ -1,14 +1,14 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 require 'pandata/argv_parser'
 
 describe Pandata::ArgvParser do
   it 'does not allow instances of itself' do
-    expect { Pandata::ArgvParser.new }.to raise_error NoMethodError
+    expect { described_class.new }.to raise_error NoMethodError
   end
 
   describe '.parse' do
     it 'returns an options hash with no duplicates' do
-      mock_argv = [
+      argv = [
         'yoda',
         '--json',
         '--all',
@@ -33,7 +33,7 @@ describe Pandata::ArgvParser do
         '--all'
       ]
 
-      options = Pandata::ArgvParser.parse(mock_argv)
+      options = described_class.parse(argv)
 
       expect(options[:user_id]).to eq 'yoda'
       expect(options[:output_file]).to eq 'my_data.json'

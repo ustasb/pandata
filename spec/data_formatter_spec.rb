@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative 'spec_helper'
 require 'pandata/data_formatter'
 
 ARTISTS = %w{ Mogwai Eminem Portishead Eminem Avicii Ladytron Ted }
@@ -25,13 +25,11 @@ FOLLOWERS = [
 ]
 
 describe Pandata::DataFormatter do
-  before(:all) do
-    @parser = Pandata::DataFormatter.new
-  end
+  let(:parser) { described_class.new }
 
   describe '#list' do
     it 'formats an array as a multi-line string' do
-      str = @parser.list(ARTISTS)
+      str = parser.list(ARTISTS)
       expect(str).to eq <<-END
   - Mogwai
   - Eminem
@@ -46,7 +44,7 @@ describe Pandata::DataFormatter do
 
   describe '#sort_list' do
     it 'sorts and formats like #list' do
-      str = @parser.sort_list(ARTISTS)
+      str = parser.sort_list(ARTISTS)
       expect(str).to eq <<-END
   - Avicii
   - Eminem
@@ -61,7 +59,7 @@ describe Pandata::DataFormatter do
 
   describe '#followx' do
     it "lists the user's stats and sorts by webname" do
-      str = @parser.followx(FOLLOWERS)
+      str = parser.followx(FOLLOWERS)
       expect(str).to eq <<-END
   - name: hendrix
     webname: jhendrix
@@ -83,22 +81,23 @@ describe Pandata::DataFormatter do
   end
 
   describe '#custom_sort', "case insensitive + ignores the initial 'The' word when sorting strings" do
+    let(:words_array) { ['Skittle', 'apple', 'The Cat', 'the Dog', 'The banana'] }
+    let(:words_hash) { { 'Skittle' => {}, 'Apple' => {}, 'The Cat' => {}, 'the Dog' => {}, 'The Banana' => {} } }
+
     it 'sorts arrays' do
-      words = ['Skittle', 'apple', 'The Cat', 'the Dog', 'The banana']
-      sorted_words = @parser.send(:custom_sort, words)
+      sorted_words = parser.send(:custom_sort, words_array)
       expect(sorted_words).to eq ['apple', 'The banana', 'The Cat', 'the Dog', 'Skittle']
     end
 
     it 'sorts hashes by key' do
-      words = { 'Skittle' => {}, 'Apple' => {}, 'The Cat' => {}, 'the Dog' => {}, 'The Banana' => {} }
-      sorted_words = @parser.send(:custom_sort, words)
+      sorted_words = parser.send(:custom_sort, words_hash)
       expect(sorted_words.keys).to eq ['Apple', 'The Banana', 'The Cat', 'the Dog', 'Skittle']
     end
   end
 
   describe '#artists_items' do
     it "ignores 'The', is case-insensitive and sorts by artist name, indenting items under owning artist" do
-      str = @parser.send(:artists_items, TRACKS, :track)
+      str = parser.send(:artists_items, TRACKS, :track)
       expect(str).to eq <<-END
   - Baz
       - The Awe

@@ -2,68 +2,56 @@ require 'spec_helper'
 require 'pandata/scraper'
 
 describe Pandata::Scraper do
-  describe 'Scraper.get' do
+  before(:each) do
+    Pandata::Downloader.stub(:read_page).and_return read_path(path)
+  end
 
-    # Stub Downloader's `read_page` instance method
-    def override_network_return(path)
-      Pandata::Downloader.class_eval do
-        define_method(:read_page) { |url| File.read(path) }
+  describe 'Scraper.get' do
+    context "when a webname exactly matches the user's search" do
+      let(:path) { 'fixtures/ajax/no_more/search_results_for_lols.html' }
+
+      it "returns a new Scraper instance" do
+        result = Pandata::Scraper.get('lols')
+
+        expect(result.class).to eq Pandata::Scraper
+        expect(result.webname).to eq 'lols'
       end
     end
 
-    it "returns a new Scraper instance if a webname exactly matches the user's search" do
-      override_network_return(File.join('spec', 'fixtures', 'ajax', 'no_more', 'search_results_for_lols.html'))
-      result = Pandata::Scraper.get('lols')
+    context 'when no matching webnames are found' do
+      let(:path) { 'fixtures/ajax/show_more/search_results_for_skittle.html' }
 
-      expect(result.class).to eq Pandata::Scraper
-      expect(result.webname).to eq 'lols'
-    end
-
-    it 'returns an array of similar webnames if no matching webname is found' do
-      override_network_return(File.join('spec', 'fixtures', 'ajax', 'show_more', 'search_results_for_skittle.html'))
-      result = Pandata::Scraper.get('skittle')
-      expect(result).to eq [
-        'sixx_miley',
-        'sydni00girly',
-        'skittle_lovee',
-        'puff_skittle',
-        'shawniagreene',
-        'emma13820',
-        'davonnacarney',
-        'brittle-skittle',
-        'skittle-bunnie',
-        'mr_skittle',
-        'kylie246',
-        'sweetsophie10',
-        'drewwhorton',
-        'skittle_sz_21',
-        'rawr_skittle_lover'
-      ]
+      it 'returns an array of similar webnames' do
+        result = Pandata::Scraper.get('skittle')
+        expect(result).to eq [
+          'sixx_miley',
+          'sydni00girly',
+          'skittle_lovee',
+          'puff_skittle',
+          'shawniagreene',
+          'emma13820',
+          'davonnacarney',
+          'brittle-skittle',
+          'skittle-bunnie',
+          'mr_skittle',
+          'kylie246',
+          'sweetsophie10',
+          'drewwhorton',
+          'skittle_sz_21',
+          'rawr_skittle_lover'
+        ]
+      end
     end
   end
 
   describe 'a Scraper instance' do
-    def stub_get_url(*args)
-      @scraper.stub(:get_url).and_return(File.join(*args))
-    end
-
-    before(:each) do
-      # Skip Scraper.get
-      @scraper = Pandata::Scraper.send(:new, 'pandorastats')
-
-      Pandata::Downloader.class_eval do
-        # Read a file instead of making a network request.
-        define_method(:read_page) { |path| File.read(path) }
-      end
-    end
+    let(:scraper) { Pandata::Scraper.send(:new, 'pandorastats') }
 
     describe '#recent_activity' do
-      before(:each) do
-        stub_get_url('spec', 'fixtures', 'feeds', 'recent_activity.xml')
-      end
+      let(:path) { 'fixtures/feeds/recent_activity.xml' }
 
       it 'returns an array of activity names' do
-        activity = @scraper.recent_activity
+        activity = scraper.recent_activity
         expect(activity).to eq [
           'Drake',
           'George Strait',
@@ -83,23 +71,19 @@ describe Pandata::Scraper do
     end
 
     describe '#playing_station' do
-      before(:each) do
-        stub_get_url('spec', 'fixtures', 'feeds', 'station_now_playing.xml')
-      end
+      let(:path) { 'fixtures/feeds/station_now_playing.xml' }
 
       it 'returns the name of the currently playing station' do
-        station = @scraper.playing_station
+        station = scraper.playing_station
         expect(station).to eq 'Drake Radio'
       end
     end
 
     describe '#stations' do
-      before(:each) do
-        stub_get_url('spec', 'fixtures', 'feeds', 'stations.xml')
-      end
+      let(:path) { 'fixtures/feeds/stations.xml' }
 
       it 'returns an array of station names' do
-        stations = @scraper.stations
+        stations = scraper.stations
         expect(stations).to eq [
           'Drake Radio',
           'George Strait Radio',
@@ -118,12 +102,10 @@ describe Pandata::Scraper do
 
     describe '#bookmarks' do
       context 'passed the :tracks argument' do
-        before(:each) do
-          stub_get_url('spec', 'fixtures', 'feeds', 'bookmarked_tracks.xml')
-        end
+        let(:path) { 'fixtures/feeds/bookmarked_tracks.xml' }
 
         it 'returns an array of hashes with track and artist names' do
-          tracks = @scraper.bookmarks(:tracks)
+          tracks = scraper.bookmarks(:tracks)
           expect(tracks).to eq [
             { artist: 'A Boy and His Kite',                 track: 'Cover Your Tracks' },
             { artist: 'Royksopp',                           track: 'Royksopp Forever' },
@@ -135,12 +117,10 @@ describe Pandata::Scraper do
       end
 
       context 'passed the :artists argument' do
-        before(:each) do
-          stub_get_url('spec', 'fixtures', 'feeds', 'bookmarked_artists.xml')
-        end
+        let(:path) { 'fixtures/feeds/bookmarked_artists.xml' }
 
         it 'returns an array of artist names' do
-          artists = @scraper.bookmarks(:artists)
+          artists = scraper.bookmarks(:artists)
           expect(artists).to eq [
             'Trampled By Turtles',
             'Adele',
@@ -154,12 +134,10 @@ describe Pandata::Scraper do
 
     describe '#likes' do
       context 'passed the :tracks argument' do
-        before(:each) do
-          stub_get_url('spec', 'fixtures', 'ajax', 'no_more', 'liked_tracks.html')
-        end
+        let(:path) { 'fixtures/ajax/no_more/liked_tracks.html' }
 
         it 'returns an array of hashes with track and artist names' do
-          tracks = @scraper.likes(:tracks)
+          tracks = scraper.likes(:tracks)
           expect(tracks).to eq [
             { artist: 'Of Monsters & Men',  track: 'Lakehouse' },
             { artist: 'Phoenix',            track: 'Lasso' },
@@ -171,12 +149,10 @@ describe Pandata::Scraper do
       end
 
       context 'passed the :artists argument' do
-        before(:each) do
-          stub_get_url('spec', 'fixtures', 'ajax', 'no_more', 'liked_artists.html')
-        end
+        let(:path) { 'fixtures/ajax/no_more/liked_artists.html' }
 
         it 'returns an array of artist names' do
-          artists = @scraper.likes(:artists)
+          artists = scraper.likes(:artists)
           expect(artists).to eq [
             'PANTyRAiD',
             'Crystal Castles',
@@ -188,12 +164,10 @@ describe Pandata::Scraper do
       end
 
       context 'passed the :albums argument' do
-        before(:each) do
-          stub_get_url('spec', 'fixtures', 'ajax', 'no_more', 'liked_albums.html')
-        end
+        let(:path) { 'fixtures/ajax/no_more/liked_albums.html' }
 
         it 'returns an array of hashes with the artist and album names' do
-          albums = @scraper.likes(:albums)
+          albums = scraper.likes(:albums)
           expect(albums).to eq [
             { artist: 'Kito & Reija Lee',       album: 'Sweet Talk EP' },
             { artist: 'Justice',                album: 'Audio, Video, Disco.' },
@@ -205,12 +179,10 @@ describe Pandata::Scraper do
       end
 
       context 'passed the :stations argument' do
-        before(:each) do
-          stub_get_url('spec', 'fixtures', 'ajax', 'no_more', 'liked_stations.html')
-        end
+        let(:path) { 'fixtures/ajax/no_more/liked_stations.html' }
 
         it 'returns an array of station names' do
-          stations = @scraper.likes(:stations)
+          stations = scraper.likes(:stations)
           expect(stations).to eq [
             'Country Christmas Radio',
             'Pachanga Boys Radio',
@@ -223,12 +195,10 @@ describe Pandata::Scraper do
     end
 
     describe '#following' do
-      before(:each) do
-        stub_get_url('spec', 'fixtures', 'ajax', 'no_more', 'following.html')
-      end
+      let(:path) { 'fixtures/ajax/no_more/following.html' }
 
       it 'returns an array of people being followed + metadata' do
-        following = @scraper.following
+        following = scraper.following
         expect(following).to eq [
           { name: 'caleb',            webname: 'wakcamaro',        href: '/profile/wakcamaro' },
           { name: 'caleb_robert_97',  webname: 'caleb_robert_97',  href: '/profile/caleb_robert_97' },
@@ -245,12 +215,10 @@ describe Pandata::Scraper do
     end
 
     describe '#followers' do
-      before(:each) do
-        stub_get_url('spec', 'fixtures', 'ajax', 'no_more', 'followers.html')
-      end
+      let(:path) { 'fixtures/ajax/no_more/followers.html' }
 
       it 'returns an array of followers + metadata' do
-        followers = @scraper.followers
+        followers = scraper.followers
         expect(followers).to eq [
           { name: 'pandorastats',   webname: 'pandorastats',   href: '/profile/pandorastats' },
           { name: 'HowZat',         webname: 'stevierocksys',  href: '/profile/stevierocksys' },
@@ -262,5 +230,6 @@ describe Pandata::Scraper do
         ]
       end
     end
+
   end
 end
