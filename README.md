@@ -12,7 +12,7 @@ Pandata is a Ruby 1.9+ library for downloading a user's Pandora.com data. This d
 
 Where possible, Pandora [feeds][1] are used (indicated by an * above).
 
-Pandata can only access **public** Pandora profiles. This option can be changed in Pandora's settings.
+**Pandata can only access public Pandora profiles.** This option can be changed in Pandora's settings.
 
 ## Installing
 
