@@ -30,8 +30,8 @@ module Pandata
       @scraper.download_cb = method(:update_progress)
     end
 
-    def update_progress(num_data)
-      progressbar.progress += num_data
+    def update_progress(new_data)
+      progressbar.progress += new_data.size
     end
 
     def download_and_output

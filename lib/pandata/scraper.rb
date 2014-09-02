@@ -136,7 +136,9 @@ module Pandata
           results.push(new_data)
         end
 
-        @download_cb[new_data.size] if @download_cb
+        if @download_cb
+          break if @download_cb[new_data] == :stop
+        end
 
         get_url(data_type, next_data_indices) if next_data_indices
       end
