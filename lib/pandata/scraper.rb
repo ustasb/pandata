@@ -172,6 +172,8 @@ module Pandata
       } if next_data_indices.empty?
 
       next_data_indices[:webname] = @webname
+      next_data_indices[:pat] = Downloader.get_pat
+
       DATA_FEED_URLS[data_name] % next_data_indices
     end
 

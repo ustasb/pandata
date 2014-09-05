@@ -134,16 +134,19 @@ describe Pandata::Scraper do
 
     describe '#likes' do
       context 'passed the :tracks argument' do
-        let(:path) { 'fixtures/ajax/no_more/liked_tracks.html' }
+        let(:path) { 'fixtures/ajax/no_more/mobile/liked_tracks.html' }
 
         it 'returns an array of hashes with track and artist names' do
           tracks = scraper.likes(:tracks)
           expect(tracks).to eq [
-            { artist: 'Of Monsters & Men',  track: 'Lakehouse' },
-            { artist: 'Phoenix',            track: 'Lasso' },
-            { artist: 'Sean Watkins',       track: 'Hello...Goodbye' },
-            { artist: 'Paloma Faith',       track: 'My Legs Are Weak' },
-            { artist: 'Ben Howard',         track: 'Esmerelda' }
+            { artist: "The Rock Heroes",    track: "All Summer Long" },
+            { artist: "Feist",              track: "I Feel It All" },
+            { artist: "Montgomery Gentry",  track: "Hell Yeah" },
+            { artist: "Saving Abel",        track: "Addicted" },
+            { artist: "The Verve",          track: "Bitter Sweet Symphony" },
+            { artist: "India Arie",         track: "The Heart Of The Matter" },
+            { artist: "Fauxliage",          track: "Let It Go" },
+            { artist: "Jem",                track: "Save Me" }
           ]
         end
       end

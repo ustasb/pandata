@@ -23,7 +23,8 @@ module Pandata
     # @param html [String]
     # @return [Hash, False]
     def get_next_data_indices(html)
-      show_more = Nokogiri::HTML(html).css('.show_more')[0]
+      # .js-more-link is found on mobile pages.
+      show_more = Nokogiri::HTML(html).css('.show_more, .js-more-link')[0]
 
       if show_more
         next_indices = {}
@@ -106,8 +107,9 @@ module Pandata
     def get_liked_tracks(html)
       tracks = []
 
-      infobox_each_link(html) do |title, subtitle|
-        tracks << { track: title, artist: subtitle }
+      doublelink_each_link(html) do |title, subtitle|
+        artist = subtitle.sub(/^by\s/i, '')
+        tracks << { track: title, artist: artist }
       end
 
       tracks
@@ -174,6 +176,19 @@ module Pandata
         yield(title_link, subtitle_link)
       end
     end
+
+    # Loops over each .double-link container and yields the title and subtitle.
+    # Encountered on mobile pages.
+    # @param html [String]
+    def doublelink_each_link(html)
+      Nokogiri::HTML(html).css('.double-link').each do |doublelink|
+        title_link = doublelink.css('h3 strong').text.strip
+        subtitle_link = doublelink.css('.media--backstageMusic__text div').text.strip
+
+        yield(title_link, subtitle_link)
+      end
+    end
+
 
     # @param html [String]
     # Returns an array of titles from #infobox_each_link.
