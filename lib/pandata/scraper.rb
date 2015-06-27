@@ -156,7 +156,14 @@ module Pandata
 
       while next_data_indices
         html = Downloader.read_page(url)
+
+        # Sometimes Pandora returns the same next_data_indices as the previous page.
+        # If we don't check for this, an infinite loop occurs.
+        # This problem occurs with tconrad.
+        prev_next_data_indices = next_data_indices
         next_data_indices = @parser.get_next_data_indices(html)
+        next_data_indices = false if prev_next_data_indices == next_data_indices
+
         url = yield(html, next_data_indices)
       end
     end
@@ -165,11 +172,11 @@ module Pandata
     # @param data_name [Symbol]
     # @param next_data_indices [Symbol] query parameters to get the next set of data
     def get_url(data_name, next_data_indices = {})
-      next_data_indices = {
-        nextStartIndex: 0,
-        nextLikeStartIndex: 0,
-        nextThumbStartIndex: 0
-      } if next_data_indices.empty?
+      if next_data_indices.empty?
+        next_data_indices = { nextStartIndex: 0, nextLikeStartIndex: 0, nextThumbStartIndex: 0 }
+      else
+        next_data_indices = next_data_indices.dup
+      end
 
       next_data_indices[:webname] = @webname
       next_data_indices[:pat] = Downloader.get_pat
