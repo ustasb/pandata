@@ -2,15 +2,16 @@
 
 Pandata is a Ruby 1.9+ library for downloading a user's Pandora.com data. This data includes:
 
-- Playing Station *
-- Recent Activity *
-- Stations *
-- Bookmarks (artists, tracks) *
+- ~~Playing Station *~~
+- ~~Recent Activity *~~
+- ~~Stations *~~
+- ~~Bookmarks (artists, tracks) *~~
 - Likes (albums, artists, stations, tracks)
 - Followers
 - Following
 
-Where possible, Pandora [feeds][1] are used (indicated by an * above).
+~~Where possible, Pandora [feeds][1] are used (indicated by an * above).~~
+**Update: Pandora has removed its feeds feature. When I find time, I'll update this gem.**
 
 **Pandata can only access public Pandora profiles.** This option can be changed in Pandora's settings.
 
@@ -38,7 +39,7 @@ pandora.com/profile/\<my_webname\>
 First, create a new Pandata scraper for a user:
 
     require 'pandata'
-    
+
     # Scraper.get takes either an email or a webname.
     # Returns an array of similar webnames if no match is found.
     johns_scraper = Pandata::Scraper.get('john@example.com')
@@ -80,6 +81,33 @@ For an up-to-date list, check out:
 
     # Get all data and output to a file.
     pandata my_webname --all -o my_pandora_data.txt
+
+### FAQ
+
+#### Q: Pandata is not grabbing all my liked tracks on Pandora. What's up with that?!
+
+First, for those coming from [pandify.com](http://pandify.com), Pandata is the
+tool that actually grabs your Pandora data.
+
+So, Pandora doesn't make it easy to retrieve users' data. This gem scrapes
+public Pandora profiles by going through a few fake proxy accounts. These fake
+accounts are shared between all Pandata users and it seems that Pandora now
+prevents those accounts from seeing some data on the website:
+
+![Unable to display thumb data.](https://raw.githubusercontent.com/ustasb/pandata/master/unable_to_display_data.png)
+
+As a workaround, I tried using the same fake accounts via the mobile endpoints.
+Pandora hasn't flagged the fake proxy accounts yet via this method. However, I've
+noticed that if you try to scroll through some user's liked tracks on Pandora's
+mobile app, the app will get stuck randomly and fail to load the next tracks. 
+The loading spinner will never stop:
+
+![tconrad infinite feed](https://raw.githubusercontent.com/ustasb/pandata/master/tconrad_infinite_feed.png)
+
+*The above is Tom Conrad's liked tracks mobile feed. He has 1200+ but the feed stops at around 185.*
+
+Again, this only happens for some users and I can't do anything about it. If it
+affects you, I'm sorry :(
 
 [1]: http://www.pandora.com/feeds
 [2]: http://rubydoc.info/gems/pandata/frames
