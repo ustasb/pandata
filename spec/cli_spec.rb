@@ -4,14 +4,14 @@ require 'pandata/cli'
 describe Pandata::CLI do
 
   before do
-    described_class.any_instance.stub(:update_progress)
+    allow_any_instance_of(described_class).to receive(:update_progress)
   end
 
   describe '--version' do
     let(:argv) { ['--version'] }
 
     it 'logs the Pandata version' do
-      STDOUT.should_receive(:puts).with Pandata::Version::STRING
+      expect(STDOUT).to receive(:puts).with Pandata::Version::STRING
       described_class.scrape(argv)
     end
   end
@@ -20,7 +20,7 @@ describe Pandata::CLI do
     let(:argv) { ['--help'] }
 
     it 'logs the Pandata help' do
-      STDOUT.should_receive(:puts).with(/Pandata: A tool for downloading.*/)
+      expect(STDOUT).to receive(:puts).with(/Pandata: A tool for downloading.*/)
       described_class.scrape(argv)
     end
   end
@@ -31,7 +31,7 @@ describe Pandata::CLI do
 
       it 'displays a "no matches found" message' do
         VCR.use_cassette('no_similar_webnames') do
-          STDOUT.should_receive(:puts).with("No exact match for 'invalidzz'.")
+          expect(STDOUT).to receive(:puts).with("No exact match for 'invalidzz'.")
           expect { described_class.scrape(argv) }.to raise_error(Pandata::PandataError)
         end
       end
@@ -42,8 +42,8 @@ describe Pandata::CLI do
 
       it 'displays a list of similar webnames' do
         VCR.use_cassette('many_similar_webnames') do
-          STDOUT.should_receive(:puts).with("No exact match for 'swedish'.")
-          STDOUT.should_receive(:puts).with <<-END
+          expect(STDOUT).to receive(:puts).with("No exact match for 'swedish'.")
+          expect(STDOUT).to receive(:puts).with <<-END
 
 Webname results for 'swedish':
   - edwardgarcia1999
@@ -72,7 +72,7 @@ Webname results for 'swedish':
     let(:webname) { 'tconrad' }
 
     after(:each) do
-      STDOUT.should_receive(:puts).with(
+      expect(STDOUT).to receive(:puts).with(
         File.read relative_path("fixtures/data/#{cassette}")
       )
       VCR.use_cassette(cassette) { described_class.scrape(argv) }

@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.files                         = Dir.glob('lib/**/*.rb')
   s.extra_rdoc_files              = %w[LICENSE README.md]
   s.executables                   << 'pandata'
-  s.add_runtime_dependency        'nokogiri', '~> 1.6.3'
-  s.add_runtime_dependency        'ruby-progressbar', '~> 1.2.0'
-  s.add_development_dependency    'rspec', '~> 2.14.0'
-  s.add_development_dependency    'vcr', '~> 2.5.0'
-  s.add_development_dependency    'webmock', '~> 1.13.0'
-  s.add_development_dependency    'yard', '~> 0.8.5'
+  s.add_runtime_dependency        'nokogiri', '~> 1.6.7'
+  s.add_runtime_dependency        'ruby-progressbar', '~> 1.5.1'
+  s.add_development_dependency    'rspec', '~> 3.4.0'
+  s.add_development_dependency    'vcr', '~> 3.0.1'
+  s.add_development_dependency    'webmock', '~> 1.22.6'
+  s.add_development_dependency    'yard', '~> 0.8.7.6'
 end
