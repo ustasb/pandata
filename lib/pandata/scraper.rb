@@ -41,23 +41,6 @@ module Pandata
       @webname = webname
     end
 
-    # Get the user's bookmarked data.
-    # @param bookmark_type [Symbol]
-    #   - :artists - returns an array of artist names
-    #   - :tracks - returns an array of hashes with :artist and :track keys
-    #   - :all - returns a hash with all bookmarked data
-    def bookmarks(bookmark_type = :all)
-      case bookmark_type
-      when :tracks
-        scrape_for(:bookmarked_tracks, :get_bookmarked_tracks)
-      when :artists
-        scrape_for(:bookmarked_artists, :get_bookmarked_artists)
-      when :all
-        { artists: bookmarks(:artists),
-          tracks: bookmarks(:tracks) }
-      end
-    end
-
     # Get the user's liked data. (The results from giving a 'thumbs up.')
     # @param like_type [Symbol]
     #   - :artists - returns an array of artist names

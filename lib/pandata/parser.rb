@@ -40,31 +40,6 @@ module Pandata
       end
     end
 
-    # @param xml [String]
-    # Returns an array of hashes with :artist and :track keys.
-    def get_bookmarked_tracks(xml)
-      tracks = []
-
-      xml_each_item(xml) do |title|
-        track, artist = title.split(' by ')
-        tracks << { artist: artist, track: track }
-      end
-
-      tracks
-    end
-
-    # @param xml [String]
-    # Returns an array of artist names.
-    def get_bookmarked_artists(xml)
-      artists = []
-
-      xml_each_item(xml) do |title|
-        artists << title
-      end
-
-      artists
-    end
-
     # @param html [String]
     # Returns an array of hashes with :artist and :track keys.
     def get_liked_tracks(html)
@@ -115,16 +90,6 @@ module Pandata
     end
 
     private
-
-    # Loops over each 'item' tag and yields the title and description.
-    # @param xml [String]
-    def xml_each_item(xml)
-      Nokogiri::XML(xml).css('item').each do |item|
-        title = item.at_css('title').text
-        desc = item.at_css('description').text
-        yield(title, desc)
-      end
-    end
 
     # Loops over each .infobox container and yields the title and subtitle.
     # @param html [String]

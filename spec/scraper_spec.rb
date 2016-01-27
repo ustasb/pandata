@@ -47,38 +47,6 @@ describe Pandata::Scraper do
   describe 'a Scraper instance' do
     let(:scraper) { Pandata::Scraper.send(:new, 'pandorastats') }
 
-    describe '#bookmarks' do
-      context 'passed the :tracks argument' do
-        let(:path) { 'fixtures/feeds/bookmarked_tracks.xml' }
-
-        it 'returns an array of hashes with track and artist names' do
-          tracks = scraper.bookmarks(:tracks)
-          expect(tracks).to eq [
-            { artist: 'A Boy and His Kite',                 track: 'Cover Your Tracks' },
-            { artist: 'Royksopp',                           track: 'Royksopp Forever' },
-            { artist: 'The National',                       track: 'Lucky You' },
-            { artist: 'Radical Face',                       track: 'Welcome Home' },
-            { artist: "Margot & The Nuclear So And So's",   track: 'Broadripple Is Burning (Daytrotter Sessions)' }
-          ]
-        end
-      end
-
-      context 'passed the :artists argument' do
-        let(:path) { 'fixtures/feeds/bookmarked_artists.xml' }
-
-        it 'returns an array of artist names' do
-          artists = scraper.bookmarks(:artists)
-          expect(artists).to eq [
-            'Trampled By Turtles',
-            'Adele',
-            'DJ Logic',
-            'Whitley',
-            'Mumford & Sons'
-          ]
-        end
-      end
-    end
-
     describe '#likes' do
       context 'passed the :tracks argument' do
         let(:path) { 'fixtures/ajax/no_more/mobile/liked_tracks.html' }

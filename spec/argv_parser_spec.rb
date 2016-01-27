@@ -12,8 +12,6 @@ describe Pandata::ArgvParser do
         'yoda',
         '--json',
         '--all',
-        '-b',
-        '-B',
         '-l',
         '-L',
         '-o',
@@ -23,7 +21,7 @@ describe Pandata::ArgvParser do
         '-F',
         '-f',
         # Duplicates
-        '-bBlLmnfF',
+        '-lLmnfF',
         '-l',
         '--json',
         '--all'
@@ -35,8 +33,6 @@ describe Pandata::ArgvParser do
       expect(options[:output_file]).to eq 'my_data.json'
       expect(options[:return_as_json]).to eq true
       expect(options[:data_to_get]).to eq [
-        :bookmarked_tracks,
-        :bookmarked_artists,
         :liked_tracks,
         :liked_artists,
         :liked_albums,

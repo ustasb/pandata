@@ -23,7 +23,7 @@ module Pandata
       get_all_data = false
 
       options[:opts] = OptionParser.new do |opts|
-        opts.banner = 'Pandata: A tool for downloading Pandora.com data (likes, bookmarks, etc.)'
+        opts.banner = 'Pandata: A tool for downloading Pandora.com data'
         opts.define_head 'Usage: pandata <email|webname> [options]'
         opts.separator <<-END
 
@@ -37,14 +37,6 @@ Options:
 
         opts.on('--all', 'Get all data') do
           get_all_data = true
-        end
-
-        opts.on('-B', '--bookmarked_artists', 'Get all bookmarked artists') do
-          options[:data_to_get] << :bookmarked_artists
-        end
-
-        opts.on('-b', '--bookmarked_tracks', 'Get all bookmarked tracks') do
-          options[:data_to_get] << :bookmarked_tracks
         end
 
         opts.on('-F', '--followers', "Get all user's followers") do
@@ -95,8 +87,6 @@ Options:
 
       if get_all_data
         options[:data_to_get] = [
-          :bookmarked_tracks,
-          :bookmarked_artists,
           :liked_tracks,
           :liked_artists,
           :liked_albums,

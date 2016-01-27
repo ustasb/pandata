@@ -78,20 +78,6 @@ Webname results for 'swedish':
       VCR.use_cassette(cassette) { described_class.scrape(argv) }
     end
 
-    describe '--bookmarked_artists' do
-      let(:cassette) { 'tconrad_bookmarked_artists' }
-      let(:argv) { [webname, '--bookmarked_artists'] }
-
-      it 'logs the bookmarked artists' do; end
-    end
-
-    describe '--bookmarked_tracks' do
-      let(:cassette) { 'tconrad_bookmarked_tracks' }
-      let(:argv) { [webname, '--bookmarked_tracks'] }
-
-      it 'logs the bookmarked tracks' do; end
-    end
-
     describe '--followers' do
       let(:cassette) { 'tconrad_followers' }
       let(:argv) { [webname, '--followers'] }
