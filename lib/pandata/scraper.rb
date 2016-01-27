@@ -47,12 +47,6 @@ module Pandata
       scrape_for(:recent_activity, :get_recent_activity)
     end
 
-    # Get the user's playing station.
-    # @return [String]
-    def playing_station
-      scrape_for(:playing_station, :get_playing_station).first
-    end
-
     # Get the user's stations.
     # @return [Array] array of station names
     def stations

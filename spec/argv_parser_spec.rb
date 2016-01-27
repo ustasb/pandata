@@ -13,7 +13,6 @@ describe Pandata::ArgvParser do
         '--json',
         '--all',
         '-a',
-        '-S',
         '-s',
         '-b',
         '-B',
@@ -26,7 +25,7 @@ describe Pandata::ArgvParser do
         '-F',
         '-f',
         # Duplicates
-        '-aSsbBlLmnfF',
+        '-asbBlLmnfF',
         '-s',
         '-l',
         '--json',
@@ -40,7 +39,6 @@ describe Pandata::ArgvParser do
       expect(options[:return_as_json]).to eq true
       expect(options[:data_to_get]).to eq [
         :recent_activity,
-        :playing_station,
         :stations,
         :bookmarked_tracks,
         :bookmarked_artists,

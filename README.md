@@ -2,7 +2,6 @@
 
 Pandata is a Ruby 1.9+ library for downloading a user's Pandora.com data. This data includes:
 
-- ~~Playing Station *~~
 - ~~Recent Activity *~~
 - ~~Stations *~~
 - ~~Bookmarks (artists, tracks) *~~
@@ -99,7 +98,7 @@ prevents those accounts from seeing some data on the website:
 As a workaround, I tried using the same fake accounts via the mobile endpoints.
 Pandora hasn't flagged the fake proxy accounts yet via this method. However, I've
 noticed that if you try to scroll through some user's liked tracks on Pandora's
-mobile app, the app will get stuck randomly and fail to load the next tracks. 
+mobile app, the app will get stuck randomly and fail to load the next tracks.
 The loading spinner will never stop:
 
 ![tconrad infinite feed](https://raw.githubusercontent.com/ustasb/pandata/master/tconrad_infinite_feed.png)

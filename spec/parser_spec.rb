@@ -176,15 +176,6 @@ describe Pandata::Parser do
     end
   end
 
-  describe '#get_playing_station' do
-    let(:xml) { read_path('fixtures/feeds/station_now_playing.xml') }
-
-    it 'returns the name of the currently playing station' do
-      station = parser.get_playing_station(xml)
-      expect(station).to eq 'Drake Radio'
-    end
-  end
-
   describe '#get_bookmarked_tracks' do
     let(:xml) { read_path('fixtures/feeds/bookmarked_tracks.xml') }
 

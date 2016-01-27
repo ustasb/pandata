@@ -70,15 +70,6 @@ describe Pandata::Scraper do
       end
     end
 
-    describe '#playing_station' do
-      let(:path) { 'fixtures/feeds/station_now_playing.xml' }
-
-      it 'returns the name of the currently playing station' do
-        station = scraper.playing_station
-        expect(station).to eq 'Drake Radio'
-      end
-    end
-
     describe '#stations' do
       let(:path) { 'fixtures/feeds/stations.xml' }
 

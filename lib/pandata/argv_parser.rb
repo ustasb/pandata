@@ -83,10 +83,6 @@ Options:
           options[:output_file] = path
         end
 
-        opts.on('-S', '--playing_station', 'Get currently playing station') do
-          options[:data_to_get] << :playing_station
-        end
-
         opts.on('-s', '--stations', 'Get all stations') do
           options[:data_to_get] << :stations
         end
@@ -108,7 +104,6 @@ Options:
       if get_all_data
         options[:data_to_get] = [
           :recent_activity,
-          :playing_station,
           :stations,
           :bookmarked_tracks,
           :bookmarked_artists,
