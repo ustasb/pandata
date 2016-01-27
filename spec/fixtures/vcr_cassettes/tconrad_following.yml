@@ -2,73 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://gist.github.com/ustasb/596f1ee96d03463fde77/raw/pandata_config.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Cookie:
-      - ''
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Tue, 03 Sep 2013 03:08:00 GMT
-      Content-Type:
-      - text/plain; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=31536000
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      X-Ua-Compatible:
-      - chrome=1
-      Access-Control-Allow-Origin:
-      - https://render.github.com
-      Etag:
-      - '"cb30953cc0d59c01f15374237abaf198"'
-      Content-Disposition:
-      - inline
-      Content-Transfer-Encoding:
-      - binary
-      X-Served-By:
-      - github-fe103-cp1-prd.iad.github.net
-      Cache-Control:
-      - private
-      X-Request-Id:
-      - d9eb001b-1f19-4378-aea7-aed308c83b37
-      X-Runtime:
-      - '0.011696'
-      Vary:
-      - Accept-Encoding
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "cookie": "at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D",
-          "required_update_for": "0.0.0"
-        }
-    http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:08:03 GMT
-- request:
-    method: get
     uri: http://www.pandora.com/content/connect?searchString=tconrad
     body:
       encoding: US-ASCII
@@ -79,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -88,18 +21,20 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:08:00 GMT
+      - Wed, 27 Jan 2016 18:58:47 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:08:00
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:47
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '783'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n<!-- following.vm -->\n\n\n\t\n\t\t\t\n\t\t<div class=\"find_people
@@ -114,7 +49,7 @@ http_interactions:
         class=\"results_count\">2 results</div>\n\t\t</div>\n\t\t<div class=\"people_search\">\n\t\t\t\t\t<div
         class=\"section clearfix\">\n\t<div class=\"row clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2_x\">\n\t\t\t<a href=\"/profile/tconrad\">\n\t\t\t<img class=\"facebookThumbnail
-        profile_img_sm\" fbid=\"500013004\" src=\"http://graph.facebook.com/500013004/picture?type=square\"
+        profile_img_sm\" fbid=\"500013004\" src=\"http://graph.facebook.com/v2.2/500013004/picture?type=square\"
         width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
         class=\"user_name single\"><a href=\"/profile/tconrad\" fbid=\"500013004\"
         webname=\"tconrad\" class=\"facebookName\">Tom Conrad</a></div>\n\t\t\t\t\t\t\t\t<div
@@ -126,7 +61,7 @@ http_interactions:
         //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
         section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
         clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/kendra_tconrad\">\n\t\t\t<img
-        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/img/no_photo_180.png\"
         width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
         class=\"user_name single\"><a href=\"/profile/kendra_tconrad\" fbid=\"0\"
         webname=\"kendra_tconrad\" class=\"facebookName\">kendra_tconrad</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
@@ -137,7 +72,7 @@ http_interactions:
         //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
         section-->\n\t\t\n\t\t\t</div>\n\t</div>\n</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:08:03 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:46 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/following?startIndex=0&webname=tconrad
@@ -150,7 +85,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -159,18 +94,20 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:08:01 GMT
+      - Wed, 27 Jan 2016 18:58:47 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:08:01
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:47
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '2850'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n<!-- following.vm -->\n\n\n\n\n\n<div class=\"feed_contents int-1\"
@@ -180,16 +117,16 @@ http_interactions:
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"803786\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
         class=\"listener_name facebookName\" fbid=\"803786\" webname=\"michael9516\"
-        data-forcefacebook=\"true\">\tMichael Eyal Sharon</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        data-forcefacebook=\"false\">\tmichael</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"michael9516\" data-listenerid=\"80297481\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/partnermarketing\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"0\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"1914056\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"0\" webname=\"partnermarketing\"
-        data-forcefacebook=\"false\">\tAsi Behar</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        class=\"listener_name facebookName\" fbid=\"1914056\" webname=\"partnermarketing\"
+        data-forcefacebook=\"false\">\tMolly Berry</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"partnermarketing\" data-listenerid=\"663619555\">\n\t\t\t\t<div
         class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
@@ -216,7 +153,7 @@ http_interactions:
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"757915220\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
         class=\"listener_name facebookName\" fbid=\"757915220\" webname=\"christiemanning\"
-        data-forcefacebook=\"true\">\tChristie Manning Marchese</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        data-forcefacebook=\"true\">\tChristie Marchese</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"christiemanning\" data-listenerid=\"249856728\">\n\t\t\t\t<div
         class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
@@ -268,9 +205,9 @@ http_interactions:
         class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/maz1972\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"717600739\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"10151965747005740\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"717600739\" webname=\"maz1972\"
+        class=\"listener_name facebookName\" fbid=\"10151965747005740\" webname=\"maz1972\"
         data-forcefacebook=\"false\">\tMarisol Segal</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"maz1972\" data-listenerid=\"100312785\">\n\t\t\t\t<div class=\"int-icon-1
@@ -347,15 +284,6 @@ http_interactions:
         data-webname=\"mark3093\" data-listenerid=\"70059858\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/adi31\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"686839298\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"686839298\" webname=\"adi31\"
-        data-forcefacebook=\"true\">\tAdi Benveniste</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"adi31\" data-listenerid=\"58736503\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/lane29\">\n\t\t\t<div
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"625606185\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
@@ -373,15 +301,6 @@ http_interactions:
         followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"lilly14\"
         data-listenerid=\"54544341\">\n\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span
         class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/pandora.aaron\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"720049655\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"720049655\" webname=\"pandora.aaron\"
-        data-forcefacebook=\"false\">\tAaron Morgan</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"pandora.aaron\" data-listenerid=\"53096711\">\n\t\t\t\t<div
-        class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/paul.stiff\">\n\t\t\t<div
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"532172663\"
@@ -435,15 +354,6 @@ http_interactions:
         data-forcefacebook=\"false\">\tBret Taylor</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"btaylor99\" data-listenerid=\"39601583\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/kateimbach\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"17908371\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"17908371\" webname=\"kateimbach\"
-        data-forcefacebook=\"true\">\tKate Imbach</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"kateimbach\" data-listenerid=\"37407120\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/ethan.diamond\">\n\t\t\t<div
@@ -520,10 +430,9 @@ http_interactions:
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/mkojalo\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"540406196\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"0\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"540406196\" webname=\"mkojalo\"
-        data-forcefacebook=\"true\">\tMatthew Kojalo</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        class=\"listener_name facebookName\" fbid=\"0\" webname=\"mkojalo\" data-forcefacebook=\"true\">\tmkojalo</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"mkojalo\" data-listenerid=\"10373261\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
@@ -576,127 +485,7 @@ http_interactions:
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"2225864\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
         class=\"listener_name facebookName\" fbid=\"2225864\" webname=\"mgsiegler\"
-        data-forcefacebook=\"false\">\tMG Siegler</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"mgsiegler\" data-listenerid=\"6204874\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/vyoung2\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"723795409\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"723795409\" webname=\"vyoung2\"
-        data-forcefacebook=\"false\">\tveronica young</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"vyoung2\" data-listenerid=\"6193610\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/chrisyerga\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"500069084\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"500069084\" webname=\"chrisyerga\"
-        data-forcefacebook=\"true\">\tchrisyerga</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"chrisyerga\" data-listenerid=\"5935313\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/ian.geller\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"713186602\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"713186602\" webname=\"ian.geller\"
-        data-forcefacebook=\"false\">\tIan Geller</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"ian.geller\" data-listenerid=\"5753698\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/Lizzie0\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"0\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"0\" webname=\"Lizzie0\" data-forcefacebook=\"false\">\tLizzie
-        Widhelm</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div class=\"follow_button
-        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"Lizzie0\"
-        data-listenerid=\"5053752\">\n\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span
-        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/bybyrat\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"616150112\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"616150112\" webname=\"bybyrat\"
-        data-forcefacebook=\"false\">\t@frankba</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"bybyrat\" data-listenerid=\"4453477\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t<div
-        class=\"show_more\" data-nextStartIndex=\"50\">Show more</div>\n\t\t\t\t\t\t\t\t</ul>\n\t\t</div>\n\t"
-    http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:08:04 GMT
-- request:
-    method: get
-    uri: http://www.pandora.com/content/following?startIndex=50&webname=tconrad
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Cookie:
-      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 03 Sep 2013 03:08:01 GMT
-      Content-Type:
-      - text/html; charset=UTF-8
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:08:01
-        GMT
-      Vary:
-      - Accept-Encoding
-      Content-Length:
-      - '2244'
-    body:
-      encoding: UTF-8
-      string: "\n\n<!-- following.vm -->\n\n\n\n\n\n \t\t\t\t\t\t\t\t\t\t\t<li class=\"clearfix\"
-        >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/anil8\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"500012896\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"500012896\" webname=\"anil8\"
-        data-forcefacebook=\"true\">\tAnil Dash</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"anil8\" data-listenerid=\"8388766\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/rabbott5\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"507031195\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"507031195\" webname=\"rabbott5\"
-        data-forcefacebook=\"false\">\tRob Abbott</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"rabbott5\" data-listenerid=\"7987854\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/kevinrose\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"500014674\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"500014674\" webname=\"kevinrose\"
-        data-forcefacebook=\"true\">\tKevin Rose</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"kevinrose\" data-listenerid=\"7538148\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/mgsiegler\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"2225864\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"2225864\" webname=\"mgsiegler\"
-        data-forcefacebook=\"false\">\tMG Siegler</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        data-forcefacebook=\"false\">\tM.G. Siegler</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"mgsiegler\" data-listenerid=\"6204874\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
@@ -772,8 +561,49 @@ http_interactions:
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"evhead\" data-listenerid=\"3141733\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/ryan.sarver\">\n\t\t\t<div
+        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t<div
+        class=\"show_more\" data-nextStartIndex=\"50\">Show more</div>\n\t\t\t\t\t\t\t\t</ul>\n\t\t</div>\n\t"
+    http_version: 
+  recorded_at: Wed, 27 Jan 2016 18:58:46 GMT
+- request:
+    method: get
+    uri: http://www.pandora.com/content/following?startIndex=50&webname=tconrad
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 27 Jan 2016 18:58:47 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Set-Cookie:
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:47
+        GMT
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "\n\n<!-- following.vm -->\n\n\n\n\n\n \t\t\t\t\t\t\t\t\t\t\t<li class=\"clearfix\"
+        >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/ryan.sarver\">\n\t\t\t<div
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"500163076\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
         class=\"listener_name facebookName\" fbid=\"500163076\" webname=\"ryan.sarver\"
@@ -783,10 +613,9 @@ http_interactions:
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/davidsze123\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"309060\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"0\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"309060\" webname=\"davidsze123\"
-        data-forcefacebook=\"true\">\tDavid Sze</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        class=\"listener_name facebookName\" fbid=\"0\" webname=\"davidsze123\" data-forcefacebook=\"true\">\tdavidsze123</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"davidsze123\" data-listenerid=\"964321\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
@@ -809,15 +638,6 @@ http_interactions:
         data-webname=\"hhartley\" data-listenerid=\"722819\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
-        class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/dave52\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"10200882\"
-        src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"10200882\" webname=\"dave52\"
-        data-forcefacebook=\"false\">\tDave Morin</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"dave52\" data-listenerid=\"585324\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
-        //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/seanab\">\n\t\t\t<div
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"500056191\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
@@ -828,14 +648,13 @@ http_interactions:
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/spinningdread\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"545289910\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"563441412\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"545289910\" webname=\"spinningdread\"
-        data-forcefacebook=\"true\">\tspinningdrea<span style=\"width:0;font-size:1px;font-size:0px;\">
-        </span>d</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div class=\"follow_button
-        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"spinningdread\"
-        data-listenerid=\"89486\">\n\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span
-        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
+        class=\"listener_name facebookName\" fbid=\"563441412\" webname=\"spinningdread\"
+        data-forcefacebook=\"true\">\tJosh Felser</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
+        data-webname=\"spinningdread\" data-listenerid=\"89486\">\n\t\t\t\t<div class=\"int-icon-1
+        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/mzapruder1\">\n\t\t\t<div
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"100002463819591\"
@@ -865,13 +684,13 @@ http_interactions:
         class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/cedwards\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"670014464\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"0\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"670014464\" webname=\"cedwards\"
-        data-forcefacebook=\"false\">\tCarl Edwards</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
-        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
-        data-webname=\"cedwards\" data-listenerid=\"5588\">\n\t\t\t\t<div class=\"int-icon-1
-        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
+        class=\"listener_name facebookName\" fbid=\"0\" webname=\"cedwards\" data-forcefacebook=\"false\">\tCarl
+        Edwards</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div class=\"follow_button
+        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"cedwards\"
+        data-listenerid=\"5588\">\n\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span
+        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/sethgoldstein\">\n\t\t\t<div
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"502532536\"
@@ -927,10 +746,9 @@ http_interactions:
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/palbers\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"696240750\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"0\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"696240750\" webname=\"palbers\"
-        data-forcefacebook=\"true\">\tPeter Albers</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        class=\"listener_name facebookName\" fbid=\"0\" webname=\"palbers\" data-forcefacebook=\"true\">\tpalbers</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"palbers\" data-listenerid=\"575\">\n\t\t\t\t<div class=\"int-icon-1
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
@@ -945,9 +763,9 @@ http_interactions:
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/conrad\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"1199817853\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"1462183164\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"1199817853\" webname=\"conrad\"
+        class=\"listener_name facebookName\" fbid=\"1462183164\" webname=\"conrad\"
         data-forcefacebook=\"false\">\tMark Conrad</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
         class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
         data-webname=\"conrad\" data-listenerid=\"97\">\n\t\t\t\t<div class=\"int-icon-1
@@ -990,13 +808,13 @@ http_interactions:
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/polarys\">\n\t\t\t<div
-        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"0\"
+        class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"500013856\"
         src=\"/images/no_photo_40.gif\" width=\"40\" height=\"40\" border=\"0\">\n\t\t\t\t<div
-        class=\"listener_name facebookName\" fbid=\"0\" webname=\"polarys\" data-forcefacebook=\"false\">\tMarc
-        Novakowski</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div class=\"follow_button
-        followable button-c btn-follow clearfix space-b-1 right\" data-webname=\"polarys\"
-        data-listenerid=\"17\">\n\t\t\t\t<div class=\"int-icon-1 i-follow\">\n\t\t\t\t\t<span
-        class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
+        class=\"listener_name facebookName\" fbid=\"500013856\" webname=\"polarys\"
+        data-forcefacebook=\"false\">\tMarc Novakowski</div>\n\t\t\t</div>\n\t\t</a>\n\t\t\t\t\t<div
+        class=\"follow_button followable button-c btn-follow clearfix space-b-1 right\"
+        data-webname=\"polarys\" data-listenerid=\"17\">\n\t\t\t\t<div class=\"int-icon-1
+        i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\t\t\t\t<li
         class=\"clearfix\" >\n\t<div class=\"follow_section clearfix\">\n\t\t<a href=\"/profile/jstoner\">\n\t\t\t<div
         class=\"listener_info\">\n\t\t\t\t<img class=\"facebookThumbnail\" fbid=\"0\"
@@ -1043,5 +861,5 @@ http_interactions:
         i-follow\">\n\t\t\t\t\t<span class=\"follow_button_label\">\n\t\t\t\t\t\t\t\t\t\t\t\tFollow\n\t\t\t\t\t\t\t\t\t\t\t</span>\n\t\t\t\t</div><!--
         //int-icon-1 i-followe -->\n\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n</li>\t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:08:04 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:46 GMT
 recorded_with: VCR 2.5.0

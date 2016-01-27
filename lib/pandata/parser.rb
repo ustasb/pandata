@@ -110,8 +110,8 @@ module Pandata
     # @param html [String]
     def doublelink_each_link(html)
       Nokogiri::HTML(html).css('.double-link').each do |doublelink|
-        title_link = doublelink.css('h3 strong').text.strip
-        subtitle_link = doublelink.css('.media--backstageMusic__text div').text.strip
+        title_link = doublelink.css('.media__bd__header').text.strip
+        subtitle_link = doublelink.css('.media__bd__subheader').text.strip
 
         yield(title_link, subtitle_link)
       end
