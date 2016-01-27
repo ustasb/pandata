@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+require 'fileutils'
+
+webname = 'tconrad'
+
+# cd into project's root.
+Dir.chdir File.join(File.dirname(__FILE__), '..')
+
+puts "Refetching all test data...\n"
+
+%w{
+  all
+  followers
+  following
+  liked_albums
+  liked_artists
+  liked_stations
+  liked_tracks
+}.each do |arg|
+  `bin/pandata #{webname} --#{arg} -o spec/fixtures/data/#{webname}_#{arg}`
+end
+
+puts "Rebuilding VCR cassettes...\n"
+
+FileUtils.rm_rf "spec/fixtures/vcr_cassettes/#{webname}*"
+
+`rspec`
