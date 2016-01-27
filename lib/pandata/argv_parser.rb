@@ -23,32 +23,20 @@ module Pandata
       get_all_data = false
 
       options[:opts] = OptionParser.new do |opts|
-        opts.banner = 'Pandata: A tool for downloading Pandora.com data (likes, bookmarks, stations, etc.)'
+        opts.banner = 'Pandata: A tool for downloading Pandora.com data'
         opts.define_head 'Usage: pandata <email|webname> [options]'
         opts.separator <<-END
 
 Examples:
   pandata john@example.com --liked_tracks
   pandata my_webname --all -o my_pandora_data.txt
-  pandata my_webname -lLb --json
+  pandata my_webname -lL --json
 
 Options:
         END
 
         opts.on('--all', 'Get all data') do
           get_all_data = true
-        end
-
-        opts.on('-a', '--recent_activity', 'Get recent activity') do
-          options[:data_to_get] << :recent_activity
-        end
-
-        opts.on('-B', '--bookmarked_artists', 'Get all bookmarked artists') do
-          options[:data_to_get] << :bookmarked_artists
-        end
-
-        opts.on('-b', '--bookmarked_tracks', 'Get all bookmarked tracks') do
-          options[:data_to_get] << :bookmarked_tracks
         end
 
         opts.on('-F', '--followers', "Get all user's followers") do
@@ -83,14 +71,6 @@ Options:
           options[:output_file] = path
         end
 
-        opts.on('-S', '--playing_station', 'Get currently playing station') do
-          options[:data_to_get] << :playing_station
-        end
-
-        opts.on('-s', '--stations', 'Get all stations') do
-          options[:data_to_get] << :stations
-        end
-
         opts.on_tail("-h", "--help", "Show this message") do
           options[:help] = true
         end
@@ -107,11 +87,6 @@ Options:
 
       if get_all_data
         options[:data_to_get] = [
-          :recent_activity,
-          :playing_station,
-          :stations,
-          :bookmarked_tracks,
-          :bookmarked_artists,
           :liked_tracks,
           :liked_artists,
           :liked_albums,

@@ -2,18 +2,14 @@
 
 Pandata is a Ruby 1.9+ library for downloading a user's Pandora.com data. This data includes:
 
-- ~~Playing Station *~~
-- ~~Recent Activity *~~
-- ~~Stations *~~
-- ~~Bookmarks (artists, tracks) *~~
 - Likes (albums, artists, stations, tracks)
 - Followers
 - Following
 
-~~Where possible, Pandora [feeds][1] are used (indicated by an * above).~~
-**Update: Pandora has removed its feeds feature. When I find time, I'll update this gem.**
-
 **Pandata can only access public Pandora profiles.** This option can be changed in Pandora's settings.
+
+**Note:** Scraping is a fragile task and Pandora can (and has) easily break this
+gem. Version 2 of this gem represents the removal of Pandora's [feeds][1] feature.
 
 ## Installing
 
@@ -49,12 +45,6 @@ Next, start scraping!
     # Get only liked tracks
     likes = johns_scraper.likes(:tracks)
 
-    # Get all bookmarks (artists and tracks)
-    bookmarks = johns_scraper.bookmarks
-
-    # Get all stations
-    stations = johns_scraper.stations
-
     # Get all followers
     followers = johns_scraper.followers
 
@@ -76,8 +66,8 @@ For an up-to-date list, check out:
 
     pandata john@example.com --liked_tracks
 
-    # Get liked tracks, artists and bookmarked tracks + output as JSON.
-    pandata my_webname -lLb --json
+    # Get liked tracks, artists + output as JSON.
+    pandata my_webname -lL --json
 
     # Get all data and output to a file.
     pandata my_webname --all -o my_pandora_data.txt
@@ -99,7 +89,7 @@ prevents those accounts from seeing some data on the website:
 As a workaround, I tried using the same fake accounts via the mobile endpoints.
 Pandora hasn't flagged the fake proxy accounts yet via this method. However, I've
 noticed that if you try to scroll through some user's liked tracks on Pandora's
-mobile app, the app will get stuck randomly and fail to load the next tracks. 
+mobile app, the app will get stuck randomly and fail to load the next tracks.
 The loading spinner will never stop:
 
 ![tconrad infinite feed](https://raw.githubusercontent.com/ustasb/pandata/master/tconrad_infinite_feed.png)
@@ -109,5 +99,5 @@ The loading spinner will never stop:
 Again, this only happens for some users and I can't do anything about it. If it
 affects you, I'm sorry :(
 
-[1]: http://www.pandora.com/feeds
+[1]: http://blog.pandora.com/2006/02/02/pandora_21_rss
 [2]: http://rubydoc.info/gems/pandata/frames

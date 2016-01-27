@@ -85,11 +85,9 @@ module Pandata
                      "  ** No Data **\n"
                    else
                      case category
-                     when /playing_station|recent_activity/
-                       formatter.list(cat_data)
-                     when /liked_tracks|bookmarked_tracks/
+                     when /liked_tracks/
                        formatter.tracks(cat_data)
-                     when /liked_artists|bookmarked_artists|stations|liked_stations/
+                     when /liked_artists|liked_stations/
                        formatter.sort_list(cat_data)
                      when :liked_albums
                        formatter.albums(cat_data)
@@ -109,10 +107,9 @@ module Pandata
       scraper_data = {}
 
       @data_to_get.each do |data_category|
-        if /(bookmark|like)e?d_(.*)/ =~ data_category
-          method = $1 << 's'  # 'likes' or 'bookmarks'
-          argument = $2.to_sym  # :tracks, :artists, :stations or :albums
-          scraper_data[data_category] = @scraper.public_send(method, argument)
+        if /liked_(.*)/ =~ data_category
+          argument = $1.to_sym  # :tracks, :artists, :stations or :albums
+          scraper_data[data_category] = @scraper.public_send(:likes, argument)
         else
           scraper_data[data_category] = @scraper.public_send(data_category)
         end

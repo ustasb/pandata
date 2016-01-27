@@ -40,68 +40,6 @@ module Pandata
       end
     end
 
-    # @param xml [String]
-    # Returns an array of recent activity names.
-    def get_recent_activity(xml)
-      activity_names = []
-
-      xml_each_item(xml) do |title|
-        activity_names << title
-      end
-
-      activity_names
-    end
-
-    # @param xml [String]
-    # Returns an array of station names.
-    def get_stations(xml)
-      stations = []
-
-      xml_each_item(xml) do |title|
-        stations << title
-      end
-
-      stations
-    end
-
-    # @param xml [String]
-    # @return [String]
-    def get_playing_station(xml)
-      station = ''
-
-      xml_each_item(xml) do |title|
-        station = title  # First title is the station name.
-        break
-      end
-
-      station
-    end
-
-    # @param xml [String]
-    # Returns an array of hashes with :artist and :track keys.
-    def get_bookmarked_tracks(xml)
-      tracks = []
-
-      xml_each_item(xml) do |title|
-        track, artist = title.split(' by ')
-        tracks << { artist: artist, track: track }
-      end
-
-      tracks
-    end
-
-    # @param xml [String]
-    # Returns an array of artist names.
-    def get_bookmarked_artists(xml)
-      artists = []
-
-      xml_each_item(xml) do |title|
-        artists << title
-      end
-
-      artists
-    end
-
     # @param html [String]
     # Returns an array of hashes with :artist and :track keys.
     def get_liked_tracks(html)
@@ -153,16 +91,6 @@ module Pandata
 
     private
 
-    # Loops over each 'item' tag and yields the title and description.
-    # @param xml [String]
-    def xml_each_item(xml)
-      Nokogiri::XML(xml).css('item').each do |item|
-        title = item.at_css('title').text
-        desc = item.at_css('description').text
-        yield(title, desc)
-      end
-    end
-
     # Loops over each .infobox container and yields the title and subtitle.
     # @param html [String]
     def infobox_each_link(html)
@@ -182,8 +110,8 @@ module Pandata
     # @param html [String]
     def doublelink_each_link(html)
       Nokogiri::HTML(html).css('.double-link').each do |doublelink|
-        title_link = doublelink.css('h3 strong').text.strip
-        subtitle_link = doublelink.css('.media--backstageMusic__text div').text.strip
+        title_link = doublelink.css('.media__bd__header').text.strip
+        subtitle_link = doublelink.css('.media__bd__subheader').text.strip
 
         yield(title_link, subtitle_link)
       end

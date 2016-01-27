@@ -41,41 +41,6 @@ module Pandata
       @webname = webname
     end
 
-    # Get the user's recent activity.
-    # @return [Array] array of activity names
-    def recent_activity
-      scrape_for(:recent_activity, :get_recent_activity)
-    end
-
-    # Get the user's playing station.
-    # @return [String]
-    def playing_station
-      scrape_for(:playing_station, :get_playing_station).first
-    end
-
-    # Get the user's stations.
-    # @return [Array] array of station names
-    def stations
-      scrape_for(:stations, :get_stations)
-    end
-
-    # Get the user's bookmarked data.
-    # @param bookmark_type [Symbol]
-    #   - :artists - returns an array of artist names
-    #   - :tracks - returns an array of hashes with :artist and :track keys
-    #   - :all - returns a hash with all bookmarked data
-    def bookmarks(bookmark_type = :all)
-      case bookmark_type
-      when :tracks
-        scrape_for(:bookmarked_tracks, :get_bookmarked_tracks)
-      when :artists
-        scrape_for(:bookmarked_artists, :get_bookmarked_artists)
-      when :all
-        { artists: bookmarks(:artists),
-          tracks: bookmarks(:tracks) }
-      end
-    end
-
     # Get the user's liked data. (The results from giving a 'thumbs up.')
     # @param like_type [Symbol]
     #   - :artists - returns an array of artist names

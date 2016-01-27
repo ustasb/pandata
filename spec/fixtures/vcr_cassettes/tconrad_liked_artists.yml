@@ -2,73 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://gist.github.com/ustasb/596f1ee96d03463fde77/raw/pandata_config.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Cookie:
-      - ''
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Tue, 03 Sep 2013 03:30:13 GMT
-      Content-Type:
-      - text/plain; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=31536000
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      X-Ua-Compatible:
-      - chrome=1
-      Access-Control-Allow-Origin:
-      - https://render.github.com
-      Etag:
-      - '"cb30953cc0d59c01f15374237abaf198"'
-      Content-Disposition:
-      - inline
-      Content-Transfer-Encoding:
-      - binary
-      X-Served-By:
-      - github-fe103-cp1-prd.iad.github.net
-      Cache-Control:
-      - private
-      X-Request-Id:
-      - 0e5c5251-8bb5-44e4-a3a5-7ee0a9faeb5a
-      X-Runtime:
-      - '0.011799'
-      Vary:
-      - Accept-Encoding
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "cookie": "at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D",
-          "required_update_for": "0.0.0"
-        }
-    http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:16 GMT
-- request:
-    method: get
     uri: http://www.pandora.com/content/connect?searchString=tconrad
     body:
       encoding: US-ASCII
@@ -79,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -88,18 +21,20 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:13 GMT
+      - Wed, 27 Jan 2016 18:58:47 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:13
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:47
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '783'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n<!-- following.vm -->\n\n\n\t\n\t\t\t\n\t\t<div class=\"find_people
@@ -114,7 +49,7 @@ http_interactions:
         class=\"results_count\">2 results</div>\n\t\t</div>\n\t\t<div class=\"people_search\">\n\t\t\t\t\t<div
         class=\"section clearfix\">\n\t<div class=\"row clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2_x\">\n\t\t\t<a href=\"/profile/tconrad\">\n\t\t\t<img class=\"facebookThumbnail
-        profile_img_sm\" fbid=\"500013004\" src=\"http://graph.facebook.com/500013004/picture?type=square\"
+        profile_img_sm\" fbid=\"500013004\" src=\"http://graph.facebook.com/v2.2/500013004/picture?type=square\"
         width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
         class=\"user_name single\"><a href=\"/profile/tconrad\" fbid=\"500013004\"
         webname=\"tconrad\" class=\"facebookName\">Tom Conrad</a></div>\n\t\t\t\t\t\t\t\t<div
@@ -126,7 +61,7 @@ http_interactions:
         //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
         section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
         clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/kendra_tconrad\">\n\t\t\t<img
-        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/img/no_photo_180.png\"
         width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
         class=\"user_name single\"><a href=\"/profile/kendra_tconrad\" fbid=\"0\"
         webname=\"kendra_tconrad\" class=\"facebookName\">kendra_tconrad</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
@@ -137,7 +72,7 @@ http_interactions:
         //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
         section-->\n\t\t\n\t\t\t</div>\n\t</div>\n</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:16 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:46 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=0&webname=tconrad
@@ -150,7 +85,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -159,23 +94,67 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:14 GMT
+      - Wed, 27 Jan 2016 18:58:47 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:14
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:47
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '782'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-2.pandora.com/images/public/amz/6/2/6/2/892038002626_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drQ200/Q269/Q26985BZDTR.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/sun-glitters\" class=\"first\">Sun Glitters</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\t\t\t<span class=\"profile_user_name\">You</span>
+        liked this on\n\t\t<a href=\"/sun-glitters\">Sun Glitters</a>\n\t\tartist
+        page\n\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!-- //infobox-body -->\n\t\t\t</div><!--
+        //infobox -->\n\t\t</div><!-- //bi-col-left -->\n\t\t<div class=\"bi-col-right
+        col-w-3\">\n\t\t\t<div class=\"menu space-b-1 clearfix right\">\n\t\t\t\t<div
+        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R363721\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/8/4/9/5/MN0002995948_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/flume\" class=\"first\">Flume</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\t\t\t<span class=\"profile_user_name\">You</span>
+        liked this on\n\t\t<a href=\"/flume\">Flume</a>\n\t\tartist page\n\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R382255\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drQ200/Q263/Q26348HKWMZ.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/moving-units\" class=\"first\">Moving Units</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\t\t\t<span class=\"profile_user_name\">You</span>
+        liked this on\n\t\t<a href=\"/moving-units\">Moving Units</a>\n\t\tartist
+        page\n\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!-- //infobox-body -->\n\t\t\t</div><!--
+        //infobox -->\n\t\t</div><!-- //bi-col-left -->\n\t\t<div class=\"bi-col-right
+        col-w-3\">\n\t\t\t<div class=\"menu space-b-1 clearfix right\">\n\t\t\t\t<div
+        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R74919\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-2-v4v6.pandora.com/images/public/rovi/portrait/0/5/3/2/MN0001072350_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/mumford-sons\" class=\"first\">Mumford &
@@ -188,7 +167,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amg/portrait/pic200/drP500/P598/P59899AC8RB.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/rovi/portrait/5/8/8/0/MN0000140885_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/curve\" class=\"first\">Curve</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -200,9 +179,50 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R52219\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amz/1/4/0/5/800005041_90W_90H.jpg\"
+        -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"5\">Show
+        more</div>\n"
+    http_version: 
+  recorded_at: Wed, 27 Jan 2016 18:58:47 GMT
+- request:
+    method: get
+    uri: http://www.pandora.com/content/artistlikes?artistStartIndex=5&webname=tconrad
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 27 Jan 2016 18:58:48 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Set-Cookie:
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:48
+        GMT
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
+        col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/1/5/0/5/MN0001935051_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/pantyraid\" class=\"first\">PANTyRAiD</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -216,7 +236,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amz/1/5/7/2/602537202751_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/8/9/5/4/MN0000724598_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/crystal-castles\" class=\"first\">Crystal
@@ -231,7 +251,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amz/6/0/1/1/800011106_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/amz/0/9/6/0/800050690_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/kito-reija-lee\" class=\"first\">Kito &
@@ -244,48 +264,9 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R342306\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"5\">Show
-        more</div>\n"
-    http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:17 GMT
-- request:
-    method: get
-    uri: http://www.pandora.com/content/artistlikes?artistStartIndex=5&webname=tconrad
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Cookie:
-      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 03 Sep 2013 03:30:14 GMT
-      Content-Type:
-      - text/html; charset=UTF-8
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:14
-        GMT
-      Vary:
-      - Accept-Encoding
-      Content-Length:
-      - '773'
-    body:
-      encoding: UTF-8
-      string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
-        col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amg/portrait/pic200/drP800/P838/P83889EEUVR.jpg\"
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/rovi/portrait/8/4/9/0/MN0000780948_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/ladytron\" class=\"first\">Ladytron</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -299,7 +280,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP900/P928/P92897I6241.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/6/9/5/3/MN0002393596_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/avicii\" class=\"first\">Avicii</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -311,9 +292,50 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R345752\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/portrait/pic200/drP900/P927/P92767IFMEO.jpg\"
+        -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"10\">Show
+        more</div>\n"
+    http_version: 
+  recorded_at: Wed, 27 Jan 2016 18:58:47 GMT
+- request:
+    method: get
+    uri: http://www.pandora.com/content/artistlikes?artistStartIndex=10&webname=tconrad
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 27 Jan 2016 18:58:48 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Set-Cookie:
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:48
+        GMT
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
+        col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drP900/P927/P92767IFMEO.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/trampled-by-turtles\" class=\"first\">Trampled
@@ -326,7 +348,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amz/3/2/2/2/656605322223_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/portrait/5/5/0/9/MN0000789055_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/explosions-in-sky\" class=\"first\">Explosions
@@ -341,7 +363,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amz/6/2/9/9/886974469926_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/portrait/0/6/4/3/MN0000503460_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/adele\" class=\"first\">Adele</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -352,48 +374,9 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R269367\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"10\">Show
-        more</div>\n"
-    http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:17 GMT
-- request:
-    method: get
-    uri: http://www.pandora.com/content/artistlikes?artistStartIndex=10&webname=tconrad
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Cookie:
-      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 03 Sep 2013 03:30:14 GMT
-      Content-Type:
-      - text/html; charset=UTF-8
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:14
-        GMT
-      Vary:
-      - Accept-Encoding
-      Content-Length:
-      - '1089'
-    body:
-      encoding: UTF-8
-      string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
-        col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amz/2/5/4/2/896835002452_90W_90H.jpg\"
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/albumart/2/5/4/2/896835002452_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/kodomo\" class=\"first\">Kodomo</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -407,7 +390,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-3.pandora.com/images/public/amg/portrait/pic200/drP900/P969/P96972ANCRW.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/4/5/8/2/MN0001502854_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/santigold\" class=\"first\">Santigold</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -421,7 +404,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amg/portrait/pic200/drP700/P757/P75704A2S1I.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/3/8/0/7/MN0002337083_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/warpaint\" class=\"first\">Warpaint</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -435,7 +418,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amg/portrait/pic200/drP500/P573/P57361LDHD0.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/6/0/7/4/MN0000084706_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/helio-sequence\" class=\"first\">The Helio
@@ -450,7 +433,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amz/7/2/9/5/711297335927_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/9/6/4/5/MN0001405469_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/passenger\" class=\"first\">Passenger</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -464,7 +447,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amz/6/2/6/0/634904060626_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/rovi/portrait/8/6/8/3/MN0000753868_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/sigur-ros\" class=\"first\">Sigur Ros</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -478,7 +461,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-3.pandora.com/images/public/amz/1/1/3/3/075597963311_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/8/1/9/5/MN0000755918_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/black-keys\" class=\"first\">The Black Keys</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -490,9 +473,50 @@ http_interactions:
         class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R11306\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-3.pandora.com/images/public/amg/portrait/pic200/drP600/P635/P63539HNZG2.jpg\"
+        -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"20\">Show
+        more</div>\n"
+    http_version: 
+  recorded_at: Wed, 27 Jan 2016 18:58:47 GMT
+- request:
+    method: get
+    uri: http://www.pandora.com/content/artistlikes?artistStartIndex=20&webname=tconrad
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Cookie:
+      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 27 Jan 2016 18:58:48 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Set-Cookie:
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:48
+        GMT
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
+        col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-3-v4v6.pandora.com/images/public/rovi/portrait/0/8/6/4/MN0000634680_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/darkel\" class=\"first\">Darkel</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -506,7 +530,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP900/P978/P97812EHZKU.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amg/portrait/pic200/drQ100/Q100/Q10022HHX2P.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/mum\" class=\"first\">Mum</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -520,7 +544,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-3.pandora.com/images/public/amz/6/1/4/4/884501124416_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/6/3/6/7/MN0000697636_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/gregory-alan-isakov\" class=\"first\">Gregory
@@ -533,48 +557,9 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R272749\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"20\">Show
-        more</div>\n"
-    http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:17 GMT
-- request:
-    method: get
-    uri: http://www.pandora.com/content/artistlikes?artistStartIndex=20&webname=tconrad
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Cookie:
-      - at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 03 Sep 2013 03:30:14 GMT
-      Content-Type:
-      - text/html; charset=UTF-8
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:14
-        GMT
-      Vary:
-      - Accept-Encoding
-      Content-Length:
-      - '934'
-    body:
-      encoding: UTF-8
-      string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
-        col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amz/2/2/0/6/016351516022_90W_90H.jpg\"
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/5/6/9/3/MN0000553965_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/dj-logic\" class=\"first\">DJ Logic</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -587,7 +572,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amz/2/7/1/2/602517492172_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/rovi/albumart/2/7/1/2/602517492172_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/whitley\" class=\"first\">Whitley</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -600,7 +585,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amz/4/9/3/2/884502922394_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/amz/7/0/9/4/888174794907_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/joe-purdy\" class=\"first\">Joe Purdy</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -613,7 +598,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amg/portrait/pic200/drP900/P947/P94757MDVVA.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/8/1/1/2/MN0001062118_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/la-roux\" class=\"first\">La Roux</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -626,7 +611,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amg/portrait/pic200/drP900/P944/P94491YZZ8C.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-3-v4v6.pandora.com/images/public/rovi/portrait/1/5/6/0/MN0000380651_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/metric\" class=\"first\">Metric</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -639,7 +624,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amg/portrait/pic200/drP600/P670/P67014OHKAG.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drP600/P670/P67014OHKAG.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/real-tuesday-weld\" class=\"first\">The
@@ -652,7 +637,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amg/portrait/pic200/drP700/P753/P75388NJNQW.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/0/4/7/5/MN0000135740_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/midlake\" class=\"first\">Midlake</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -663,49 +648,10 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R187747\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amz/1/2/5/6/644110026521_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/dodos\" class=\"first\">The Dodos</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R269661\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/portrait/pic200/drP800/P850/P85085WXWEW.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/tv-on-radio\" class=\"first\">TV On The
-        Radio</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R42326\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-2.pandora.com/images/public/amg/portrait/pic200/drP900/P931/P93147OFGB5.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/great-lake-swimmers\" class=\"first\">Great
-        Lake Swimmers</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R135067\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"30\">Show
         more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:17 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:47 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=30&webname=tconrad
@@ -718,7 +664,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -727,23 +673,64 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:15 GMT
+      - Wed, 27 Jan 2016 18:58:48 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:15
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:48
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '965'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/portrait/pic200/drP700/P729/P72925TWJRA.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/rovi/portrait/5/5/2/3/MN0000663255_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/dodos\" class=\"first\">The Dodos</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R269661\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/rovi/portrait/2/7/9/2/MN0000012972_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/tv-on-radio\" class=\"first\">TV On The
+        Radio</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R42326\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/8/3/2/0/MN0000760238_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/great-lake-swimmers\" class=\"first\">Great
+        Lake Swimmers</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R135067\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/3/6/8/8/MN0000028863_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/88\" class=\"first\">The 88</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -756,7 +743,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amz/3/2/8/7/075597947823_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-2-v4v6.pandora.com/images/public/rovi/portrait/0/5/2/7/MN0000627250_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/buena-vista-social-club\" class=\"first\">Buena
@@ -769,7 +756,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amg/portrait/pic200/drP900/P900/P90039DSUR5.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/5/0/0/0/MN0000780005_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/lcd-soundsystem\" class=\"first\">LCD Soundsystem</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -782,7 +769,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-3.pandora.com/images/public/amz/1/5/1/7/777215107151_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/albumart/1/5/1/7/777215107151_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/covenant-of-thorns\" class=\"first\">A Covenant
@@ -795,7 +782,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amg/portrait/pic200/drP600/P688/P68816ZTOOB.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/5/2/1/4/MN0000634125_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/presets\" class=\"first\">The Presets</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -808,7 +795,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP900/P965/P96552WTTHF.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/2/7/0/4/MN0000664072_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/gliss\" class=\"first\">Gliss</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -821,7 +808,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amg/portrait/pic200/drP700/P739/P73959V1D21.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/1/2/7/0/MN0000480721_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/tapes-n-tapes\" class=\"first\">Tapes 'n
@@ -832,49 +819,10 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R194113\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/portrait/pic200/drP900/P937/P93787I456K.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/kevin-devine\" class=\"first\">Kevin Devine</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R144143\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amg/portrait/pic200/drP900/P965/P96535A1MT8.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/charlotte-gainsbourg\" class=\"first\">Charlotte
-        Gainsbourg</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R206541\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amg/portrait/pic200/drP100/P177/p17706i58k2.JPG\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/ultra-vivid-scene\" class=\"first\">Ultra
-        Vivid Scene</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R174984\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"40\">Show
         more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:18 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:47 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=40&webname=tconrad
@@ -887,7 +835,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -896,36 +844,64 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:15 GMT
+      - Wed, 27 Jan 2016 18:58:48 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:15
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:48
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '925'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amg/portrait/pic200/drP900/P982/P98268OSZC2.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/4/5/0/2/MN0000082054_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/talk-talk\" class=\"first\">Talk Talk</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        normal\">\n\t\t\t\t\t\t<a href=\"/kevin-devine\" class=\"first\">Kevin Devine</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
         class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
         //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
         -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
         clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R35639\">\n\t\t\t\t\t\tCreate
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R144143\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amg/portrait/pic200/drP900/P900/P90067PCU4M.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/3/0/7/1/MN0000771703_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/charlotte-gainsbourg\" class=\"first\">Charlotte
+        Gainsbourg</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R206541\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/1/2/6/8/MN0000178621_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/ultra-vivid-scene\" class=\"first\">Ultra
+        Vivid Scene</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R174984\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/8/8/2/8/MN0000378288_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/massive-attack\" class=\"first\">Massive
@@ -938,7 +914,20 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amz/1/2/0/3/098787103021_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-1-v4v6.pandora.com/images/public/rovi/portrait/4/1/8/0/MN0000790814_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/talk-talk\" class=\"first\">Talk Talk</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R35639\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/6/7/9/0/MN0000250976_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/low\" class=\"first\">Low</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -951,7 +940,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amz/7/2/6/0/652637240627_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/6/3/1/5/MN0000895136_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/pixies\" class=\"first\">Pixies</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -964,7 +953,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amg/portrait/pic200/drP100/P154/p15451oc4uv.JPG\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/3/3/0/7/MN0000047033_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/blue-nile\" class=\"first\">The Blue Nile</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -977,7 +966,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amg/portrait/pic200/drP000/P021/p02119q5d93.JPG\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/rovi/portrait/6/9/2/1/MN0000451296_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/red-house-painters\" class=\"first\">Red
@@ -990,7 +979,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amg/portrait/pic200/drP600/P682/P68261Y0R5U.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/9/1/6/1/MN0000301619_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/portishead\" class=\"first\">Portishead</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1001,49 +990,10 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R2303\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP600/P612/P61297KPCM0.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/9-inch-nails\" class=\"first\">Nine Inch
-        Nails</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R141040\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-3.pandora.com/images/public/amz/6/6/6/9/075597959666_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/iron-wine\" class=\"first\">Iron & Wine</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R115226\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amg/portrait/pic200/drP600/P699/P69933HIYWV.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/cure\" class=\"first\">The Cure</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R139909\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"50\">Show
         more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:18 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:48 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=50&webname=tconrad
@@ -1056,7 +1006,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -1065,23 +1015,51 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:15 GMT
+      - Wed, 27 Jan 2016 18:58:49 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:15
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:49
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '931'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP700/P799/P79973QR181.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-1-v4v6.pandora.com/images/public/rovi/portrait/3/3/7/1/MN0000351733_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/9-inch-nails\" class=\"first\">Nine Inch
+        Nails</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R141040\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/portrait/8/3/0/5/MN0000085038_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/iron-wine\" class=\"first\">Iron & Wine</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R115226\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/portrait/5/1/2/4/MN0000254215_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/wilco\" class=\"first\">Wilco</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1094,7 +1072,20 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amz/4/2/9/0/5414939280924_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/0/9/3/7/MN0000137390_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/cure\" class=\"first\">The Cure</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R139909\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drQ100/Q189/Q18928LZX7C.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/wax-tailor\" class=\"first\">Wax Tailor</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1107,7 +1098,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amg/portrait/pic200/drP200/P235/P23537PUPB6.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/portrait/0/3/2/0/MN0000040230_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/songs-ohia\" class=\"first\">Songs: Ohia</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1120,7 +1111,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amz/0/2/0/8/881159008020_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/albumart/0/2/0/8/881159008020_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/green-pitch\" class=\"first\">Green Pitch</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1133,7 +1124,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amg/portrait/pic200/drP600/P615/P61579OPOTZ.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/8/7/8/1/MN0000681878_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/maritime\" class=\"first\">Maritime</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1146,7 +1137,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amg/portrait/pic200/drP600/P668/P66875BGNR3.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/rovi/portrait/8/0/8/5/MN0000915808_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/tokyo-police-club\" class=\"first\">Tokyo
@@ -1159,7 +1150,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amg/portrait/pic200/drP600/P667/P66719JQB16.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amg/portrait/pic200/drP600/P667/P66719JQB16.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/magnolia-electric-co\" class=\"first\">Magnolia
@@ -1170,49 +1161,10 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R99934\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP700/P729/P72968NPE7A.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/bright-eyes\" class=\"first\">Bright Eyes</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R101229\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amg/portrait/pic200/drP400/P419/P41948HXDRB.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/feeder\" class=\"first\">Feeder</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R13509\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amz/2/8/8/3/825646643882_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/justice\" class=\"first\">Justice</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R188944\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"60\">Show
         more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:18 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:48 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=60&webname=tconrad
@@ -1225,7 +1177,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -1234,23 +1186,64 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:15 GMT
+      - Wed, 27 Jan 2016 18:58:49 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:15
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:49
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '947'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amz/4/7/6/9/626570609674_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/6/5/0/0/MN0000620056_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/bright-eyes\" class=\"first\">Bright Eyes</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R101229\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drP400/P419/P41948HXDRB.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/feeder\" class=\"first\">Feeder</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R13509\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/rovi/portrait/6/0/1/8/MN0000648106_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/justice\" class=\"first\">Justice</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R188944\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/albumart/4/7/6/9/626570609674_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/kyle-andrews\" class=\"first\">Kyle Andrews</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1263,7 +1256,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amz/4/2/3/6/634457176324_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/portrait/3/4/0/3/MN0000123043_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/corrina-repp\" class=\"first\">Corrina Repp</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1276,7 +1269,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amg/portrait/pic200/drP600/P612/P61230SGHIR.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/portrait/4/0/3/8/MN0000068304_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/concretes\" class=\"first\">The Concretes</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1289,7 +1282,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amg/portrait/pic200/drP900/P925/P92594QKA7R.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/amg/portrait/pic200/drP900/P925/P92594QKA7R.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/swords-project\" class=\"first\">The Swords
@@ -1302,7 +1295,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP200/P257/P25791H6VAR.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/rovi/portrait/8/4/4/8/MN0000988448_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/frou-frou\" class=\"first\">Frou Frou</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1315,7 +1308,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amz/7/2/5/5/881390645527_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-1-v4v6.pandora.com/images/public/rovi/albumart/7/2/5/5/881390645527_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/chikinki\" class=\"first\">Chikinki</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1328,7 +1321,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amg/portrait/pic200/drP600/P645/P64560Z7V1K.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drP600/P645/P64560Z7V1K.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/bad-astronaut\" class=\"first\">Bad Astronaut</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1339,49 +1332,10 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R1269\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amz/2/1/9/4/7410840044912_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/pat-macko-elites\" class=\"first\">Pat Macko
-        & The Elites</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R176316\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amg/portrait/pic200/drP400/P407/P40761QZ9OA.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/luna\" class=\"first\">Luna</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R76111\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/portrait/pic200/drP900/P922/P92201Q6MOI.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/magnetic-fields\" class=\"first\">The Magnetic
-        Fields</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R35523\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"70\">Show
         more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:18 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:48 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=70&webname=tconrad
@@ -1394,7 +1348,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -1403,23 +1357,64 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:15 GMT
+      - Wed, 27 Jan 2016 18:58:49 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:15
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:49
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '962'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amg/portrait/pic200/drP500/P591/P59164AMOTW.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-1-v4v6.pandora.com/images/public/amz/2/1/9/4/7410840044912_90W_90H.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/pat-macko-elites\" class=\"first\">Pat Macko
+        & The Elites</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R176316\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/portrait/0/9/9/8/MN0000268990_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/luna\" class=\"first\">Luna</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R76111\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/portrait/8/5/3/6/MN0000056358_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/magnetic-fields\" class=\"first\">The Magnetic
+        Fields</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R35523\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/amg/portrait/pic200/drP500/P591/P59164AMOTW.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/pedro-lion\" class=\"first\">Pedro The Lion</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1432,7 +1427,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amg/portrait/pic200/drP600/P607/P60776S71MY.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/6/1/0/7/MN0000047016_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/blanket-music\" class=\"first\">Blanket
@@ -1445,7 +1440,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-2.pandora.com/images/public/amz/3/2/5/5/639980005523_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/amz/3/2/5/5/639980005523_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/kingdom-rock\" class=\"first\">The Kingdom
@@ -1458,7 +1453,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amz/8/2/1/4/656605014128_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-1-v4v6.pandora.com/images/public/rovi/portrait/9/3/5/3/MN0000573539_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/windsor-for-derby\" class=\"first\">Windsor
@@ -1471,7 +1466,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-3.pandora.com/images/public/amz/5/2/8/7/700435707825_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/rovi/albumart/5/2/8/7/700435707825_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/100-watt-smile\" class=\"first\">100 Watt
@@ -1484,7 +1479,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/3/2/6/8/744861078623_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/amg/3/2/6/8/744861078623_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/brightblack-morning-light\" class=\"first\">Brightblack
@@ -1497,7 +1492,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amg/portrait/pic200/drP600/P633/P63317QAWLR.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drP600/P633/P63317QAWLR.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/mobius-band\" class=\"first\">Mobius Band</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1508,49 +1503,10 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R121132\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/portrait/pic200/drP700/P755/P75555I86L8.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/sounds\" class=\"first\">The Sounds</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R14927\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amg/portrait/pic200/drP700/P734/P73405Q1VTB.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/lynn-miles\" class=\"first\">Lynn Miles</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R1747\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amz/4/2/7/6/828767276724_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/kashmir\" class=\"first\">Kashmir</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R162382\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"80\">Show
         more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:19 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:48 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=80&webname=tconrad
@@ -1563,7 +1519,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -1572,23 +1528,64 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:16 GMT
+      - Wed, 27 Jan 2016 18:58:49 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:16
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:49
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '948'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amg/portrait/pic200/drP600/P652/P65296NKOCE.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/5/5/9/7/MN0000507955_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/sounds\" class=\"first\">The Sounds</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R14927\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/portrait/7/4/9/9/MN0000169947_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/lynn-miles\" class=\"first\">Lynn Miles</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R1747\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/7/0/9/2/MN0000362907_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/kashmir\" class=\"first\">Kashmir</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R162382\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/portrait/5/0/3/2/MN0000772305_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/static-age\" class=\"first\">The Static
@@ -1601,7 +1598,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP600/P635/P63551H9O9Z.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/amg/portrait/pic200/drP600/P635/P63551H9O9Z.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/now-its-overhead\" class=\"first\">Now It's
@@ -1614,7 +1611,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-2.pandora.com/images/public/amz/2/2/1/1/646315451122_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amz/2/2/1/1/646315451122_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/readyville\" class=\"first\">Readyville</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1627,7 +1624,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amz/6/2/5/6/637642106526_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/albumart/6/2/5/6/637642106526_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/headcase\" class=\"first\">Headcase</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1640,7 +1637,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-3.pandora.com/images/public/amg/portrait/pic200/drP600/P614/P61498S24JN.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/6/1/4/9/MN0002159416_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/cities\" class=\"first\">Cities</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1653,7 +1650,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amg/portrait/pic200/drP900/P920/P92031KJ47F.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/rovi/portrait/7/6/5/5/MN0000725567_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/greg-laswell\" class=\"first\">Greg Laswell</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1666,7 +1663,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-2.pandora.com/images/public/amz/9/7/1/8/093624948179_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/portrait/0/7/6/1/MN0000021670_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/tegan-sara\" class=\"first\">Tegan And Sara</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1677,49 +1674,10 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R66779\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amz/2/2/0/7/858275007022_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/joshua-radin\" class=\"first\">Joshua Radin</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R189364\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amz/0/2/3/7/800505137320_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/dylan-rhymes\" class=\"first\">Dylan Rhymes</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
-        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R160611\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amz/8/2/2/6/666561006228_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/do-make-say-think\" class=\"first\">Do Make
-        Say Think</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R171012\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"90\">Show
         more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:19 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:48 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=90&webname=tconrad
@@ -1732,7 +1690,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -1741,23 +1699,64 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:16 GMT
+      - Wed, 27 Jan 2016 18:58:49 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:16
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:49
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '971'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP100/P172/p17222x8x73.JPG\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-2-v4v6.pandora.com/images/public/rovi/portrait/2/8/2/4/MN0000624282_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/joshua-radin\" class=\"first\">Joshua Radin</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R189364\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/amz/0/2/3/7/800505137320_90W_90H.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/dylan-rhymes\" class=\"first\">Dylan Rhymes</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
+        class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R160611\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/portrait/6/0/9/9/MN0000169906_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/do-make-say-think\" class=\"first\">Do Make
+        Say Think</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R171012\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/6/0/6/1/MN0000031606_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/smog\" class=\"first\">Smog</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1770,7 +1769,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP000/P097/p09731j2v9y.JPG\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amg/portrait/pic200/drP000/P097/p09731j2v9y.JPG\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/pete-krebs\" class=\"first\">Pete Krebs</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1783,7 +1782,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-1.pandora.com/images/public/amg/portrait/pic200/drP200/P226/p22648h6var.JPG\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/4/5/7/7/MN0000817754_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/ween\" class=\"first\">Ween</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1796,7 +1795,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amz/7/2/8/6/634457576827_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/portrait/0/7/5/9/MN0000099570_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/kingsbury-manx\" class=\"first\">The Kingsbury
@@ -1809,7 +1808,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP500/P588/P58806U14DT.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-1-v4v6.pandora.com/images/public/rovi/portrait/4/9/4/9/MN0000019494_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/trembling-blue-stars\" class=\"first\">Trembling
@@ -1822,7 +1821,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sjl-2.pandora.com/images/public/amz/0/2/4/5/653225005420_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amz/0/2/4/5/653225005420_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/bottom-of-hudson\" class=\"first\">Bottom
@@ -1835,7 +1834,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amz/9/2/1/7/656605017129_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/albumart/9/2/1/7/656605017129_90W_90H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/early-day-miners\" class=\"first\">Early
@@ -1846,49 +1845,10 @@ http_interactions:
         i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R99924\">\n\t\t\t\t\t\tCreate
         Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/portrait/pic200/drP600/P675/P67529P8X5B.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/bonnie-prince-billy\" class=\"first\">Bonnie
-        'Prince' Billy</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R44959\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amz/9/8/8/1/093624951889_90W_90H.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/regina-spektor\" class=\"first\">Regina
-        Spektor</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R117639\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
-        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
-        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-1.pandora.com/images/public/amg/portrait/pic200/drP500/P598/P59830Q8364.jpg\"
-        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
-        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
-        normal\">\n\t\t\t\t\t\t<a href=\"/sufjan-stevens\" class=\"first\">Sufjan
-        Stevens</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
-        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
-        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
-        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R56908\">\n\t\t\t\t\t\tCreate
-        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
-        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"show_more\" data-nextStartIndex=\"100\">Show
         more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:19 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:49 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/artistlikes?artistStartIndex=100&webname=tconrad
@@ -1901,7 +1861,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -1910,23 +1870,64 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:30:16 GMT
+      - Wed, 27 Jan 2016 18:58:50 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:30:16
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:50
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '772'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\t\t\n\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amg/portrait/pic200/drP700/P733/P73362F3YIM.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/portrait/4/6/7/4/MN0000094764_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/bonnie-prince-billy\" class=\"first\">Bonnie
+        'Prince' Billy</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R44959\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/portrait/0/6/5/6/MN0000386560_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/regina-spektor\" class=\"first\">Regina
+        Spektor</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R117639\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/0/0/3/0/MN0000580300_200W.jpg\"
+        width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
+        -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
+        normal\">\n\t\t\t\t\t\t<a href=\"/sufjan-stevens\" class=\"first\">Sufjan
+        Stevens</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p class=\"s-0 line-h-1_4\">\n\t\t\t\t\t\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!--
+        //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left
+        -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
+        clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
+        i-create-1 like_create_station\"\n\t\t\t\t\t\tdata-artistid=\"R56908\">\n\t\t\t\t\t\tCreate
+        Station\n\t\t\t\t\t</div><!-- //int-icon -->\n\t\t\t\t</div><!-- //btn_bg
+        btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
+        -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
+        class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/rovi/portrait/3/7/2/3/MN0000753273_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/andy-stochansky\" class=\"first\">Andy Stochansky</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1939,7 +1940,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/amg/portrait/pic200/drP600/P672/P67298RRU9P.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/rovi/portrait/5/9/7/1/MN0000861795_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/matt-pond-pa\" class=\"first\">Matt Pond
@@ -1952,7 +1953,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-1.pandora.com/images/public/amg/portrait/pic200/drP200/P229/p22967qhctt.JPG\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-dc6-1-v4v6.pandora.com/images/public/rovi/portrait/3/5/0/0/MN0000660053_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/grandaddy\" class=\"first\">Grandaddy</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1965,7 +1966,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amz/0/2/6/4/673855044620_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/rovi/portrait/0/3/8/0/MN0000480830_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/mountain-goats\" class=\"first\">The Mountain
@@ -1978,7 +1979,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-sv5-2.pandora.com/images/public/amg/portrait/pic200/drP000/P093/p09315sgqur.JPG\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/rovi/portrait/8/7/6/9/MN0000189678_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/galaxie-500\" class=\"first\">Galaxie 500</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -1991,7 +1992,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amz/4/2/9/5/880882175924_90W_90H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-1.p-cdn.com/images/public/rovi/portrait/9/4/2/6/MN0000326249_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/radiohead\" class=\"first\">Radiohead</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -2004,7 +2005,7 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\t<div class=\"section clearfix\">\n\t\t<div
         class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-2.pandora.com/images/public/amg/portrait/pic200/drP900/P997/P99736XWJWR.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/portrait/4/4/4/8/MN0000758444_200W.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\">\n\t\t\t\t\t\t<a href=\"/blur\" class=\"first\">Blur</a>\n\t\t\t\t\t</h3>\n\t\t\t\t\t<p
@@ -2017,5 +2018,5 @@ http_interactions:
         btn_left -->\n\t\t\t\t\t\t\t</div><!-- //menu -->\n\t\t</div><!-- //bi-col-right
         -->\n\t</div><!-- //section -->\n\n<div class=\"no_more\"></div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:30:19 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:49 GMT
 recorded_with: VCR 2.5.0

@@ -2,73 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://gist.github.com/ustasb/596f1ee96d03463fde77/raw/pandata_config.json
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Cookie:
-      - ''
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - '*/*'
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - GitHub.com
-      Date:
-      - Tue, 03 Sep 2013 03:35:58 GMT
-      Content-Type:
-      - text/plain; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Status:
-      - 200 OK
-      Strict-Transport-Security:
-      - max-age=31536000
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      X-Ua-Compatible:
-      - chrome=1
-      Access-Control-Allow-Origin:
-      - https://render.github.com
-      Etag:
-      - '"cb30953cc0d59c01f15374237abaf198"'
-      Content-Disposition:
-      - inline
-      Content-Transfer-Encoding:
-      - binary
-      X-Served-By:
-      - github-fe102-cp1-prd.iad.github.net
-      Cache-Control:
-      - private
-      X-Request-Id:
-      - 3ee727d3-8bd1-4b6b-b902-977bf4ebc655
-      X-Runtime:
-      - '0.011508'
-      Vary:
-      - Accept-Encoding
-    body:
-      encoding: UTF-8
-      string: |-
-        {
-          "cookie": "at=wR3JtOkD5uML+hpRZts7J9nGAfao51kP9+mWXzdt95pb2iuYxCrLqMlU3pJwmIYf5POmKDqWEOoNNtwtzqvlH7A%3D%3D",
-          "required_update_for": "0.0.0"
-        }
-    http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:36:01 GMT
-- request:
-    method: get
     uri: http://www.pandora.com/content/connect?searchString=tconrad
     body:
       encoding: US-ASCII
@@ -79,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -88,18 +21,20 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:35:58 GMT
+      - Wed, 27 Jan 2016 18:58:56 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:35:58
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:56
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '783'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n<!-- following.vm -->\n\n\n\t\n\t\t\t\n\t\t<div class=\"find_people
@@ -114,7 +49,7 @@ http_interactions:
         class=\"results_count\">2 results</div>\n\t\t</div>\n\t\t<div class=\"people_search\">\n\t\t\t\t\t<div
         class=\"section clearfix\">\n\t<div class=\"row clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2_x\">\n\t\t\t<a href=\"/profile/tconrad\">\n\t\t\t<img class=\"facebookThumbnail
-        profile_img_sm\" fbid=\"500013004\" src=\"http://graph.facebook.com/500013004/picture?type=square\"
+        profile_img_sm\" fbid=\"500013004\" src=\"http://graph.facebook.com/v2.2/500013004/picture?type=square\"
         width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
         class=\"user_name single\"><a href=\"/profile/tconrad\" fbid=\"500013004\"
         webname=\"tconrad\" class=\"facebookName\">Tom Conrad</a></div>\n\t\t\t\t\t\t\t\t<div
@@ -126,7 +61,7 @@ http_interactions:
         //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
         section-->\n\t\t\t\t\t<div class=\"section clearfix\">\n\t<div class=\"row
         clearfix\">\n\t\t<div class=\"bi-col-left col-w-2_x\">\n\t\t\t<a href=\"/profile/kendra_tconrad\">\n\t\t\t<img
-        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/images/no_artist_image.gif\"
+        class=\"facebookThumbnail profile_img_sm\" fbid=\"0\" src=\"/img/no_photo_180.png\"
         width=\"50\" height=\"50\" border=\"0\">\n\t\t\t</a>\n\t\t\t<div class=\"section_info\">\n\t\t\t\t<div
         class=\"user_name single\"><a href=\"/profile/kendra_tconrad\" fbid=\"0\"
         webname=\"kendra_tconrad\" class=\"facebookName\">kendra_tconrad</a></div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t</div>\n\t\t<div
@@ -137,7 +72,7 @@ http_interactions:
         //int-icon-1 i-follow -->\n\t\t\t\t</div><!-- //button-c btn-follow -->\n\t\t\t</div>\n\t\t</div>\n\t\t</div>\n</div><!--end
         section-->\n\t\t\n\t\t\t</div>\n\t</div>\n</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:36:01 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:56 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/albumlikes?albumStartIndex=0&webname=tconrad
@@ -150,7 +85,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -159,23 +94,25 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:35:58 GMT
+      - Wed, 27 Jan 2016 18:58:57 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:35:58
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:57
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '1184'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\n\t\t\n\t\t\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-ch1-1.pandora.com/images/public/amz/6/0/1/1/800011106_130W_130H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-2.p-cdn.com/images/public/amz/6/0/1/1/800011106_130W_130H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\"><a href=\"/kito-reija-lee/sweet-talk-ep\" class=\"first\">Sweet Talk
@@ -185,12 +122,12 @@ http_interactions:
         page\n\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!-- //infobox-body -->\n\t\t\t</div><!--
         //infobox -->\n\t\t</div><!-- //bi-col-left\" -->\n\t\t<div class=\"bi-col-right
         col-w-3\">\n\t\t\t<div class=\"menu space-b-1 clearfix right\">\n\t\t\t\t<div
-        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B004VEAGWI/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B004VEAGWI\"\n\t\t\t\t\t\tdata-itunesurl=\"&RD_PARM1=http%253A%252F%252Fphobos.apple.com%252FWebObjects%252FMZStore.woa%252Fwa%252FviewAlbum%253Fid%253D429224262%2526partnerId%3D30\"\n\t\t\t\t\t\tdata-albumid=\"L148655\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
+        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B004VEAGWI/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B004VEAGWI\"\n\t\t\t\t\t\tdata-itunesurl=\"https://itunes.apple.com/us/album/sweet-talk-ep/id429224262?uo=5&at=11l3Hh&app=itunes\"\n\t\t\t\t\t\tdata-albumid=\"L148655\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
         //int-icon -->\n\t\t\t\t</div><!-- //btn_bg btn_left -->\n\t\t\t\t\t\t\t</div><!--
         //menu -->\n\t\t</div><!-- //bi-col-right -->\n\t</div>\n\t<div class=\"section
         clearfix\">\n\t\t<div class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox
         i-t-shade-1 clearfix\">\n\t\t\t\t<div class=\"infobox-thumb\">\n\t\t\t\t\t<img
-        src=\"http://cont-1.p-cdn.com/images/public/amz/2/8/8/3/825646643882_130W_130H.jpg\"
+        src=\"http://mediaserver-cont-ch1-2-v4v6.pandora.com/images/public/rovi/albumart/2/8/8/3/825646643882_130W_130H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\"><a href=\"/justice/audio-video-disco\" class=\"first\">Audio, Video,
@@ -200,12 +137,12 @@ http_interactions:
         page\n\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!-- //infobox-body -->\n\t\t\t</div><!--
         //infobox -->\n\t\t</div><!-- //bi-col-left\" -->\n\t\t<div class=\"bi-col-right
         col-w-3\">\n\t\t\t<div class=\"menu space-b-1 clearfix right\">\n\t\t\t\t<div
-        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B005MW7982/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B005MW7982\"\n\t\t\t\t\t\tdata-itunesurl=\"&RD_PARM1=http%253A%252F%252Fphobos.apple.com%252FWebObjects%252FMZStore.woa%252Fwa%252FviewAlbum%253Fid%253D470073062%2526partnerId%3D30\"\n\t\t\t\t\t\tdata-albumid=\"L160825\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
+        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B005TOW9JM/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B005TOW9JM\"\n\t\t\t\t\t\tdata-itunesurl=\"https://itunes.apple.com/us/album/audio-video-disco./id470073062?uo=5&at=11l3Hh&app=itunes\"\n\t\t\t\t\t\tdata-albumid=\"L160825\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
         //int-icon -->\n\t\t\t\t</div><!-- //btn_bg btn_left -->\n\t\t\t\t\t\t\t</div><!--
         //menu -->\n\t\t</div><!-- //bi-col-right -->\n\t</div>\n\t<div class=\"section
         clearfix\">\n\t\t<div class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox
         i-t-shade-1 clearfix\">\n\t\t\t\t<div class=\"infobox-thumb\">\n\t\t\t\t\t<img
-        src=\"http://cont-1.p-cdn.com/images/public/amz/3/2/5/0/673855040523_130W_130H.jpg\"
+        src=\"http://mediaserver-cont-sv5-2-v4v6.pandora.com/images/public/rovi/albumart/3/2/5/0/673855040523_130W_130H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\"><a href=\"/mountain-goats/all-eternals-deck\" class=\"first\">All
@@ -216,12 +153,12 @@ http_interactions:
         page\n\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!-- //infobox-body -->\n\t\t\t</div><!--
         //infobox -->\n\t\t</div><!-- //bi-col-left\" -->\n\t\t<div class=\"bi-col-right
         col-w-3\">\n\t\t\t<div class=\"menu space-b-1 clearfix right\">\n\t\t\t\t<div
-        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B004S85HRQ/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B004S85HRQ\"\n\t\t\t\t\t\tdata-itunesurl=\"&RD_PARM1=http%253A%252F%252Fphobos.apple.com%252FWebObjects%252FMZStore.woa%252Fwa%252FviewAlbum%253Fid%253D419449005%2526partnerId%3D30\"\n\t\t\t\t\t\tdata-albumid=\"L147698\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
+        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/gp/search/?index=music&field-artist=The+Mountain+Goats&field-title=All+Eternals+Deck&tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"\"\n\t\t\t\t\t\tdata-itunesurl=\"https://itunes.apple.com/us/album/all-eternals-deck/id419449005?uo=5&at=11l3Hh&app=itunes\"\n\t\t\t\t\t\tdata-albumid=\"L147698\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
         //int-icon -->\n\t\t\t\t</div><!-- //btn_bg btn_left -->\n\t\t\t\t\t\t\t</div><!--
         //menu -->\n\t\t</div><!-- //bi-col-right -->\n\t</div>\n\t<div class=\"section
         clearfix\">\n\t\t<div class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox
         i-t-shade-1 clearfix\">\n\t\t\t\t<div class=\"infobox-thumb\">\n\t\t\t\t\t<img
-        src=\"http://cont-sjl-1.pandora.com/images/public/amz/7/2/9/9/656605309927_130W_130H.jpg\"
+        src=\"http://mediaserver-cont-dc6-2-v4v6.pandora.com/images/public/rovi/albumart/7/2/9/9/656605309927_130W_130H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\"><a href=\"/explosions-in-sky/all-of-sudden-i-miss-everyone\" class=\"first\">All
@@ -232,12 +169,12 @@ http_interactions:
         page\n\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!-- //infobox-body -->\n\t\t\t</div><!--
         //infobox -->\n\t\t</div><!-- //bi-col-left\" -->\n\t\t<div class=\"bi-col-right
         col-w-3\">\n\t\t\t<div class=\"menu space-b-1 clearfix right\">\n\t\t\t\t<div
-        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B002U3BXX8/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B002U3BXX8\"\n\t\t\t\t\t\tdata-itunesurl=\"&RD_PARM1=http%253A%252F%252Fphobos.apple.com%252FWebObjects%252FMZStore.woa%252Fwa%252FviewAlbum%253Fid%253D319136556%2526partnerId%3D30\"\n\t\t\t\t\t\tdata-albumid=\"L72375\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
+        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B002U3BXX8/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B002U3BXX8\"\n\t\t\t\t\t\tdata-itunesurl=\"https://itunes.apple.com/us/album/all-of-a-sudden-i-miss-everyone/id319136556?uo=5&at=11l3Hh&app=itunes\"\n\t\t\t\t\t\tdata-albumid=\"L72375\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
         //int-icon -->\n\t\t\t\t</div><!-- //btn_bg btn_left -->\n\t\t\t\t\t\t\t</div><!--
         //menu -->\n\t\t</div><!-- //bi-col-right -->\n\t</div>\n\t<div class=\"section
         clearfix\">\n\t\t<div class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox
         i-t-shade-1 clearfix\">\n\t\t\t\t<div class=\"infobox-thumb\">\n\t\t\t\t\t<img
-        src=\"http://cont-sv5-3.pandora.com/images/public/amz/0/2/9/6/075597996920_130W_130H.jpg\"
+        src=\"http://mediaserver-cont-sv3-1-v4v6.pandora.com/images/public/rovi/albumart/0/2/9/6/075597996920_130W_130H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\"><a href=\"/black-keys/attack-release\" class=\"first\">Attack & Release</a></h3>\n\t\t\t\t\t<p
@@ -248,12 +185,12 @@ http_interactions:
         -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left\" -->\n\t\t<div
         class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1 clearfix
         right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B001661RC2/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B001661RC2\"\n\t\t\t\t\t\tdata-itunesurl=\"&RD_PARM1=http%253A%252F%252Fphobos.apple.com%252FWebObjects%252FMZStore.woa%252Fwa%252FviewAlbum%253Fid%253D276473578%2526partnerId%3D30\"\n\t\t\t\t\t\tdata-albumid=\"L96967\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
+        i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B001661RC2/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B001661RC2\"\n\t\t\t\t\t\tdata-itunesurl=\"https://itunes.apple.com/us/album/attack-release/id1052967338?uo=5&at=11l3Hh&app=itunes\"\n\t\t\t\t\t\tdata-albumid=\"L96967\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
         //int-icon -->\n\t\t\t\t</div><!-- //btn_bg btn_left -->\n\t\t\t\t\t\t\t</div><!--
         //menu -->\n\t\t</div><!-- //bi-col-right -->\n\t</div>\n\n<div class=\"show_more\"
         data-nextStartIndex=\"5\">Show more</div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:36:01 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:56 GMT
 - request:
     method: get
     uri: http://www.pandora.com/content/albumlikes?albumStartIndex=5&webname=tconrad
@@ -266,7 +203,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
   response:
@@ -275,23 +212,25 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 03 Sep 2013 03:35:58 GMT
+      - Wed, 27 Jan 2016 18:58:57 GMT
+      Server:
+      - Apache
       Content-Type:
       - text/html; charset=UTF-8
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       Set-Cookie:
-      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Sun, 02-Sep-18 03:35:58
+      - v2regbstage=true;Path=/;Domain=.pandora.com;Expires=Mon, 25-Jan-21 18:58:57
         GMT
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '878'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: "\n\n\n\n\t\t\n\t\t\n\t<div class=\"section clearfix\">\n\t\t<div class=\"bi-col-left
         col-w-2\">\n\t\t\t<div class=\"infobox i-t-shade-1 clearfix\">\n\t\t\t\t<div
-        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://cont-dc6-2.pandora.com/images/public/amz/2/1/4/7/800007412_130W_130H.jpg\"
+        class=\"infobox-thumb\">\n\t\t\t\t\t<img src=\"http://mediaserver-cont-sv5-1-v4v6.pandora.com/images/public/amz/2/1/4/7/800007412_130W_130H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\"><a href=\"/crystal-castles/crystal-castles-2\" class=\"first\">Crystal
@@ -302,12 +241,12 @@ http_interactions:
         page\n\t\n\t\t\t\t\t</p>\n\t\t\t\t</div><!-- //infobox-body -->\n\t\t\t</div><!--
         //infobox -->\n\t\t</div><!-- //bi-col-left\" -->\n\t\t<div class=\"bi-col-right
         col-w-3\">\n\t\t\t<div class=\"menu space-b-1 clearfix right\">\n\t\t\t\t<div
-        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/gp/search/?index=music&field-artist=Crystal+Castles&field-title=Crystal+Castles+%28II%29&tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"\"\n\t\t\t\t\t\tdata-itunesurl=\"&RD_PARM1=http%253A%252F%252Fphobos.apple.com%252FWebObjects%252FMZSearch.woa%252Fwa%252FadvancedSearch%253Fmedia%253Dmusic%2526artistTerm%253DCrystal%252BCastles%2526albumTerm%253DCrystal%252BCastles%252B%252528II%252529%2526originStoreFront%253D143441%2526partnerId%3D30\"\n\t\t\t\t\t\tdata-albumid=\"L133459\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
+        class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1 i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B0056DMAOU/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B0056DMAOU\"\n\t\t\t\t\t\tdata-itunesurl=\"http://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?term=Crystal+Castles+Crystal+Castles+%28II%29&at=11l3Hh&app=itunes\"\n\t\t\t\t\t\tdata-albumid=\"L133459\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
         //int-icon -->\n\t\t\t\t</div><!-- //btn_bg btn_left -->\n\t\t\t\t\t\t\t</div><!--
         //menu -->\n\t\t</div><!-- //bi-col-right -->\n\t</div>\n\t<div class=\"section
         clearfix\">\n\t\t<div class=\"bi-col-left col-w-2\">\n\t\t\t<div class=\"infobox
         i-t-shade-1 clearfix\">\n\t\t\t\t<div class=\"infobox-thumb\">\n\t\t\t\t\t<img
-        src=\"http://cont-1.p-cdn.com/images/public/amz/1/2/5/3/656605213521_130W_130H.jpg\"
+        src=\"http://cont-1.p-cdn.com/images/public/rovi/albumart/1/2/5/3/656605213521_130W_130H.jpg\"
         width=\"50\" height=\"50\" class=\"shade-1\">\n\t\t\t\t</div><!-- //infobox-thumb
         -->\n\t\t\t\t<div class=\"infobox-body\">\n\t\t\t\t\t<h3 class=\"s-0 line-h-1_4
         normal\"><a href=\"/bon-iver/bon-iver\" class=\"first\">Bon Iver</a></h3>\n\t\t\t\t\t<p
@@ -317,9 +256,9 @@ http_interactions:
         //infobox-body -->\n\t\t\t</div><!-- //infobox -->\n\t\t</div><!-- //bi-col-left\"
         -->\n\t\t<div class=\"bi-col-right col-w-3\">\n\t\t\t<div class=\"menu space-b-1
         clearfix right\">\n\t\t\t\t<div class=\"btn_bg \">\n\t\t\t\t\t<div class=\"int-icon-1
-        i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B005C7MVC6/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B005C7MVC6\"\n\t\t\t\t\t\tdata-itunesurl=\"&RD_PARM1=http%253A%252F%252Fphobos.apple.com%252FWebObjects%252FMZStore.woa%252Fwa%252FviewAlbum%253Fid%253D436243980%2526partnerId%3D30\"\n\t\t\t\t\t\tdata-albumid=\"L151745\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
+        i-buy-1 like_buy col\"\n\t\t\t\t\t\tdata-amazonurl=\"http://www.amazon.com/dp/B00ISK0874/?tag=wwwpandoracom-20\"\n\t\t\t\t\t\tdata-amazondigitalasin=\"B00ISK0874\"\n\t\t\t\t\t\tdata-itunesurl=\"https://itunes.apple.com/us/album/bon-iver/id438685974?uo=5&at=11l3Hh&app=itunes\"\n\t\t\t\t\t\tdata-albumid=\"L151745\">\n\t\t\t\t\t\tBuy\n\t\t\t\t\t</div><!--
         //int-icon -->\n\t\t\t\t</div><!-- //btn_bg btn_left -->\n\t\t\t\t\t\t\t</div><!--
         //menu -->\n\t\t</div><!-- //bi-col-right -->\n\t</div>\n\n<div class=\"no_more\"></div>\n"
     http_version: 
-  recorded_at: Tue, 03 Sep 2013 03:36:01 GMT
+  recorded_at: Wed, 27 Jan 2016 18:58:56 GMT
 recorded_with: VCR 2.5.0
