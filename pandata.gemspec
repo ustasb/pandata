@@ -1,11 +1,12 @@
-require './lib/pandata'
+$:.push File.expand_path("../lib", __FILE__)
+require 'pandata/version'
 
 Gem::Specification.new do |s|
   s.name                          = 'pandata'
   s.version                       = Pandata::Version::STRING
-  s.required_ruby_version         = '>= 1.9.1'
+  s.required_ruby_version         = '>= 1.9.3'
   s.summary                       = 'A Pandora.com web scraper'
-  s.description                   = 'A library and tool for downloading Pandora.com data'
+  s.description                   = 'A library and tool for downloading Pandora.com data.'
   s.homepage                      = 'https://github.com/ustasb/pandata'
   s.license                       = 'MIT'
   s.authors                       = ['Brian Ustas']
