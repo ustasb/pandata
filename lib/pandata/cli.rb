@@ -85,8 +85,6 @@ module Pandata
                      "  ** No Data **\n"
                    else
                      case category
-                     when /recent_activity/
-                       formatter.list(cat_data)
                      when /liked_tracks|bookmarked_tracks/
                        formatter.tracks(cat_data)
                      when /liked_artists|bookmarked_artists|stations|liked_stations/

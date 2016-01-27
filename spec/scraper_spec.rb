@@ -47,29 +47,6 @@ describe Pandata::Scraper do
   describe 'a Scraper instance' do
     let(:scraper) { Pandata::Scraper.send(:new, 'pandorastats') }
 
-    describe '#recent_activity' do
-      let(:path) { 'fixtures/feeds/recent_activity.xml' }
-
-      it 'returns an array of activity names' do
-        activity = scraper.recent_activity
-        expect(activity).to eq [
-          'Drake',
-          'George Strait',
-          'Future',
-          'Ssion',
-          'Gucci Mane',
-          'Frank Ocean',
-          'Rage Against The Machine',
-          'Lady Gaga',
-          'Loverboy',
-          'Lil Wayne',
-          'HYFR (Hell Ya Fucking Right) by Drake',
-          'Human by The Killers',
-          'Drake Radio'
-        ]
-      end
-    end
-
     describe '#stations' do
       let(:path) { 'fixtures/feeds/stations.xml' }
 

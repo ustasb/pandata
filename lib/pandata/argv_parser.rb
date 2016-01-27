@@ -39,10 +39,6 @@ Options:
           get_all_data = true
         end
 
-        opts.on('-a', '--recent_activity', 'Get recent activity') do
-          options[:data_to_get] << :recent_activity
-        end
-
         opts.on('-B', '--bookmarked_artists', 'Get all bookmarked artists') do
           options[:data_to_get] << :bookmarked_artists
         end
@@ -103,7 +99,6 @@ Options:
 
       if get_all_data
         options[:data_to_get] = [
-          :recent_activity,
           :stations,
           :bookmarked_tracks,
           :bookmarked_artists,

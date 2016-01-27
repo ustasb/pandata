@@ -132,29 +132,6 @@ describe Pandata::Parser do
     end
   end
 
-  describe '#get_recent_activity' do
-    let(:xml) { read_path('fixtures/feeds/recent_activity.xml') }
-
-    it 'returns an array of activity names' do
-      activity = parser.get_recent_activity(xml)
-      expect(activity).to eq [
-        'Drake',
-        'George Strait',
-        'Future',
-        'Ssion',
-        'Gucci Mane',
-        'Frank Ocean',
-        'Rage Against The Machine',
-        'Lady Gaga',
-        'Loverboy',
-        'Lil Wayne',
-        'HYFR (Hell Ya Fucking Right) by Drake',
-        'Human by The Killers',
-        'Drake Radio'
-      ]
-    end
-  end
-
   describe '#get_stations' do
     let(:xml) { read_path('fixtures/feeds/stations.xml') }
 

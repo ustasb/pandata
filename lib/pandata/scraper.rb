@@ -41,12 +41,6 @@ module Pandata
       @webname = webname
     end
 
-    # Get the user's recent activity.
-    # @return [Array] array of activity names
-    def recent_activity
-      scrape_for(:recent_activity, :get_recent_activity)
-    end
-
     # Get the user's stations.
     # @return [Array] array of station names
     def stations

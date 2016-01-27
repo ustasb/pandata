@@ -41,18 +41,6 @@ module Pandata
     end
 
     # @param xml [String]
-    # Returns an array of recent activity names.
-    def get_recent_activity(xml)
-      activity_names = []
-
-      xml_each_item(xml) do |title|
-        activity_names << title
-      end
-
-      activity_names
-    end
-
-    # @param xml [String]
     # Returns an array of station names.
     def get_stations(xml)
       stations = []
