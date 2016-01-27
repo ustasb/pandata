@@ -47,27 +47,6 @@ describe Pandata::Scraper do
   describe 'a Scraper instance' do
     let(:scraper) { Pandata::Scraper.send(:new, 'pandorastats') }
 
-    describe '#stations' do
-      let(:path) { 'fixtures/feeds/stations.xml' }
-
-      it 'returns an array of station names' do
-        stations = scraper.stations
-        expect(stations).to eq [
-          'Drake Radio',
-          'George Strait Radio',
-          'Future Radio',
-          'Ssion Radio',
-          'Gucci Mane Radio',
-          'Frank Ocean Radio',
-          'Loverboy Radio',
-          'Lil Wayne Radio',
-          'Fun. Radio',
-          'The Killers Radio',
-          'pandorastats\'s QuickMix'
-        ]
-      end
-    end
-
     describe '#bookmarks' do
       context 'passed the :tracks argument' do
         let(:path) { 'fixtures/feeds/bookmarked_tracks.xml' }

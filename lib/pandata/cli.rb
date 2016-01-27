@@ -87,7 +87,7 @@ module Pandata
                      case category
                      when /liked_tracks|bookmarked_tracks/
                        formatter.tracks(cat_data)
-                     when /liked_artists|bookmarked_artists|stations|liked_stations/
+                     when /liked_artists|bookmarked_artists|liked_stations/
                        formatter.sort_list(cat_data)
                      when :liked_albums
                        formatter.albums(cat_data)

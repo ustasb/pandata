@@ -41,12 +41,6 @@ module Pandata
       @webname = webname
     end
 
-    # Get the user's stations.
-    # @return [Array] array of station names
-    def stations
-      scrape_for(:stations, :get_stations)
-    end
-
     # Get the user's bookmarked data.
     # @param bookmark_type [Symbol]
     #   - :artists - returns an array of artist names

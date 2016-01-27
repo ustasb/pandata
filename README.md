@@ -2,7 +2,6 @@
 
 Pandata is a Ruby 1.9+ library for downloading a user's Pandora.com data. This data includes:
 
-- ~~Stations *~~
 - ~~Bookmarks (artists, tracks) *~~
 - Likes (albums, artists, stations, tracks)
 - Followers
@@ -49,9 +48,6 @@ Next, start scraping!
 
     # Get all bookmarks (artists and tracks)
     bookmarks = johns_scraper.bookmarks
-
-    # Get all stations
-    stations = johns_scraper.stations
 
     # Get all followers
     followers = johns_scraper.followers

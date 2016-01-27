@@ -41,18 +41,6 @@ module Pandata
     end
 
     # @param xml [String]
-    # Returns an array of station names.
-    def get_stations(xml)
-      stations = []
-
-      xml_each_item(xml) do |title|
-        stations << title
-      end
-
-      stations
-    end
-
-    # @param xml [String]
     # Returns an array of hashes with :artist and :track keys.
     def get_bookmarked_tracks(xml)
       tracks = []

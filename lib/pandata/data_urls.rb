@@ -5,7 +5,6 @@ module Pandata
   # URLs to Pandora's data!
   DATA_FEED_URLS = {
     user_search:          'http://www.pandora.com/content/connect?searchString=%{searchString}',
-    stations:             "http://feeds.pandora.com/feeds/people/%{webname}/stations.xml?max=#{MAX_RESULTS}",
     bookmarked_tracks:    "http://feeds.pandora.com/feeds/people/%{webname}/favorites.xml?max=#{MAX_RESULTS}",
     bookmarked_artists:   "http://feeds.pandora.com/feeds/people/%{webname}/favoriteartists.xml?max=#{MAX_RESULTS}",
     liked_tracks:         'http://www.pandora.com/content/mobile/profile_likes_track.vm?likeStartIndex=%{nextLikeStartIndex}&thumbStartIndex=%{nextThumbStartIndex}&webname=%{webname}&pat=%{pat}',

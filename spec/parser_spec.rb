@@ -132,27 +132,6 @@ describe Pandata::Parser do
     end
   end
 
-  describe '#get_stations' do
-    let(:xml) { read_path('fixtures/feeds/stations.xml') }
-
-    it 'returns an array of station names' do
-      stations = parser.get_stations(xml)
-      expect(stations).to eq [
-        'Drake Radio',
-        'George Strait Radio',
-        'Future Radio',
-        'Ssion Radio',
-        'Gucci Mane Radio',
-        'Frank Ocean Radio',
-        'Loverboy Radio',
-        'Lil Wayne Radio',
-        'Fun. Radio',
-        'The Killers Radio',
-        "pandorastats's QuickMix"
-      ]
-    end
-  end
-
   describe '#get_bookmarked_tracks' do
     let(:xml) { read_path('fixtures/feeds/bookmarked_tracks.xml') }
 

@@ -23,7 +23,7 @@ module Pandata
       get_all_data = false
 
       options[:opts] = OptionParser.new do |opts|
-        opts.banner = 'Pandata: A tool for downloading Pandora.com data (likes, bookmarks, stations, etc.)'
+        opts.banner = 'Pandata: A tool for downloading Pandora.com data (likes, bookmarks, etc.)'
         opts.define_head 'Usage: pandata <email|webname> [options]'
         opts.separator <<-END
 
@@ -79,10 +79,6 @@ Options:
           options[:output_file] = path
         end
 
-        opts.on('-s', '--stations', 'Get all stations') do
-          options[:data_to_get] << :stations
-        end
-
         opts.on_tail("-h", "--help", "Show this message") do
           options[:help] = true
         end
@@ -99,7 +95,6 @@ Options:
 
       if get_all_data
         options[:data_to_get] = [
-          :stations,
           :bookmarked_tracks,
           :bookmarked_artists,
           :liked_tracks,

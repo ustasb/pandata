@@ -134,13 +134,6 @@ Webname results for 'swedish':
       it 'logs the liked stations' do; end
     end
 
-    describe '--stations' do
-      let(:cassette) { 'tconrad_stations' }
-      let(:argv) { [webname, '--stations'] }
-
-      it 'logs the stations' do; end
-    end
-
     describe '--all' do
       let(:cassette) { 'tconrad_all' }
       let(:argv) { [webname, '--all'] }
