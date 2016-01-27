@@ -30,7 +30,7 @@ module Pandata
 Examples:
   pandata john@example.com --liked_tracks
   pandata my_webname --all -o my_pandora_data.txt
-  pandata my_webname -lLb --json
+  pandata my_webname -lL --json
 
 Options:
         END
