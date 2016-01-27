@@ -25,4 +25,4 @@ puts "Rebuilding VCR cassettes...\n"
 
 FileUtils.rm_rf "spec/fixtures/vcr_cassettes/#{webname}*"
 
-`rspec`
+`bundle exec rspec`
