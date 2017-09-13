@@ -1,6 +1,7 @@
 # Pandata [![Build Status](https://travis-ci.org/ustasb/pandata.svg?branch=master)](https://travis-ci.org/ustasb/pandata) [![Gem Version](https://badge.fury.io/rb/pandata.svg)](https://badge.fury.io/rb/pandata)
 
-Author: [Brian Ustas](http://brianustas.com)
+- Author: [Brian Ustas](http://brianustas.com)
+- Initial release: 09/02/14
 
 Pandata is a Ruby 1.9+ library for downloading a user's Pandora.com data. This data includes:
 
