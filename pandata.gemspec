@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency        'ruby-progressbar', '~> 1.5.1'
   s.add_development_dependency    'rspec', '~> 3.4.0'
   s.add_development_dependency    'vcr', '~> 3.0.1'
-  s.add_development_dependency    'webmock', '~> 1.22.6'
+  s.add_development_dependency    'webmock', '~> 2.3.2'
   s.add_development_dependency    'yard', '~> 0.8.7.6'
 end
