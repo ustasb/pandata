@@ -75,9 +75,9 @@ For an up-to-date list, check out:
     # Get all data and output to a file.
     pandata my_webname --all -o my_pandora_data.txt
 
-### FAQ
+## FAQ
 
-#### Q: Pandata is not grabbing all my liked tracks on Pandora. What's up with that?!
+### Q: Pandata is not grabbing all my liked tracks on Pandora. What's up with that?!
 
 First, for those coming from [pandify.com](http://pandify.com), Pandata is the
 tool that actually grabs your Pandora data.
